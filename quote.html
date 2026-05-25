@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Get a Quote · Cleanova Building Services — Metro Atlanta</title>
+<meta name="description" content="Request a tailored cleaning quote from Cleanova. Same-day responses for commercial facilities and residential properties across Metro Atlanta.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="purple-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#8b6dff"/>
+      <stop offset="100%" stop-color="#4a2db8"/>
+    </linearGradient>
+    <linearGradient id="silver-grad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f4f4f6"/>
+      <stop offset="50%" stop-color="#a5a6ac"/>
+      <stop offset="100%" stop-color="#54555c"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav-logo">
+    <img src="logo.png" alt="Cleanova Building Services">
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="commercial.html">Commercial</a></li>
+    <li><a href="residential.html">Residential</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="quote.html" class="nav-cta active">Get a Quote</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- PAGE HEAD -->
+<header class="page-head">
+  <div class="orb orb-1"></div>
+  <div class="hero-grid-bg"></div>
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span class="sep">/</span>Get a Quote
+    </div>
+    <span class="eyebrow"><span class="silver-rule"></span>Request a Quote</span>
+    <h1>Tell us about <em class="display-italic">the property.</em></h1>
+    <p class="lead">A few details below is all we need to prepare a tailored scope, schedule, and pricing — typically returned the same business day. Commercial or residential, every quote is reviewed personally by a Cleanova account manager.</p>
+  </div>
+</header>
+
+<!-- QUOTE FORM -->
+<section style="padding-top: 30px;">
+  <div class="container" style="max-width: 1080px;">
+    <form id="quote-form" class="form-wrap" novalidate>
+
+      <!-- Toggle: Commercial vs Residential -->
+      <div class="toggle-group">
+        <button type="button" class="toggle-btn active" data-target="commercial">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="18" height="18" style="vertical-align:-3px; margin-right:8px;">
+            <rect x="3" y="4" width="18" height="16"/>
+            <line x1="8" y1="8" x2="8" y2="8.01"/>
+            <line x1="12" y1="8" x2="12" y2="8.01"/>
+            <line x1="16" y1="8" x2="16" y2="8.01"/>
+            <line x1="8" y1="12" x2="8" y2="12.01"/>
+            <line x1="12" y1="12" x2="12" y2="12.01"/>
+            <line x1="16" y1="12" x2="16" y2="12.01"/>
+            <line x1="8" y1="16" x2="8" y2="16.01"/>
+            <line x1="16" y1="16" x2="16" y2="16.01"/>
+          </svg>
+          Commercial
+        </button>
+        <button type="button" class="toggle-btn" data-target="residential">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="18" height="18" style="vertical-align:-3px; margin-right:8px;">
+            <path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2h-4v-7h-6v7H5a2 2 0 0 1-2-2z"/>
+          </svg>
+          Residential
+        </button>
+      </div>
+
+      <div class="form-grid">
+
+        <!-- ============== COMMON FIELDS ============== -->
+        <div class="form-divider">
+          <span class="silver-rule"></span>
+          Contact Information
+        </div>
+
+        <div class="form-group">
+          <label for="full-name">Full Name *</label>
+          <input type="text" id="full-name" name="full-name" placeholder="Your full name" required>
+        </div>
+
+        <div class="form-group">
+          <label for="company-name">Company Name <span style="color:var(--silver-600); font-weight:300;">(optional)</span></label>
+          <input type="text" id="company-name" name="company-name" placeholder="Business or property management">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone *</label>
+          <input type="tel" id="phone" name="phone" placeholder="(404) 555-0100" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required>
+        </div>
+
+        <div class="form-group full">
+          <label for="address">Property Address *</label>
+          <input type="text" id="address" name="address" placeholder="Street, City, State, ZIP" required>
+        </div>
+
+        <!-- ============== COMMERCIAL SECTION ============== -->
+        <div class="form-section active" data-section="commercial">
+
+          <div class="form-divider">
+            <span class="silver-rule"></span>
+            Facility Details
+          </div>
+
+          <div class="form-group">
+            <label for="industry">Industry / Property Type *</label>
+            <select id="industry" name="industry" required>
+              <option value="">Select an industry…</option>
+              <option>Office Buildings</option>
+              <option>Medical Offices</option>
+              <option>Hospitals</option>
+              <option>Dental Offices</option>
+              <option>Retail Stores</option>
+              <option>Restaurants</option>
+              <option>Grocery Stores</option>
+              <option>Shopping Centers</option>
+              <option>Warehouses & Industrial</option>
+              <option>Apartments / Multifamily</option>
+              <option>Fitness Centers</option>
+              <option>Plazas / Mixed-Use</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="building-size">Total Building Size (sq ft) *</label>
+            <input type="text" id="building-size" name="building-size" placeholder="e.g. 12,000 sq ft">
+          </div>
+
+          <div class="form-group">
+            <label for="floors">Number of Floors</label>
+            <input type="number" id="floors" name="floors" min="1" placeholder="e.g. 3">
+          </div>
+
+          <div class="form-group">
+            <label for="floor-types-c">Floor Type(s)</label>
+            <input type="text" id="floor-types-c" name="floor-types-c" placeholder="VCT, carpet, polished concrete…">
+          </div>
+
+          <div class="form-group">
+            <label for="service-type-c">Service Type *</label>
+            <select id="service-type-c" name="service-type-c">
+              <option value="">Select a service…</option>
+              <option>Recurring Janitorial</option>
+              <option>Floor Restoration / Strip & Wax</option>
+              <option>Carpet & Upholstery</option>
+              <option>Window Cleaning</option>
+              <option>Pressure Washing</option>
+              <option>Disinfection / Sanitization</option>
+              <option>Porter / Day Services</option>
+              <option>Post-Construction Cleanup</option>
+              <option>Move-In / Move-Out</option>
+              <option>Emergency Cleanup</option>
+              <option>Multiple Services</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="frequency-c">Cleaning Frequency</label>
+            <select id="frequency-c" name="frequency-c">
+              <option value="">Select frequency…</option>
+              <option>One-Time</option>
+              <option>Daily</option>
+              <option>3× / Week</option>
+              <option>2× / Week</option>
+              <option>Weekly</option>
+              <option>Bi-Weekly</option>
+              <option>Monthly</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="schedule-pref">Schedule Preference</label>
+            <select id="schedule-pref" name="schedule-pref">
+              <option value="">Select preference…</option>
+              <option>Standard Business Hours</option>
+              <option>After-Hours (Evening)</option>
+              <option>Overnight</option>
+              <option>Weekends Only</option>
+              <option>Flexible</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="access-info">After-Hours Access Info</label>
+            <input type="text" id="access-info" name="access-info" placeholder="Keys, codes, alarm details, point of contact">
+          </div>
+
+          <div class="form-group">
+            <label for="equipment-needs">Special Equipment Requirements</label>
+            <input type="text" id="equipment-needs" name="equipment-needs" placeholder="Auto-scrubber, lift, HEPA extraction…">
+          </div>
+
+          <div class="form-group full">
+            <label for="consult-date-c">Preferred Walkthrough / Consultation Date</label>
+            <input type="date" id="consult-date-c" name="consult-date-c">
+          </div>
+
+          <div class="form-group full">
+            <label for="start-date-c">Preferred Service Start Date</label>
+            <input type="date" id="start-date-c" name="start-date-c">
+          </div>
+        </div>
+
+        <!-- ============== RESIDENTIAL SECTION ============== -->
+        <div class="form-section" data-section="residential">
+
+          <div class="form-divider">
+            <span class="silver-rule"></span>
+            Home Details
+          </div>
+
+          <div class="form-group">
+            <label for="property-type-r">Property Type *</label>
+            <select id="property-type-r" name="property-type-r">
+              <option value="">Select a type…</option>
+              <option>Single-Family Home</option>
+              <option>Townhouse</option>
+              <option>Condo / Apartment</option>
+              <option>Luxury Home / Estate</option>
+              <option>Listing / Vacant Home</option>
+              <option>New Construction</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="home-size">Home Size (sq ft) *</label>
+            <input type="text" id="home-size" name="home-size" placeholder="e.g. 2,800 sq ft">
+          </div>
+
+          <div class="form-group">
+            <label for="rooms">Number of Bedrooms</label>
+            <input type="number" id="rooms" name="rooms" min="0" placeholder="e.g. 4">
+          </div>
+
+          <div class="form-group">
+            <label for="bathrooms">Number of Bathrooms</label>
+            <input type="number" id="bathrooms" name="bathrooms" min="0" step="0.5" placeholder="e.g. 2.5">
+          </div>
+
+          <div class="form-group">
+            <label for="floor-types-r">Flooring Types</label>
+            <input type="text" id="floor-types-r" name="floor-types-r" placeholder="Hardwood, tile, carpet, marble…">
+          </div>
+
+          <div class="form-group">
+            <label for="pets">Pets in Home</label>
+            <select id="pets" name="pets">
+              <option value="">Select…</option>
+              <option>No Pets</option>
+              <option>1 Dog or Cat</option>
+              <option>2 Dogs / Cats</option>
+              <option>3+ Pets</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="service-type-r">Service Type *</label>
+            <select id="service-type-r" name="service-type-r">
+              <option value="">Select a service…</option>
+              <option>Recurring Maintenance</option>
+              <option>Deep Cleaning</option>
+              <option>Move-In / Move-Out</option>
+              <option>Listing Preparation</option>
+              <option>Open House Refresh</option>
+              <option>Post-Construction (Tiered)</option>
+              <option>Carpet & Upholstery</option>
+              <option>Full Sanitization</option>
+              <option>Luxury Home Maintenance</option>
+              <option>Organization</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="frequency-r">Frequency</label>
+            <select id="frequency-r" name="frequency-r">
+              <option value="">Select frequency…</option>
+              <option>One-Time</option>
+              <option>Weekly</option>
+              <option>Bi-Weekly</option>
+              <option>Monthly</option>
+              <option>As-Needed</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="special-treatment">Special Stain / Treatment Requests</label>
+            <input type="text" id="special-treatment" name="special-treatment" placeholder="Pet stains, marble polish, upholstery…">
+          </div>
+
+          <div class="form-group">
+            <label for="upholstery">Upholstery / Sofa Requests</label>
+            <input type="text" id="upholstery" name="upholstery" placeholder="Sectional, dining chairs, mattresses…">
+          </div>
+
+          <div class="form-group full">
+            <label for="consult-date-r">Preferred Consultation Date</label>
+            <input type="date" id="consult-date-r" name="consult-date-r">
+          </div>
+
+          <div class="form-group full">
+            <label for="service-date-r">Preferred Service Date</label>
+            <input type="date" id="service-date-r" name="service-date-r">
+          </div>
+        </div>
+
+        <!-- ============== UPLOAD + NOTES ============== -->
+        <div class="form-divider">
+          <span class="silver-rule"></span>
+          Photos & Notes
+        </div>
+
+        <div class="form-group full">
+          <label for="photos">Upload Photos or Videos <span style="color:var(--silver-600); font-weight:300;">(optional)</span></label>
+          <label class="file-upload">
+            <div class="icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="32" height="32">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                <polyline points="17 8 12 3 7 8"/>
+                <line x1="12" y1="3" x2="12" y2="15"/>
+              </svg>
+            </div>
+            <div class="text">
+              <strong>Click to upload</strong><br>
+              <span style="font-size:0.82rem;color:var(--silver-500)">PNG, JPG, MP4 — up to 10 files</span>
+            </div>
+            <input type="file" id="photos" name="photos" multiple accept="image/*,video/*">
+          </label>
+        </div>
+
+        <div class="form-group full">
+          <label for="notes">Additional Notes</label>
+          <textarea id="notes" name="notes" placeholder="Tell us anything else about the property, special requests, access notes, or expectations…"></textarea>
+        </div>
+
+      </div>
+
+      <!-- Submit -->
+      <div style="margin-top: 44px; display:flex; gap:14px; flex-wrap:wrap; align-items:center;">
+        <button type="submit" class="btn btn-primary" style="font-size: 0.98rem; padding: 18px 36px;">
+          <span>Submit Quote Request</span>
+          <svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <span style="font-size: 0.86rem; color: var(--silver-500); max-width: 380px; line-height: 1.5;">
+          By submitting you agree to be contacted by Cleanova. We respond to most submissions the same business day.
+        </span>
+      </div>
+
+    </form>
+  </div>
+</section>
+
+<!-- TRUST STRIP -->
+<section>
+  <div class="container">
+    <div class="section-head" style="margin-top: 40px;">
+      <span class="eyebrow"><span class="silver-rule"></span>What Happens Next</span>
+      <h2>Three steps to a <em class="display-italic">signed scope.</em></h2>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-item">
+        <div class="why-num">01</div>
+        <h4>Same-Day Response</h4>
+        <p>An account manager reviews your submission and reaches out within the same business day with initial questions or a draft scope.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <h4>Walkthrough or Call</h4>
+        <p>For commercial accounts, we schedule a free on-site walkthrough. For residential, a quick consultation call confirms expectations.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <h4>Tailored Quote</h4>
+        <p>You receive a written, itemized scope with pricing, schedule, and team assignments. Sign, and we begin.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-num">04</div>
+        <h4>Begin Service</h4>
+        <p>Recurring contracts launch with a kickoff brief. One-time jobs are scheduled directly. You always know who's coming and when.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Cleanova Building Services">
+        <p>Premium commercial and residential facility services across Metro Atlanta. Operating at the standard businesses and homeowners deserve.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="commercial.html">Commercial</a></li>
+          <li><a href="residential.html">Residential</a></li>
+          <li><a href="residential.html#post-construction">Post-Construction</a></li>
+          <li><a href="commercial.html#floor-care">Floor Restoration</a></li>
+          <li><a href="commercial.html#janitorial">Janitorial</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="quote.html">Get a Quote</a></li>
+          <li><a href="contact.html#areas">Service Areas</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:hello@cleanova.com">hello@cleanova.com</a></li>
+          <li><a href="tel:+14045550100">(404) 555-0100</a></li>
+          <li>Metro Atlanta, GA</li>
+          <li>Mon–Sun · 24/7 Operations</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <small>© 2026 Cleanova Building Services. Licensed & Insured. All rights reserved.</small>
+      <small>Crafted for Metro Atlanta</small>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
