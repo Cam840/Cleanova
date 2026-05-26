@@ -1,264 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Residential Cleaning · Cleanova Building Services — Metro Atlanta</title>
-<meta name="description" content="Luxury residential cleaning, deep cleaning, post-construction, and listing preparation across Metro Atlanta. Discreet, detail-obsessed home care.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Residential Cleaning Services — Cleanova Building Services</title>
+  <meta name="description" content="Premium cleaning for homes and living spaces. Meticulous. Reliable. Luxury care across Metro Atlanta.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body>
 
-<nav class="nav">
-  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Cleanova Building Services"></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="commercial.html">Commercial</a></li>
-    <li><a href="residential.html" class="active">Residential</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="quote.html" class="nav-cta">Get a Quote</a></li>
-  </ul>
-  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-
-<header class="page-head">
-  <div class="page-head-bg">
-    <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1800&q=80&auto=format&fit=crop" alt="Luxury home interior">
-  </div>
-  <div class="hero-grid-bg"></div>
-  <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span>Residential</div>
-    <span class="eyebrow"><span class="silver-rule"></span>Division 02 · Residential</span>
-    <h1>Home care for people who <em class="display-italic">don't compromise.</em></h1>
-    <p class="lead">Discreet, detail-obsessed residential cleaning for luxury properties, active listings, and homeowners who expect more than average. Every service is tailored. Every crew is trained.</p>
-    <div style="margin-top:40px; display:flex; gap:14px; flex-wrap:wrap;">
-      <a href="quote.html" class="btn btn-primary">Request Residential Quote<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-      <a href="#services" class="btn btn-ghost">View Services</a>
+  <!-- ===== NAV ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="logo.png" alt="Cleanova Building Services"></a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-page="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="commercial.html" data-page="commercial.html">Commercial</a>
+          <div class="nav-dropdown-menu">
+            <a href="commercial.html#office">Office Cleaning</a>
+            <a href="commercial.html#medical">Medical & Dental</a>
+            <a href="commercial.html#retail">Retail & Grocery</a>
+            <a href="commercial.html#floor">Floor Care</a>
+            <a href="commercial.html#porter">Day Porter Services</a>
+            <a href="commercial.html#disinfection">Disinfection</a>
+            <a href="commercial.html#construction">Construction Clean-Up</a>
+            <a href="commercial.html#window">Window Cleaning</a>
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <a href="residential.html" data-page="residential.html">Residential</a>
+          <div class="nav-dropdown-menu">
+            <a href="residential.html#standard">Standard Cleaning</a>
+            <a href="residential.html#deep">Deep Cleaning</a>
+            <a href="residential.html#movein">Move-In / Move-Out</a>
+            <a href="residential.html#postconstruction">Post Construction</a>
+            <a href="residential.html#openhouse">Open House</a>
+            <a href="residential.html#carpet">Carpet & Sofa</a>
+            <a href="residential.html#disinfection">Disinfection</a>
+            <a href="residential.html#addon">Add-On Services</a>
+          </div>
+        </li>
+        <li><a href="about.html" data-page="about.html">About Us</a></li>
+        <li><a href="about.html#areas">Service Areas</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+        <li><a href="quote.html" class="nav-cta">Get a Quote</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
-</header>
+  </nav>
 
-<!-- SERVICES -->
-<section id="services">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow"><span class="silver-rule"></span>Residential Services</span>
-      <h2>Every service your <em class="display-italic">home deserves.</em></h2>
+  <!-- ===== PAGE HEAD ===== -->
+  <section class="page-head residential">
+    <div class="page-head-inner">
+      <h1>Residential Services</h1>
+      <p>Premium cleaning for homes and living spaces. Meticulous. Reliable. Luxury care.</p>
     </div>
-    <div class="panel-grid">
+  </section>
 
-      <article class="panel">
-        <div class="panel-num">01</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M10 30l22-20 22 20v22H10z"/><path d="M24 52V36h16v16"/></svg></div>
-        <h3>Recurring Maintenance</h3>
-        <p>Weekly, bi-weekly, or monthly home cleaning tailored to your schedule and lifestyle. Consistent crew, consistent results.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">02</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="32" cy="28" r="14"/><path d="M32 14v28M18 28h28"/><circle cx="32" cy="28" r="6"/></svg></div>
-        <h3>Deep Cleaning</h3>
-        <p>Full-home intensive cleaning — baseboards, vents, inside cabinets, behind appliances, grout lines, and every surface in between.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">03</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M16 52V24l16-12 16 12v28M24 40h16M24 48h16"/></svg></div>
-        <h3>Move-In / Move-Out</h3>
-        <p>Complete top-to-bottom cleaning for vacant homes — spotless for the next tenant, owner, or buyer.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">04</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 52h40M20 52V32h24v20M32 20a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg></div>
-        <h3>Listing Preparation</h3>
-        <p>MLS-ready cleaning that makes your listing shine on day one. Used by realtors across Metro Atlanta before every showing.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">05</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M10 30l22-20 22 20v22H10z"/><circle cx="32" cy="38" r="6"/><path d="M32 32v-8"/></svg></div>
-        <h3>Open House Refresh</h3>
-        <p>Fast-turnaround pre-showing clean. We work around broker schedules to get the home looking its absolute best before buyers walk in.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">06</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 52h40v-4H12zM16 48V28l16-16 16 16v20M24 36h6v12h-6zM34 36h6v12h-6z"/></svg></div>
-        <h3>Carpet Extraction</h3>
-        <p>Hot-water extraction for residential carpets. Pet odors, deep staining, allergen removal — restored without damaging fibers.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">07</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="10" y="30" width="44" height="24"/><rect x="18" y="22" width="28" height="8"/><path d="M24 30v24M40 30v24"/></svg></div>
-        <h3>Sofa & Upholstery</h3>
-        <p>Sectionals, dining chairs, ottomans, and mattresses cleaned with upholstery-safe extractors. Fabric or leather.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">08</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="12" y="20" width="40" height="32"/><path d="M20 20v-8h24v8"/><path d="M20 36h24M20 44h16"/></svg></div>
-        <h3>Kitchen Detailing</h3>
-        <p>Appliance exteriors and interiors, hood vents, cabinet faces, backsplash, and countertops — degreased and polished to standard.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">09</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M16 52h32M20 52V36c0-8 4-12 12-12s12 4 12 12v16"/><path d="M24 36h16M32 24v-8"/><circle cx="32" cy="14" r="4"/></svg></div>
-        <h3>Bathroom Detailing</h3>
-        <p>Grout scrubbing, glass shower polishing, fixture descaling, toilet sanitization, and tile restoration — the parts most crews skip.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">10</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="12" y="12" width="16" height="16"/><rect x="36" y="12" width="16" height="16"/><rect x="12" y="36" width="16" height="16"/><rect x="36" y="36" width="16" height="16"/></svg></div>
-        <h3>Organization</h3>
-        <p>Pantry, closet, linen, and storage organization paired with cleaning. Systemized for long-term maintenance.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">11</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M32 8l20 8v14c0 14-8 22-20 26-12-4-20-12-20-26V16z"/><path d="M22 32l8 8 14-14"/></svg></div>
-        <h3>Full Sanitization</h3>
-        <p>EPA-approved disinfection of all high-touch surfaces throughout the home. Ideal for post-illness, allergies, or seasonal resets.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">12</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M10 34l22-22 22 22v18H10z"/><circle cx="32" cy="44" r="6"/><path d="M26 44h12"/></svg></div>
-        <h3>Luxury Home Maintenance</h3>
-        <p>Ongoing discreet service for high-value properties. Assigned dedicated crew, white-glove standards, and full confidentiality.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- PHOTO BAND -->
-<div class="img-band">
-  <img src="https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=1800&q=80&auto=format&fit=crop" alt="Luxury home kitchen">
-  <div class="img-band-overlay">
-    <div class="img-band-text container">
-      <h2 style="text-align:center;"><em class="display-italic">Discreet. Trusted.</em> Detail-obsessed.</h2>
-    </div>
-  </div>
-</div>
-
-<!-- POST-CONSTRUCTION -->
-<section id="post-construction">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow"><span class="silver-rule"></span>Post-Construction System</span>
-      <h2>Three tiers to <em class="display-italic">move-in ready.</em></h2>
-      <p>New construction and renovation cleaning isn't one visit — it's a structured process. Our three-phase system takes your property from job site to showcase.</p>
-    </div>
-    <div class="tiers">
-      <div class="tier">
-        <div class="tier-num">01</div>
-        <span class="eyebrow" style="margin-bottom:16px;"><span class="silver-rule"></span>Initial Clean</span>
-        <h3>Rough Phase</h3>
-        <ul>
-          <li>Debris and construction waste removal</li>
-          <li>Concrete, drywall, and sawdust sweep-down</li>
-          <li>Window frame and door jamb wipedown</li>
-          <li>Rough floor prep for finishing work</li>
-          <li>Trash haul-out and dumpster coordination</li>
-        </ul>
+  <!-- ===== OUR RESIDENTIAL SERVICES ===== -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="eyebrow">Our Residential Services</span>
       </div>
-      <div class="tier">
-        <div class="tier-num">02</div>
-        <span class="eyebrow" style="margin-bottom:16px;"><span class="silver-rule"></span>Detailed Clean</span>
-        <h3>Detail Phase</h3>
-        <ul>
-          <li>Interior glass, mirrors, and shower doors</li>
-          <li>Cabinet interior and exterior wipedown</li>
-          <li>Fixture and hardware polishing</li>
-          <li>Paint overspray and sticker residue removal</li>
-          <li>HVAC vent and return air cleaning</li>
-        </ul>
-      </div>
-      <div class="tier">
-        <div class="tier-num">03</div>
-        <span class="eyebrow" style="margin-bottom:16px;"><span class="silver-rule"></span>Final Presentation</span>
-        <h3>Final Phase</h3>
-        <ul>
-          <li>Full floor polish, buff, and protect</li>
-          <li>Touch-up cleaning on all surfaces</li>
-          <li>Final glass polish and streak inspection</li>
-          <li>Exterior sweep and entrance detail</li>
-          <li>Walk-through with client or GC</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- REALTOR SECTION -->
-<section>
-  <div class="container">
-    <div class="two-col reverse">
-      <div class="two-col-img">
-        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=900&q=80&auto=format&fit=crop" alt="Real estate listing">
-      </div>
-      <div>
-        <span class="eyebrow"><span class="silver-rule"></span>For Realtors</span>
-        <h2 style="margin-top:24px;">Your listings. <em class="display-italic">Our standard.</em></h2>
-        <p style="margin-top:24px;">Realtors across Metro Atlanta trust Cleanova to prepare their listings before showings and open houses. Fast turnaround, no shortcuts, and results that help properties sell at asking — or above.</p>
-        <div class="why-grid" style="margin-top:40px;">
-          <div class="why-item"><div class="num">01</div><h4>Listing Prep</h4><p>Pre-MLS cleaning that presents the property at its best.</p></div>
-          <div class="why-item"><div class="num">02</div><h4>Open House</h4><p>Same-day refreshes and touch-ups before buyers walk in.</p></div>
-          <div class="why-item"><div class="num">03</div><h4>Turnover</h4><p>Full cleaning between tenants for rental and investment portfolios.</p></div>
-          <div class="why-item"><div class="num">04</div><h4>Vacant Homes</h4><p>Ongoing light maintenance so vacant listings always show clean.</p></div>
+      <div class="panel-grid">
+        <div class="panel-card" id="standard">
+          <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80&auto=format&fit=crop');"></div>
+          <div class="panel-body">
+            <div class="panel-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 9l9-6 9 6v12H3z"/><path d="M9 21v-6h6v6"/></svg>
+            </div>
+            <h3>Standard Cleaning</h3>
+            <a href="quote.html" class="learn-more">Learn More</a>
+          </div>
+        </div>
+        <div class="panel-card" id="deep">
+          <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80&auto=format&fit=crop');"></div>
+          <div class="panel-body">
+            <div class="panel-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 12c0 5-9 11-9 11s-9-6-9-11a9 9 0 1 1 18 0z"/></svg>
+            </div>
+            <h3>Deep Cleaning</h3>
+            <a href="quote.html" class="learn-more">Learn More</a>
+          </div>
+        </div>
+        <div class="panel-card" id="movein">
+          <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1600585154526-990dced4db0d?w=600&q=80&auto=format&fit=crop');"></div>
+          <div class="panel-body">
+            <div class="panel-icon">
+              <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            </div>
+            <h3>Move-In / Move-Out</h3>
+            <a href="quote.html" class="learn-more">Learn More</a>
+          </div>
+        </div>
+        <div class="panel-card" id="postconstruction">
+          <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=80&auto=format&fit=crop');"></div>
+          <div class="panel-body">
+            <div class="panel-icon">
+              <svg viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M14 20V6l4 4v10"/><path d="M6 20V10l4-4v14"/></svg>
+            </div>
+            <h3>Post Construction Cleaning</h3>
+            <a href="quote.html" class="learn-more">Learn More</a>
+          </div>
+        </div>
+        <div class="panel-card" id="openhouse">
+          <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=600&q=80&auto=format&fit=crop');"></div>
+          <div class="panel-body">
+            <div class="panel-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 10l9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+            </div>
+            <h3>Open House &amp; Showing Clean</h3>
+            <a href="quote.html" class="learn-more">Learn More</a>
+          </div>
+        </div>
+        <div class="panel-card" id="carpet">
+          <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?w=600&q=80&auto=format&fit=crop');"></div>
+          <div class="panel-body">
+            <div class="panel-icon">
+              <svg viewBox="0 0 24 24"><rect x="2" y="6" width="20" height="14" rx="2"/><path d="M2 12h20"/></svg>
+            </div>
+            <h3>Carpet &amp; Sofa Cleaning</h3>
+            <a href="quote.html" class="learn-more">Learn More</a>
+          </div>
+        </div>
+        <div class="panel-card" id="disinfection">
+          <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=600&q=80&auto=format&fit=crop');"></div>
+          <div class="panel-body">
+            <div class="panel-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2v6M12 14v8M2 12h6M14 12h8"/></svg>
+            </div>
+            <h3>Disinfection &amp; Sanitization</h3>
+            <a href="quote.html" class="learn-more">Learn More</a>
+          </div>
+        </div>
+        <div class="panel-card" id="addon">
+          <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1581578017093-cd30fce4eeb7?w=600&q=80&auto=format&fit=crop');"></div>
+          <div class="panel-body">
+            <div class="panel-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+            </div>
+            <h3>Add-On Services</h3>
+            <a href="quote.html" class="learn-more">Learn More</a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CTA -->
-<section class="cta-strip">
-  <div class="container cta-strip-inner">
-    <div>
-      <span class="eyebrow"><span class="silver-rule"></span>Residential Bookings</span>
-      <h2 style="margin-top:24px;">Your home deserves <em class="display-italic">better than average.</em></h2>
-      <p>Submit your property details and get a tailored quote back the same day.</p>
+  <!-- ===== POST CONSTRUCTION CLEANING (3 TIERS) ===== -->
+  <section class="section" style="padding-top: 20px;" id="post-construction-detail">
+    <div class="section-inner">
+      <div class="feature-bar">
+        <div class="feature-content">
+          <h2>Post Construction Cleaning</h2>
+          <p style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--silver-300); margin-bottom: 8px;">3 Tiers Of Service</p>
+          <div class="tier-grid">
+            <div class="tier-card">
+              <h4>Tier 1</h4>
+              <h3>Rough Clean</h3>
+              <ul>
+                <li>Debris Removal</li>
+                <li>Dust &amp; Dirt Cleaning</li>
+                <li>Surface Wipe Downs</li>
+              </ul>
+            </div>
+            <div class="tier-card">
+              <h4>Tier 2</h4>
+              <h3>Detail Clean</h3>
+              <ul>
+                <li>Deep Cleaning</li>
+                <li>Windows &amp; Tracks</li>
+                <li>Cabinetry &amp; Fixtures</li>
+              </ul>
+            </div>
+            <div class="tier-card">
+              <h4>Tier 3</h4>
+              <h3>Final Clean</h3>
+              <ul>
+                <li>Final Touches</li>
+                <li>Polishing &amp; Detailing</li>
+                <li>Move-In-Ready Finish</li>
+              </ul>
+            </div>
+          </div>
+          <a href="quote.html" class="btn btn-primary btn-small" style="align-self: flex-start; margin-top: 24px;">Get a Quote</a>
+        </div>
+        <div class="feature-image" style="background-image: url('https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=900&q=80&auto=format&fit=crop');"></div>
+      </div>
     </div>
-    <div class="cta-strip-actions">
-      <a href="quote.html" class="btn btn-primary">Request Residential Quote<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-      <a href="about.html" class="btn btn-ghost">Learn About Cleanova</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><img src="logo.png" alt="Cleanova Building Services"><p>Premium commercial and residential facility services across Metro Atlanta. Operating at the standard businesses and homeowners deserve.</p></div>
-      <div class="footer-col"><h4>Services</h4><ul><li><a href="commercial.html">Commercial</a></li><li><a href="residential.html">Residential</a></li><li><a href="residential.html#post-construction">Post-Construction</a></li><li><a href="commercial.html#floor-care">Floor Restoration</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="quote.html">Get a Quote</a></li><li><a href="about.html#areas">Service Areas</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@cleanova.com">hello@cleanova.com</a></li><li><a href="tel:+14045550100">(404) 555-0100</a></li><li>Metro Atlanta, GA</li><li>Mon–Sun · 24/7</li></ul></div>
+  <!-- ===== CTA STRIP ===== -->
+  <section class="cta-strip">
+    <h2>Your Home Deserves The Best.</h2>
+    <p>Get a same-day quote for a deep clean, move-in/out, or recurring service.</p>
+    <div class="cta-actions">
+      <a href="quote.html" class="btn btn-primary">Get a Quote</a>
+      <a href="commercial.html" class="btn btn-ghost">View Commercial</a>
     </div>
-    <div class="footer-bottom"><small>© 2026 Cleanova Building Services. Licensed & Insured. All rights reserved.</small><small>Metro Atlanta, Georgia</small></div>
-  </div>
-</footer>
+  </section>
 
-<script src="//code.tidio.co/cleanova.js" async></script>
-<script src="script.js"></script>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Cleanova Building Services">
+          <p>Premium commercial and residential cleaning services across Metro Atlanta. Exceptional standards, every time.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="none" stroke="#0a0a0a" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="#0a0a0a"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-list">
+            <li><a href="commercial.html">Commercial Cleaning</a></li>
+            <li><a href="residential.html">Residential Cleaning</a></li>
+            <li><a href="residential.html#postconstruction">Post Construction</a></li>
+            <li><a href="commercial.html#disinfection">Disinfection</a></li>
+            <li><a href="commercial.html#floor">Floor Care</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#areas">Service Areas</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+            (404) 555-0100
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            hello@cleanova.com
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Lawrenceville, GA<br>Serving Metro Atlanta
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Cleanova Building Services</div>
+        <div>Licensed &amp; Insured · Metro Atlanta</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
