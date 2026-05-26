@@ -174,7 +174,7 @@ p { color: var(--silver-300); }
   background: var(--black-3);
 }
 
-.nav-cta {
+.nav-links a.nav-cta {
   padding: 12px 12px 12px 24px;
   background: var(--silver-100);
   color: var(--black);
@@ -192,7 +192,7 @@ p { color: var(--silver-300); }
   white-space: nowrap;
 }
 
-.nav-cta::after {
+.nav-links a.nav-cta::after {
   content: '→';
   width: 40px;
   height: 40px;
@@ -210,11 +210,11 @@ p { color: var(--silver-300); }
   transition: all 0.2s ease;
 }
 
-.nav-cta:hover {
+.nav-links a.nav-cta:hover {
   background: var(--silver-200);
 }
 
-.nav-cta:hover::after {
+.nav-links a.nav-cta:hover::after {
   transform: translateX(3px);
   background: rgba(0, 0, 0, 0.14);
 }
