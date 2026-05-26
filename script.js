@@ -1,74 +1,70 @@
-/* ============================================
-   CLEANOVA — Shared JavaScript v2
-   ============================================ */
-
-// Nav scroll state
+// ===== NAV SCROLL =====
 const nav = document.querySelector('.nav');
 if (nav) {
-  const onScroll = () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 30) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  });
 }
 
-// Mobile hamburger
-const hamburger = document.querySelector('.hamburger');
+// ===== MOBILE NAV TOGGLE =====
+const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
-if (hamburger && navLinks) {
-  hamburger.addEventListener('click', () => {
-    hamburger.classList.toggle('open');
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
     navLinks.classList.toggle('open');
-    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
   });
-  navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      hamburger.classList.remove('open');
-      navLinks.classList.remove('open');
-      document.body.style.overflow = '';
+  // Close on link click (mobile)
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 600) navLinks.classList.remove('open');
     });
   });
 }
 
-// Quote form: commercial / residential toggle
+// ===== QUOTE FORM TOGGLE =====
 const toggleBtns = document.querySelectorAll('.toggle-btn');
-const formSections = document.querySelectorAll('.form-section');
+const commercialFields = document.getElementById('commercial-fields');
+const residentialFields = document.getElementById('residential-fields');
+
 if (toggleBtns.length) {
   toggleBtns.forEach(btn => {
     btn.addEventListener('click', () => {
       toggleBtns.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const target = btn.dataset.target;
-      formSections.forEach(s => {
-        s.classList.toggle('active', s.dataset.section === target);
-      });
-    });
-  });
-}
-
-// File upload feedback
-const fileInput = document.querySelector('.file-upload input[type="file"]');
-const fileText = document.querySelector('.file-upload .text');
-if (fileInput && fileText) {
-  const originalHTML = fileText.innerHTML;
-  fileInput.addEventListener('change', e => {
-    const n = e.target.files.length;
-    fileText.innerHTML = n
-      ? `<strong>${n} file${n > 1 ? 's' : ''} selected</strong><br><span style="font-size:0.82rem;color:var(--silver-500)">Click to change</span>`
-      : originalHTML;
-  });
-}
-
-// Intersection reveal
-const revealEls = document.querySelectorAll('[data-reveal]');
-if (revealEls.length && 'IntersectionObserver' in window) {
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('revealed');
-        obs.unobserve(entry.target);
+      const type = btn.dataset.type;
+      const hiddenInput = document.getElementById('service-type');
+      if (hiddenInput) hiddenInput.value = type;
+      if (commercialFields && residentialFields) {
+        if (type === 'commercial') {
+          commercialFields.style.display = 'block';
+          residentialFields.style.display = 'none';
+        } else {
+          commercialFields.style.display = 'none';
+          residentialFields.style.display = 'block';
+        }
       }
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
-  revealEls.forEach(el => obs.observe(el));
+  });
 }
+
+// ===== FILE INPUT FEEDBACK =====
+const fileInput = document.querySelector('.file-input-wrap input[type="file"]');
+const fileLabel = document.querySelector('.file-input-wrap span');
+if (fileInput && fileLabel) {
+  const originalText = fileLabel.textContent;
+  fileInput.addEventListener('change', () => {
+    if (fileInput.files.length) {
+      const names = Array.from(fileInput.files).map(f => f.name).join(', ');
+      fileLabel.textContent = names.length > 50 ? `${fileInput.files.length} files selected` : names;
+    } else {
+      fileLabel.textContent = originalText;
+    }
+  });
+}
+
+// ===== SET ACTIVE NAV LINK =====
+const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
+  if (link.dataset.page === currentPath) link.classList.add('active');
+});
