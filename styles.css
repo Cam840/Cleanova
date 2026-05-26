@@ -92,7 +92,7 @@ p { color: var(--silver-300); }
 .nav-inner {
   max-width: 1400px;
   margin: 0 auto;
-  padding: 26px 40px;
+  padding: 22px 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
