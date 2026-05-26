@@ -1346,57 +1346,146 @@ p { color: var(--silver-300); }
 }
 
 /* ============ ABOUT PAGE CONTACT GRID ============ */
+#contact {
+  position: relative;
+  background:
+    radial-gradient(circle at center top, rgba(255,255,255,0.055), transparent 38%),
+    var(--black);
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-  margin-top: 50px;
+  gap: 22px;
+  margin-top: 55px;
 }
 
 .contact-card {
-  background: var(--black-2);
-  border: 1px solid var(--line);
-  padding: 36px 30px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--black-2), var(--black-1));
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 24px;
+  padding: 46px 32px 42px;
   text-align: center;
-  transition: all 0.2s ease;
+  transition: all 0.35s ease;
+  cursor: pointer;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.12),
+    transparent 35%,
+    transparent 65%,
+    rgba(255,255,255,0.05)
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.contact-card::after {
+  display: inline-block;
+  margin-top: 22px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--silver-100);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.35s ease;
+}
+
+.contact-card:nth-child(1)::after {
+  content: 'Call Now →';
+}
+
+.contact-card:nth-child(2)::after {
+  content: 'Send Email →';
+}
+
+.contact-card:nth-child(3)::after {
+  content: 'View Area →';
 }
 
 .contact-card:hover {
-  border-color: var(--silver-500);
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.26);
+  box-shadow:
+    0 24px 60px rgba(0, 0, 0, 0.55),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.contact-card:hover::before {
+  opacity: 1;
+}
+
+.contact-card:hover::after {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .contact-icon {
-  width: 46px;
-  height: 46px;
-  border: 1px solid var(--silver-500);
+  width: 58px;
+  height: 58px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 18px;
+  margin: 0 auto 22px;
+  background: rgba(255, 255, 255, 0.035);
+  transition: all 0.35s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.12) rotate(3deg);
+  background: var(--silver-100);
+  border-color: var(--silver-100);
 }
 
 .contact-icon svg {
-  width: 18px;
-  height: 18px;
+  width: 20px;
+  height: 20px;
   stroke: var(--silver-200);
   stroke-width: 1.5;
   fill: none;
+  transition: all 0.35s ease;
+}
+
+.contact-card:hover .contact-icon svg {
+  stroke: var(--black);
 }
 
 .contact-card h3 {
-  font-size: 0.78rem;
-  letter-spacing: 0.2em;
+  font-size: 0.82rem;
+  letter-spacing: 0.22em;
   margin-bottom: 14px;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-card p {
-  font-size: 13px;
+  font-size: 13.5px;
   line-height: 1.7;
   color: var(--silver-200);
+  position: relative;
+  z-index: 2;
 }
 
-.contact-card a:hover { color: var(--silver-100); }
+.contact-card a {
+  transition: all 0.25s ease;
+}
+
+.contact-card a:hover {
+  color: var(--silver-100);
+}
 
 /* ============ CALENDLY EMBED ============ */
 .calendly-wrap {
