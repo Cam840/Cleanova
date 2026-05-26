@@ -1804,3 +1804,40 @@ p { color: var(--silver-300); }
   .cta-actions { flex-direction: column; align-items: stretch; }
   .cta-actions .btn { width: 100%; }
 }
+
+/* ============ SCROLL REVEAL ANIMATION ============ */
+.reveal {
+  opacity: 0;
+  transform: translateY(45px);
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease;
+}
+
+.reveal.reveal-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Slight delay options for cards */
+.reveal-delay-1 {
+  transition-delay: 0.08s;
+}
+
+.reveal-delay-2 {
+  transition-delay: 0.16s;
+}
+
+.reveal-delay-3 {
+  transition-delay: 0.24s;
+}
+
+.reveal-delay-4 {
+  transition-delay: 0.32s;
+}
+
+/* Prevent weird animation on the fixed nav */
+.nav.reveal {
+  opacity: 1;
+  transform: none;
+}
