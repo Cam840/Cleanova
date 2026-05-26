@@ -317,9 +317,7 @@ section { padding: var(--section-y) 0; position: relative; }
   content: '';
   position: absolute;
   inset: 0;
-  background:
-    radial-gradient(ellipse at 30% 40%, rgba(45,107,66,0.22) 0%, transparent 55%),
-    linear-gradient(180deg, rgba(8,10,9,0.3) 0%, rgba(8,10,9,0.85) 100%);
+
 }
 
 .hero-grid-bg {
