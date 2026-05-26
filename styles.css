@@ -76,32 +76,52 @@ p { color: var(--silver-300); }
 /* ============ NAV ============ */
 .nav {
   position: fixed;
-  top: 0; left: 0; right: 0;
+  top: 0; 
+  left: 0; 
+  right: 0;
   z-index: 100;
-  background: rgba(0, 0, 0, 0.78);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line-soft);
-  transition: background 0.3s ease;
+  padding: 18px 28px 0;
+  background: transparent;
+  border-bottom: none;
+  transition: all 0.3s ease;
 }
 
 .nav.scrolled {
-  background: rgba(0, 0, 0, 0.95);
+  padding-top: 10px;
+}
+
+.nav.scrolled .nav-inner {
+  background: rgba(0, 0, 0, 0.92);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
 }
 
 .nav-inner {
-  max-width: 1400px;
+  max-width: 1450px;
   margin: 0 auto;
-  padding: 22px 40px;
+  padding: 18px 34px;
+  min-height: 92px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
+
+  background: rgba(5, 5, 5, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+
+  position: relative;
 }
 
 .nav-logo img {
-  height: 65px;
+  height: 68px;
   width: auto;
+  object-fit: contain;
 }
 
 .nav-links {
@@ -1505,7 +1525,19 @@ p { color: var(--silver-300); }
 }
 
 @media (max-width: 600px) {
-  .nav-inner { padding: 18px 20px; }
+  .nav {
+    padding: 10px 12px 0;
+  }
+
+  .nav-inner {
+    padding: 14px 18px;
+    min-height: 76px;
+    border-radius: 16px;
+  }
+
+  .nav-logo img {
+    height: 54px;
+  }
   .nav-links {
     display: none;
     position: absolute;
