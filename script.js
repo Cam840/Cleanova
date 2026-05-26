@@ -109,7 +109,7 @@ revealItems.forEach(item => {
   revealObserver.observe(item);
 });
 
-// ===== INDEX SERVICE DETAILS =====
+// ===== INDEX SERVICE DETAILS POPUP =====
 const serviceDetails = {
   carpet: {
     title: 'Carpet Cleaning Extraction',
@@ -224,52 +224,65 @@ const serviceDetails = {
 };
 
 const serviceCards = document.querySelectorAll('.service-card[data-service]');
-const servicePanel = document.getElementById('service-detail-panel');
-const serviceTitle = document.getElementById('service-detail-title');
-const serviceText = document.getElementById('service-detail-text');
-const serviceList = document.getElementById('service-detail-list');
-const serviceClose = document.querySelector('.service-detail-close');
+const serviceModal = document.getElementById('service-modal');
+const serviceModalImage = document.getElementById('service-modal-image');
+const serviceModalTitle = document.getElementById('service-modal-title');
+const serviceModalText = document.getElementById('service-modal-text');
+const serviceModalList = document.getElementById('service-modal-list');
+const serviceModalClose = document.querySelector('.service-modal-close');
+const serviceModalBackdrop = document.querySelector('.service-modal-backdrop');
 
-function openServiceDetail(serviceKey) {
+function openServiceModal(card) {
+  const serviceKey = card.dataset.service;
   const detail = serviceDetails[serviceKey];
 
-  if (!detail || !servicePanel || !serviceTitle || !serviceText || !serviceList) return;
+  if (!detail || !serviceModal || !serviceModalTitle || !serviceModalText || !serviceModalList) return;
 
-  serviceTitle.textContent = detail.title;
-  serviceText.textContent = detail.text;
+  const imageElement = card.querySelector('.panel-image');
+  const imageBackground = imageElement ? imageElement.style.backgroundImage : '';
 
-  serviceList.innerHTML = detail.points
-    .map(point => `<li>${point}</li>`)
-    .join('');
+  serviceModalTitle.textContent = detail.title;
+  serviceModalText.textContent = detail.text;
+  serviceModalList.innerHTML = detail.points.map(point => `<li>${point}</li>`).join('');
 
-  servicePanel.classList.add('open');
+  if (serviceModalImage) {
+    serviceModalImage.style.backgroundImage = imageBackground;
+  }
 
-  serviceCards.forEach(card => {
-    card.classList.toggle('active', card.dataset.service === serviceKey);
-  });
+  serviceModal.classList.add('open');
+  document.body.classList.add('modal-open');
+}
 
-  servicePanel.scrollIntoView({
-    behavior: 'smooth',
-    block: 'center'
-  });
+function closeServiceModal() {
+  if (!serviceModal) return;
+
+  serviceModal.classList.remove('open');
+  document.body.classList.remove('modal-open');
 }
 
 serviceCards.forEach(card => {
   card.addEventListener('click', () => {
-    openServiceDetail(card.dataset.service);
+    openServiceModal(card);
   });
 
   card.addEventListener('keydown', event => {
     if (event.key === 'Enter' || event.key === ' ') {
       event.preventDefault();
-      openServiceDetail(card.dataset.service);
+      openServiceModal(card);
     }
   });
 });
 
-if (serviceClose) {
-  serviceClose.addEventListener('click', () => {
-    servicePanel.classList.remove('open');
-    serviceCards.forEach(card => card.classList.remove('active'));
-  });
+if (serviceModalClose) {
+  serviceModalClose.addEventListener('click', closeServiceModal);
 }
+
+if (serviceModalBackdrop) {
+  serviceModalBackdrop.addEventListener('click', closeServiceModal);
+}
+
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape') {
+    closeServiceModal();
+  }
+});
