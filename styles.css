@@ -2019,3 +2019,307 @@ body.modal-open {
   opacity: 1;
   transform: none;
 }
+
+/* ==================================================
+   DE-BOX GENERIC SECTIONS
+   Keeps service image cards, removes repetitive boxes
+   ================================================== */
+
+/* ---------- WHY CHOOSE SECTION: no boxes ---------- */
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 58px 50px;
+}
+
+.why-card {
+  background: transparent;
+  border: none;
+  padding: 0;
+  text-align: left;
+  position: relative;
+  transition: transform 0.28s ease;
+}
+
+.why-card::before {
+  content: '';
+  display: block;
+  width: 82px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--silver-100), transparent);
+  margin-bottom: 26px;
+}
+
+.why-card:hover {
+  transform: translateY(-6px);
+}
+
+.why-icon {
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  margin: 0 0 22px;
+  justify-content: flex-start;
+}
+
+.why-icon svg {
+  width: 30px;
+  height: 30px;
+  stroke: var(--silver-200);
+  stroke-width: 1.25;
+}
+
+.why-card h3 {
+  font-size: 0.86rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 14px;
+}
+
+.why-card p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--silver-300);
+  max-width: 360px;
+}
+
+
+/* ---------- STATS: make it feel like a brand strip, not boxes ---------- */
+.stats-row {
+  background: linear-gradient(180deg, var(--black-1), var(--black));
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  gap: 0;
+}
+
+.stat {
+  border-right: none;
+  padding: 58px 30px;
+  position: relative;
+}
+
+.stat::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 28%;
+  height: 44%;
+  width: 1px;
+  background: linear-gradient(180deg, transparent, rgba(255,255,255,0.16), transparent);
+}
+
+.stat:last-child::after {
+  display: none;
+}
+
+.stat-number {
+  font-size: clamp(1.9rem, 3vw, 3rem);
+}
+
+.stat-label {
+  margin-top: 10px;
+}
+
+
+/* ---------- PROCESS / WHAT HAPPENS NEXT: timeline feel ---------- */
+.happens-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 34px;
+}
+
+.happens-step {
+  background: transparent;
+  border: none;
+  padding: 0 0 0 24px;
+  position: relative;
+}
+
+.happens-step::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, var(--silver-300), transparent);
+}
+
+.happens-step-num {
+  font-size: 2.8rem;
+  margin-bottom: 18px;
+  color: rgba(245,245,243,0.32);
+}
+
+.happens-step h3 {
+  margin-bottom: 12px;
+}
+
+.happens-step p {
+  font-size: 13.5px;
+  line-height: 1.75;
+}
+
+
+/* ---------- CONTACT: no boxed cards, more elegant columns ---------- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  margin-top: 60px;
+}
+
+.contact-card {
+  background: transparent;
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.16);
+  border-radius: 0;
+  padding: 34px 0 0;
+  text-align: left;
+  box-shadow: none;
+  overflow: visible;
+}
+
+.contact-card::before,
+.contact-card::after {
+  display: none;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  background: transparent;
+  border-color: rgba(255,255,255,0.34);
+  box-shadow: none;
+}
+
+.contact-icon {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  margin: 0 0 22px;
+  justify-content: flex-start;
+}
+
+.contact-card:hover .contact-icon {
+  transform: none;
+  background: transparent;
+  border: none;
+}
+
+.contact-icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: var(--silver-200);
+}
+
+.contact-card:hover .contact-icon svg {
+  stroke: var(--silver-100);
+}
+
+.contact-card h3 {
+  font-size: 0.82rem;
+  letter-spacing: 0.22em;
+  margin-bottom: 12px;
+}
+
+.contact-card p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+
+/* ---------- TESTIMONIAL: remove boxed container ---------- */
+.testimonial {
+  background: transparent;
+  border: none;
+  padding: 20px 40px;
+  max-width: 850px;
+}
+
+.testimonial::before {
+  content: '';
+  display: block;
+  width: 90px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--silver-300), transparent);
+  margin: 0 auto 34px;
+}
+
+.testimonial p {
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+}
+
+
+/* ---------- TIER CARDS: make them list columns instead of boxes ---------- */
+.tier-grid {
+  gap: 34px;
+}
+
+.tier-card {
+  background: transparent;
+  border: none;
+  border-left: 1px solid rgba(255,255,255,0.16);
+  padding: 0 0 0 24px;
+}
+
+.tier-card h3 {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.tier-card li {
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+
+
+/* ---------- FEATURE BAR: soften large boxed split sections ---------- */
+.feature-bar {
+  background: transparent;
+  border: none;
+  gap: 40px;
+  align-items: center;
+}
+
+.feature-content {
+  padding: 20px 0;
+}
+
+.feature-image {
+  border-radius: 28px;
+  overflow: hidden;
+  min-height: 420px;
+}
+
+
+/* ---------- Keep service cards boxed because they are interactive image cards ---------- */
+.panel-card {
+  /* Leave these as visual cards */
+}
+
+@media (max-width: 900px) {
+  .why-grid,
+  .contact-grid,
+  .happens-grid,
+  .tier-grid {
+    grid-template-columns: 1fr;
+    gap: 34px;
+  }
+
+  .stat::after {
+    display: none;
+  }
+
+  .contact-card,
+  .tier-card,
+  .happens-step {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .happens-step::before {
+    display: none;
+  }
+}
