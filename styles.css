@@ -1087,6 +1087,12 @@ p { color: var(--silver-300); }
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
+
+.areas-grid .btn {
+  margin-top: 4px;
+  box-shadow: 0 14px 35px rgba(255,255,255,0.06);
+}
+
 /* ============ CTA STRIP ============ */
 .cta-strip {
   padding: 90px 40px;
