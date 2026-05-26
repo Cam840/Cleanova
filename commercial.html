@@ -1,229 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Commercial Cleaning · Cleanova Building Services — Metro Atlanta</title>
-<meta name="description" content="Commercial janitorial, floor restoration, carpet care, and recurring facility maintenance for offices, medical, retail, and warehouses across Metro Atlanta.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commercial Cleaning Services — Cleanova Building Services</title>
+  <meta name="description" content="Reliable, detail-oriented commercial cleaning for offices, medical facilities, retail, and more across Metro Atlanta.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body>
 
-<nav class="nav">
-  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Cleanova Building Services"></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="commercial.html" class="active">Commercial</a></li>
-    <li><a href="residential.html">Residential</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="quote.html" class="nav-cta">Get a Quote</a></li>
-  </ul>
-  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
-
-<header class="page-head">
-  <div class="page-head-bg">
-    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1800&q=80&auto=format&fit=crop" alt="Commercial office interior">
-  </div>
-  <div class="hero-grid-bg"></div>
-  <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span>Commercial</div>
-    <span class="eyebrow"><span class="silver-rule"></span>Division 01 · Commercial</span>
-    <h1>Facility services <em class="display-italic">built for contracts</em> — not one-off jobs.</h1>
-    <p class="lead">Systems, equipment, and accountability that match the scale of corporate facility management. We serve offices, medical, retail, warehouses, and multifamily across Metro Atlanta.</p>
-    <div style="margin-top:40px; display:flex; gap:14px; flex-wrap:wrap;">
-      <a href="quote.html" class="btn btn-primary">Request Commercial Quote<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-      <a href="#services" class="btn btn-ghost">View Services</a>
+  <!-- ===== NAV ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="logo.png" alt="Cleanova Building Services"></a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-page="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="commercial.html" data-page="commercial.html">Commercial</a>
+          <div class="nav-dropdown-menu">
+            <a href="commercial.html#office">Office Cleaning</a>
+            <a href="commercial.html#medical">Medical & Dental</a>
+            <a href="commercial.html#retail">Retail & Grocery</a>
+            <a href="commercial.html#floor">Floor Care</a>
+            <a href="commercial.html#porter">Day Porter Services</a>
+            <a href="commercial.html#disinfection">Disinfection</a>
+            <a href="commercial.html#construction">Construction Clean-Up</a>
+            <a href="commercial.html#window">Window Cleaning</a>
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <a href="residential.html" data-page="residential.html">Residential</a>
+          <div class="nav-dropdown-menu">
+            <a href="residential.html#standard">Standard Cleaning</a>
+            <a href="residential.html#deep">Deep Cleaning</a>
+            <a href="residential.html#movein">Move-In / Move-Out</a>
+            <a href="residential.html#postconstruction">Post Construction</a>
+            <a href="residential.html#openhouse">Open House</a>
+            <a href="residential.html#carpet">Carpet & Sofa</a>
+            <a href="residential.html#disinfection">Disinfection</a>
+            <a href="residential.html#addon">Add-On Services</a>
+          </div>
+        </li>
+        <li><a href="about.html" data-page="about.html">About Us</a></li>
+        <li><a href="about.html#areas">Service Areas</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+        <li><a href="quote.html" class="nav-cta">Get a Quote</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-  </div>
-</header>
+  </nav>
 
-<section style="padding-top:50px; padding-bottom:50px;">
-  <div class="container">
-    <div class="stats-row" style="margin-top:0;">
-      <div class="stat"><div class="num">24/7</div><div class="label">Off-Hours Capable</div></div>
-      <div class="stat"><div class="num">14+</div><div class="label">Industries Served</div></div>
-      <div class="stat"><div class="num">100%</div><div class="label">Licensed & Insured</div></div>
-      <div class="stat"><div class="num">Same Day</div><div class="label">Quote Turnaround</div></div>
+  <!-- ===== PAGE HEAD ===== -->
+  <section class="page-head commercial">
+    <div class="page-head-inner">
+      <h1>Commercial Services</h1>
+      <p>We deliver reliable, detail-oriented cleaning solutions for businesses and facilities of all sizes.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PHOTO BAND -->
-<div class="img-band">
-  <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1800&q=80&auto=format&fit=crop" alt="Professional cleaning equipment">
-  <div class="img-band-overlay"></div>
-</div>
-
-<!-- SERVICES -->
-<section id="services">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow"><span class="silver-rule"></span>Commercial Services</span>
-      <h2>Every service your <em class="display-italic">facility needs.</em></h2>
-    </div>
-    <div class="panel-grid">
-
-      <article class="panel" id="janitorial">
-        <div class="panel-num">01</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20 50V32l12-20 12 20v18H20z"/><path d="M26 50v-12h12v12"/></svg></div>
-        <h3>Janitorial Operations</h3>
-        <p>Daily, weekly, or custom-frequency facility maintenance. Restrooms, common areas, offices, break rooms — fully scoped and documented.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel" id="floor-care">
-        <div class="panel-num">02</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="8" y="48" width="48" height="8"/><path d="M16 48V20l16-10 16 10v28"/><rect x="24" y="30" width="16" height="18"/></svg></div>
-        <h3>Floor Restoration</h3>
-        <p>VCT strip and wax, polished concrete, hardwood refinishing, and grout restoration. We bring floors back to standard — and keep them there.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">03</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 52h40M12 44h40M20 44c0-10 8-16 12-24 4 8 12 14 12 24"/></svg></div>
-        <h3>Carpet & Upholstery</h3>
-        <p>Hot-water extraction and low-moisture systems for commercial carpet. Conference seating, lobby furniture, and cubicle panels included.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">04</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="12" y="8" width="40" height="48" rx="2"/><path d="M20 20h24M20 30h24M20 40h16"/><circle cx="46" cy="42" r="8"/><path d="M46 38v8M42 42h8"/></svg></div>
-        <h3>Window Cleaning</h3>
-        <p>Interior and exterior glass for multi-story commercial buildings. Water-fed pole systems and high-rise rigging available.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">05</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M16 48c0-8 4-16 8-20s8-8 8-16"/><path d="M24 48c0-6 4-12 8-16s8-10 8-20"/><path d="M8 52h48"/></svg></div>
-        <h3>Pressure Washing</h3>
-        <p>Exterior concrete, parking structures, building facades, dumpster pads, and drive-throughs. We restore and maintain curb appeal.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">06</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="32" cy="32" r="18"/><path d="M32 18v14M32 32l10 6"/><circle cx="32" cy="32" r="4" fill="currentColor" stroke="none"/></svg></div>
-        <h3>Disinfection Services</h3>
-        <p>Electrostatic spraying and EPA List N disinfectants for high-touch surfaces, medical environments, and post-illness protocols.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">07</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="32" cy="24" r="10"/><path d="M18 52c0-8 6-14 14-14s14 6 14 14"/></svg></div>
-        <h3>Day Porter Services</h3>
-        <p>On-site porter coverage during business hours. Lobby maintenance, restroom checks, spill response, trash rounds, and tenant support.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">08</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="12" y="20" width="40" height="32"/><path d="M12 20l8-12h24l8 12"/><line x1="32" y1="20" x2="32" y2="52"/><line x1="12" y1="36" x2="52" y2="36"/></svg></div>
-        <h3>Post-Construction Cleanup</h3>
-        <p>Rough, detailed, and final-phase construction cleaning. We prepare new and renovated commercial spaces for occupancy — on your timeline.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">09</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="8" y="28" width="20" height="24"/><circle cx="18" cy="52" r="5"/><circle cx="18" cy="52" r="2"/><rect x="36" y="20" width="20" height="32"/><circle cx="46" cy="52" r="5"/><circle cx="46" cy="52" r="2"/></svg></div>
-        <h3>Robotic Floor Equipment</h3>
-        <p>Autonomous scrubbing and mopping systems for large-format commercial floors. Warehouses, grocery, and retail floors maintained at scale.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">10</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M32 8l20 8v14c0 14-8 22-20 26-12-4-20-12-20-26V16z"/><path d="M22 32l8 8 14-14"/></svg></div>
-        <h3>Emergency Cleanup</h3>
-        <p>Rapid-response biohazard, flooding, vandalism, and post-incident remediation. 24/7 dispatch for commercial accounts under contract.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">11</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="12" y="12" width="40" height="40"/><path d="M24 12v40M40 12v40M12 28h40M12 44h40"/></svg></div>
-        <h3>Move-In / Move-Out</h3>
-        <p>Full-scope cleaning for commercial tenant transitions. We prepare vacated suites and new spaces for same-day or next-day occupancy.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-      <article class="panel">
-        <div class="panel-num">12</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M16 20h32v32H16z"/><path d="M22 28h8v8h-8zM34 28h8v8h-8zM22 40h8v12h-8zM34 40h8v12h-8z"/></svg></div>
-        <h3>Supply Management</h3>
-        <p>Restroom consumables, hand sanitizer, paper products, and janitorial supplies — stocked, tracked, and restocked as part of your service plan.</p>
-        <div class="panel-link"><span>Learn More</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- PHOTO BAND -->
-<div class="img-band">
-  <img src="https://images.unsplash.com/photo-1568992687947-868a62a9f521?w=1800&q=80&auto=format&fit=crop" alt="Office building exterior">
-  <div class="img-band-overlay"></div>
-</div>
-
-<!-- HOW WE OPERATE -->
-<section>
-  <div class="container">
-    <div class="two-col">
-      <div>
-        <span class="eyebrow"><span class="silver-rule"></span>How We Operate</span>
-        <h2 style="margin-top:24px;">Systems that <em class="display-italic">don't break</em> under volume.</h2>
-        <p style="margin-top:24px;">Most cleaning operations break down at scale — rotating crews, no accountability, and property managers chasing problems. Cleanova is built differently.</p>
-        <ul class="feature-list" style="margin-top:36px;">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Digital checklists</strong> completed shift-by-shift with supervisor sign-off</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Supervisor inspections</strong> documented with photos and sent to your contact</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Single account manager</strong> per client — direct line, direct email</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Background-checked, uniformed crews</strong> with assigned recurring teams</span></li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Flexible scheduling</strong> — nights, weekends, and overnight slots available</span></li>
-        </ul>
+  <!-- ===== WHAT WE OFFER (PANEL GRID) ===== -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="eyebrow">What We Offer</span>
       </div>
-      <div class="two-col-img">
-        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80&auto=format&fit=crop" alt="Professional team meeting">
+      <div class="panel-grid">
+        <div class="panel-card" id="office">
+          <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80&auto=format&fit=crop');"></div>
+          <div class="panel-body">
+            <div class="panel-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 21V7l9-4 9 4v14"/><path d="M9 21V12h6v9"/><path d="M3 21h18"/></svg>
+            </div>
+            <h3>Office Cleaning</h3>
+            <a href="quote.html" class="learn-more">Learn More</a>
+          </div>
+        </div>
+        <div class="panel-card" id="medical">
+          <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80&auto=format&fit=crop');"></div>
+          <div class="panel-body">
+            <div class="panel-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 4v16M4 12h16"/></svg>
+            </div>
+            <h3>Medical &amp; Dental</h3>
+            <a href="quote.html" class="learn-more">Learn More</a>
+          </div>
+        </div>
+        <div class="panel-card" id="retail">
+          <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=600&q=80&auto=format&fit=crop');"></div>
+          <div class="panel-body">
+            <div class="panel-icon">
+              <svg viewBox="0 0 24 24"><path d="M6 2L3 7v13h18V7l-3-5z"/><path d="M3 7h18"/><path d="M9 12a3 3 0 0 0 6 0"/></svg>
+            </div>
+            <h3>Retail &amp; Grocery</h3>
+            <a href="quote.html" class="learn-more">Learn More</a>
+          </div>
+        </div>
+        <div class="panel-card" id="floor">
+          <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1581578017093-cd30fce4eeb7?w=600&q=80&auto=format&fit=crop');"></div>
+          <div class="panel-body">
+            <div class="panel-icon">
+              <svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V8l7-5 7 5v13"/></svg>
+            </div>
+            <h3>Floor Care</h3>
+            <a href="quote.html" class="learn-more">Learn More</a>
+          </div>
+        </div>
+        <div class="panel-card" id="porter">
+          <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?w=600&q=80&auto=format&fit=crop');"></div>
+          <div class="panel-body">
+            <div class="panel-icon">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v2"/></svg>
+            </div>
+            <h3>Day Porter Services</h3>
+            <a href="quote.html" class="learn-more">Learn More</a>
+          </div>
+        </div>
+        <div class="panel-card" id="disinfection">
+          <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=600&q=80&auto=format&fit=crop');"></div>
+          <div class="panel-body">
+            <div class="panel-icon">
+              <svg viewBox="0 0 24 24"><path d="M12 2v6"/><path d="M8 4l8 4M16 4l-8 4"/><circle cx="12" cy="14" r="6"/></svg>
+            </div>
+            <h3>Disinfection</h3>
+            <a href="quote.html" class="learn-more">Learn More</a>
+          </div>
+        </div>
+        <div class="panel-card" id="construction">
+          <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=600&q=80&auto=format&fit=crop');"></div>
+          <div class="panel-body">
+            <div class="panel-icon">
+              <svg viewBox="0 0 24 24"><path d="M2 20h20"/><path d="M14 20V6l4 4v10"/><path d="M6 20V10l4-4v14"/></svg>
+            </div>
+            <h3>Construction Clean-Up</h3>
+            <a href="quote.html" class="learn-more">Learn More</a>
+          </div>
+        </div>
+        <div class="panel-card" id="window">
+          <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&q=80&auto=format&fit=crop');"></div>
+          <div class="panel-body">
+            <div class="panel-icon">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18"/><path d="M3 12h18M12 3v18"/></svg>
+            </div>
+            <h3>Window Cleaning</h3>
+            <a href="quote.html" class="learn-more">Learn More</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CTA -->
-<section class="cta-strip">
-  <div class="container cta-strip-inner">
-    <div>
-      <span class="eyebrow"><span class="silver-rule"></span>Commercial Contracts</span>
-      <h2 style="margin-top:24px;">Let's build the right <em class="display-italic">recurring plan.</em></h2>
-      <p>Submit your facility details and we'll prepare a tailored scope, schedule, and quote — typically same-day.</p>
+  <!-- ===== HEALTH & SAFETY FIRST ===== -->
+  <section class="section" style="padding-top: 20px;">
+    <div class="section-inner">
+      <div class="feature-bar">
+        <div class="feature-content">
+          <h2>Health &amp; Safety First</h2>
+          <p>We follow strict health and safety protocols to ensure clean, safe and healthy environments.</p>
+          <ul class="feature-list">
+            <li>Hospital-grade disinfection</li>
+            <li>OSHA compliant practices</li>
+            <li>Trained &amp; background-checked teams</li>
+            <li>Eco-friendly &amp; safe products</li>
+            <li>Detailed quality inspections</li>
+          </ul>
+          <a href="quote.html" class="btn btn-primary btn-small" style="align-self: flex-start;">Get a Quote</a>
+        </div>
+        <div class="feature-image" style="background-image: url('https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=900&q=80&auto=format&fit=crop');"></div>
+      </div>
     </div>
-    <div class="cta-strip-actions">
-      <a href="quote.html" class="btn btn-primary">Request Commercial Quote<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-      <a href="about.html" class="btn btn-ghost">Learn About Cleanova</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><img src="logo.png" alt="Cleanova Building Services"><p>Premium commercial and residential facility services across Metro Atlanta. Operating at the standard businesses and homeowners deserve.</p></div>
-      <div class="footer-col"><h4>Services</h4><ul><li><a href="commercial.html">Commercial</a></li><li><a href="residential.html">Residential</a></li><li><a href="residential.html#post-construction">Post-Construction</a></li><li><a href="commercial.html#floor-care">Floor Restoration</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="quote.html">Get a Quote</a></li><li><a href="about.html#areas">Service Areas</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@cleanova.com">hello@cleanova.com</a></li><li><a href="tel:+14045550100">(404) 555-0100</a></li><li>Metro Atlanta, GA</li><li>Mon–Sun · 24/7</li></ul></div>
+  <!-- ===== CTA STRIP ===== -->
+  <section class="cta-strip">
+    <h2>Ready To Elevate Your Facility?</h2>
+    <p>Talk to our team about a customized commercial cleaning plan that fits your schedule and standards.</p>
+    <div class="cta-actions">
+      <a href="quote.html" class="btn btn-primary">Get a Quote</a>
+      <a href="residential.html" class="btn btn-ghost">View Residential</a>
     </div>
-    <div class="footer-bottom"><small>© 2026 Cleanova Building Services. Licensed & Insured. All rights reserved.</small><small>Metro Atlanta, Georgia</small></div>
-  </div>
-</footer>
+  </section>
 
-<script src="//code.tidio.co/cleanova.js" async></script>
-<script src="script.js"></script>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Cleanova Building Services">
+          <p>Premium commercial and residential cleaning services across Metro Atlanta. Exceptional standards, every time.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="none" stroke="#0a0a0a" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="#0a0a0a"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-list">
+            <li><a href="commercial.html">Commercial Cleaning</a></li>
+            <li><a href="residential.html">Residential Cleaning</a></li>
+            <li><a href="residential.html#postconstruction">Post Construction</a></li>
+            <li><a href="commercial.html#disinfection">Disinfection</a></li>
+            <li><a href="commercial.html#floor">Floor Care</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#areas">Service Areas</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+            (404) 555-0100
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            hello@cleanova.com
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Lawrenceville, GA<br>Serving Metro Atlanta
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Cleanova Building Services</div>
+        <div>Licensed &amp; Insured · Metro Atlanta</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
