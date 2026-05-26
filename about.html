@@ -1,319 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About · Cleanova Building Services — Metro Atlanta</title>
-<meta name="description" content="Cleanova Building Services — premium facility services built on reliability, communication, and consistency. Serving commercial and residential clients across Metro Atlanta.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Outfit:wght@200;300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
-<!-- Calendly -->
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us — Cleanova Building Services</title>
+  <meta name="description" content="Built on trust. Focused on excellence. Learn about Cleanova Building Services and our mission across Metro Atlanta.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="logo.png">
 </head>
 <body>
 
-<nav class="nav">
-  <a href="index.html" class="nav-logo"><img src="logo.png" alt="Cleanova Building Services"></a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="commercial.html">Commercial</a></li>
-    <li><a href="residential.html">Residential</a></li>
-    <li><a href="about.html" class="active">About</a></li>
-    <li><a href="quote.html" class="nav-cta">Get a Quote</a></li>
-  </ul>
-  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
-</nav>
+  <!-- ===== NAV ===== -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><img src="logo.png" alt="Cleanova Building Services"></a>
+      <ul class="nav-links">
+        <li><a href="index.html" data-page="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="commercial.html" data-page="commercial.html">Commercial</a>
+          <div class="nav-dropdown-menu">
+            <a href="commercial.html#office">Office Cleaning</a>
+            <a href="commercial.html#medical">Medical & Dental</a>
+            <a href="commercial.html#retail">Retail & Grocery</a>
+            <a href="commercial.html#floor">Floor Care</a>
+            <a href="commercial.html#porter">Day Porter Services</a>
+            <a href="commercial.html#disinfection">Disinfection</a>
+            <a href="commercial.html#construction">Construction Clean-Up</a>
+            <a href="commercial.html#window">Window Cleaning</a>
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <a href="residential.html" data-page="residential.html">Residential</a>
+          <div class="nav-dropdown-menu">
+            <a href="residential.html#standard">Standard Cleaning</a>
+            <a href="residential.html#deep">Deep Cleaning</a>
+            <a href="residential.html#movein">Move-In / Move-Out</a>
+            <a href="residential.html#postconstruction">Post Construction</a>
+            <a href="residential.html#openhouse">Open House</a>
+            <a href="residential.html#carpet">Carpet & Sofa</a>
+            <a href="residential.html#disinfection">Disinfection</a>
+            <a href="residential.html#addon">Add-On Services</a>
+          </div>
+        </li>
+        <li><a href="about.html" data-page="about.html">About Us</a></li>
+        <li><a href="about.html#areas">Service Areas</a></li>
+        <li><a href="about.html#contact">Contact</a></li>
+        <li><a href="quote.html" class="nav-cta">Get a Quote</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
 
-<header class="page-head">
-  <div class="page-head-bg">
-    <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1800&q=80&auto=format&fit=crop" alt="Atlanta cityscape">
-  </div>
-  <div class="hero-grid-bg"></div>
-  <div class="container">
-    <div class="breadcrumb"><a href="index.html">Home</a><span class="sep">/</span>About</div>
-    <span class="eyebrow"><span class="silver-rule"></span>About Cleanova</span>
-    <h1>Not just another <em class="display-italic">cleaning company.</em></h1>
-    <p class="lead">We're a premium facility services and property care company built on a simple belief — that businesses and homeowners across Metro Atlanta deserve standards higher than the industry has been willing to offer.</p>
-  </div>
-</header>
+  <!-- ===== PAGE HEAD ===== -->
+  <section class="page-head about">
+    <div class="page-head-inner">
+      <h1>About Us</h1>
+      <p>Built on trust. Focused on excellence. Delivering reliable cleaning across Metro Atlanta.</p>
+    </div>
+  </section>
 
-<section style="padding-top:60px; padding-bottom:60px;">
-  <div class="container">
-    <div class="stats-row" style="margin-top:0;">
-      <div class="stat"><div class="num">2026</div><div class="label">Founded in Atlanta</div></div>
-      <div class="stat"><div class="num">8+</div><div class="label">Service Cities</div></div>
-      <div class="stat"><div class="num">100%</div><div class="label">Licensed & Insured</div></div>
-      <div class="stat"><div class="num">24/7</div><div class="label">Operations</div></div>
+  <!-- ===== ABOUT BAND ===== -->
+  <section class="about-band">
+    <div class="about-band-grid">
+      <div class="about-band-text">
+        <span class="eyebrow">About Us</span>
+        <h2>
+          Built On Trust.
+          <em>Focused on Excellence.</em>
+        </h2>
+        <p>
+          Cleanova Building Services is a professional cleaning company dedicated to delivering exceptional results for commercial and residential clients.
+        </p>
+        <p>
+          Our mission is simple: provide reliable service, communicate clearly, and keep every space immaculately clean. We treat every project with the same level of detail-oriented care, whether it's a single home or a large commercial facility.
+        </p>
+      </div>
+      <div class="about-band-image">
+        <div style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80&auto=format&fit=crop');"></div>
+        <div style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=80&auto=format&fit=crop');"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ROW ===== -->
+  <div class="stats-row">
+    <div class="stat">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Satisfaction Focused</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">Same-Day</div>
+      <div class="stat-label">Quotes</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">Experienced</div>
+      <div class="stat-label">Professionals</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">Quality</div>
+      <div class="stat-label">You Can Trust</div>
     </div>
   </div>
-</section>
 
-<!-- STORY -->
-<section>
-  <div class="container">
-    <div class="two-col">
-      <div>
-        <span class="eyebrow"><span class="silver-rule"></span>Our Story</span>
-        <h2 style="margin-top:24px;">Built from a <em class="display-italic">simple frustration.</em></h2>
-        <p style="margin-top:28px;">Cleanova was founded after years of watching property managers, business owners, and homeowners settle for cleaning services that didn't return calls, didn't follow through, and didn't take the work seriously.</p>
-        <p style="margin-top:20px;">We built this company to be the opposite — a facility services group with the systems and accountability of a corporate operation, the polish of a luxury brand, and the trust of a partner who actually shows up.</p>
-        <p style="margin-top:20px;">From contracted office janitorial to discreet luxury home care, every Cleanova engagement runs on the same foundation: <em class="display-italic">communicate clearly, execute consistently, present professionally.</em></p>
-        <div style="margin-top:44px; display:flex; gap:14px; flex-wrap:wrap;">
-          <a href="quote.html" class="btn btn-primary">Get a Quote<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
+  <!-- ===== MISSION FEATURE BAR ===== -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="feature-bar">
+        <div class="feature-image" style="background-image: url('https://images.unsplash.com/photo-1581578017093-cd30fce4eeb7?w=900&q=80&auto=format&fit=crop');"></div>
+        <div class="feature-content">
+          <span class="eyebrow" style="margin-bottom: 10px;">Our Mission</span>
+          <h2>To Elevate The Standard Of Cleaning</h2>
+          <p>Through integrity, communication, and uncompromising quality. Every team we send is trained, supervised, and held to the same high standards on every job.</p>
+          <ul class="feature-list">
+            <li>Reliable &amp; Professional</li>
+            <li>Detail-Oriented</li>
+            <li>Consistent Quality</li>
+            <li>Customer Focused</li>
+          </ul>
+          <a href="quote.html" class="btn btn-primary btn-small" style="align-self: flex-start;">Get a Quote</a>
         </div>
       </div>
-      <div class="two-col-img">
-        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=80&auto=format&fit=crop" alt="Professional team">
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE CLEANOVA ===== -->
+  <section class="section" style="background: var(--black-1); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft);">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="eyebrow">Why Choose Cleanova</span>
+        <h2>What Sets Us Apart</h2>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+          </div>
+          <h3>Same-Day Quotes</h3>
+          <p>Receive a detailed estimate within hours, not days. Fast, transparent, and accurate.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Free Consultations</h3>
+          <p>We walk every property to scope the right service plan — no obligation, no pressure.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <h3>Trained &amp; Verified Teams</h3>
+          <p>Background-checked, fully trained, and supervised crews you can trust on-site.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          </div>
+          <h3>Quality Control Inspections</h3>
+          <p>Every job ends with a quality check so the work meets the same standard, every time.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          </div>
+          <h3>Flexible Scheduling</h3>
+          <p>Daily, weekly, monthly, or one-time — we work around your schedule, not ours.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <h3>Satisfaction Guaranteed</h3>
+          <p>If something isn't right, we make it right. Your satisfaction is non-negotiable.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- VALUES -->
-<section>
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow"><span class="silver-rule"></span>Our Values</span>
-      <h2>The principles behind <em class="display-italic">every job.</em></h2>
+  <!-- ===== TESTIMONIAL ===== -->
+  <section class="testimonial-section">
+    <div class="section-header">
+      <span class="eyebrow">Testimonials</span>
     </div>
-    <div class="panel-grid">
-      <article class="panel">
-        <div class="panel-num">01</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="32" cy="32" r="22"/><path d="M32 18v14l9 6"/></svg></div>
-        <h3>Reliability</h3>
-        <p>We show up when we say we will. Every appointment, every recurring visit, every emergency call — execution is non-negotiable.</p>
-        <div class="panel-link"><span>Our Standard</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-      <article class="panel">
-        <div class="panel-num">02</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 18h40v24H30l-8 8v-8H12z"/><path d="M22 28h20M22 34h14"/></svg></div>
-        <h3>Communication</h3>
-        <p>Same-day quote responses. Direct lines to your account manager. No ghosting, no chasing, no surprises.</p>
-        <div class="panel-link"><span>Our Standard</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-      <article class="panel">
-        <div class="panel-num">03</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="12" y="12" width="14" height="14"/><rect x="38" y="12" width="14" height="14"/><rect x="12" y="38" width="14" height="14"/><rect x="38" y="38" width="14" height="14"/></svg></div>
-        <h3>Consistency</h3>
-        <p>The third visit looks identical to the first. Standardized scopes, trained crews, and quality checklists keep results uniform.</p>
-        <div class="panel-link"><span>Our Standard</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-      <article class="panel">
-        <div class="panel-num">04</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M32 8l20 8v14c0 14-8 22-20 26-12-4-20-12-20-26V16z"/><path d="M22 32l8 8 14-14"/></svg></div>
-        <h3>Accountability</h3>
-        <p>Quality assurance audits. Documented checklists. If it's not right, we return and make it right — no invoicing games.</p>
-        <div class="panel-link"><span>Our Standard</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-      <article class="panel">
-        <div class="panel-num">05</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="32" cy="22" r="9"/><path d="M14 52c0-10 8-16 18-16s18 6 18 16"/></svg></div>
-        <h3>Professionalism</h3>
-        <p>Uniformed crews. Branded vehicles. Polished communication. Every touchpoint reflects the standard of your property.</p>
-        <div class="panel-link"><span>Our Standard</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
-      <article class="panel">
-        <div class="panel-num">06</div>
-        <div class="panel-icon"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="28" cy="28" r="14"/><path d="M38 38l12 12"/></svg></div>
-        <h3>Detail Obsession</h3>
-        <p>The baseboards, door tracks, ceiling vents — the parts most companies skip. We were built around the work nobody else wants to do.</p>
-        <div class="panel-link"><span>Our Standard</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></div>
-      </article>
+    <div class="testimonial">
+      <div class="testimonial-quote">"</div>
+      <p>Cleanova has been incredible to work with. Their team is professional, reliable, and our facility has never looked better.</p>
+      <div class="testimonial-cite">— Property Manager, Alpharetta</div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- PHOTO BAND -->
-<div class="img-band">
-  <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1800&q=80&auto=format&fit=crop" alt="Professional cleaning service">
-  <div class="img-band-overlay">
-    <div class="img-band-text container">
-      <h2 style="text-align:center;"><em class="display-italic">Communicate clearly.</em><br>Execute consistently.</h2>
-    </div>
-  </div>
-</div>
-
-<!-- STANDARDS -->
-<section>
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow"><span class="silver-rule"></span>The Cleanova Standard</span>
-      <h2>What you can <em class="display-italic">always expect.</em></h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-item"><div class="num">01</div><h4>Licensed & Insured</h4><p>Full general liability and workers' comp on every job, commercial or residential.</p></div>
-      <div class="why-item"><div class="num">02</div><h4>Direct Account Contact</h4><p>One named account manager. Direct line, direct email. No call centers, no tickets.</p></div>
-      <div class="why-item"><div class="num">03</div><h4>Transparent Pricing</h4><p>Itemized scopes. No mystery fees. What we quote is what you pay — including supplies.</p></div>
-      <div class="why-item"><div class="num">04</div><h4>Discretion</h4><p>For luxury residential and executive accounts — confidentiality is standard, not optional.</p></div>
-      <div class="why-item"><div class="num">05</div><h4>Trained Crews</h4><p>Background-checked, uniformed, protocol-trained. The same faces every visit when possible.</p></div>
-      <div class="why-item"><div class="num">06</div><h4>Real Equipment</h4><p>Commercial-grade machines and EPA-approved chemistry — not a vacuum and a spray bottle.</p></div>
-      <div class="why-item"><div class="num">07</div><h4>Local Operations</h4><p>Headquartered in Lawrenceville. Local crews, local response times, local accountability.</p></div>
-      <div class="why-item"><div class="num">08</div><h4>Long-Term Partner</h4><p>We don't chase one-off jobs. We build relationships with clients who want consistency for years.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- SCHEDULE / CALENDLY -->
-<section>
-  <div class="container" style="max-width:900px;">
-    <div class="section-head center">
-      <span class="eyebrow"><span class="silver-rule"></span>Book a Walkthrough</span>
-      <h2>Schedule a <em class="display-italic">free consultation.</em></h2>
-      <p>Pick a time that works for you — we'll come to your facility or home, assess the scope, and follow up with a written quote same-day.</p>
-    </div>
-    <!-- Calendly inline widget — replace URL with your actual Calendly link -->
-    <div class="embed-wrap" style="height:700px;">
-      <div class="calendly-inline-widget"
-           data-url="https://calendly.com/cleanova/consultation?hide_gdpr_banner=1&background_color=111412&text_color=f5f5f3&primary_color=2d6b42"
-           style="min-width:320px;height:700px;"></div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT INFO -->
-<section>
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow"><span class="silver-rule"></span>Get in Touch</span>
-      <h2>Reach a real <em class="display-italic">account manager.</em></h2>
-    </div>
-    <div class="contact-grid">
-      <a href="mailto:hello@cleanova.com" class="contact-card">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16c1 0 2 1 2 2v12c0 1-1 2-2 2H4c-1 0-2-1-2-2V6c0-1 1-2 2-2z"/><polyline points="22 6 12 13 2 6"/></svg></div>
-        <h4>Email</h4>
-        <p>For inquiries, partnerships, and account questions.</p>
-        <p style="margin-top:14px;"><strong>hello@cleanova.com</strong></p>
-      </a>
-      <a href="tel:+14045550100" class="contact-card">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.33 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
-        <h4>Phone</h4>
-        <p>Direct line. Extended hours for active clients.</p>
-        <p style="margin-top:14px;"><strong>(404) 555-0100</strong></p>
-      </a>
-      <div class="contact-card">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-        <h4>Location</h4>
-        <p>Headquartered in Lawrenceville, serving all of Metro Atlanta.</p>
-        <p style="margin-top:14px;"><strong>Metro Atlanta, GA</strong></p>
+  <!-- ===== SCHEDULE A CONSULTATION (CALENDLY) ===== -->
+  <section class="section" id="schedule" style="background: var(--black-1); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft);">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="eyebrow">Schedule</span>
+        <h2>Book A Free Consultation</h2>
+        <p>Pick a time that works for you. We'll walk your space and put together a custom plan.</p>
       </div>
-      <div class="contact-card">
-        <div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-        <h4>Hours</h4>
-        <p>Office hours weekdays. Commercial ops run 24/7 for contracts.</p>
-        <p style="margin-top:14px;"><strong>Mon–Sun · 24/7</strong></p>
+      <div class="calendly-wrap">
+        <!-- Calendly inline widget — replace data-url with your real Calendly link -->
+        <div class="calendly-inline-widget"
+             data-url="https://calendly.com/cleanova/consultation?hide_gdpr_banner=1&background_color=0a0a0a&text_color=d8d8d4&primary_color=f5f5f3"
+             style="min-width:320px;height:700px;"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- SERVICE AREAS -->
-<section id="areas">
-  <div class="container">
-    <div class="section-head">
-      <span class="eyebrow"><span class="silver-rule"></span>Service Areas</span>
-      <h2>Operating across <em class="display-italic">Metro Atlanta.</em></h2>
-      <p>Headquartered in Lawrenceville with active crews spanning the northeast metro and central Atlanta.</p>
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="eyebrow">Contact Us</span>
+        <h2>We're Here To Help</h2>
+        <p>Reach out by phone, email, or visit us in Lawrenceville. We respond fast.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h3>Phone</h3>
+          <p><a href="tel:4045550100">(404) 555-0100</a></p>
+          <p style="font-size: 11px; color: var(--silver-400); margin-top: 6px;">Mon–Fri 8:00 AM – 6:00 PM<br>Saturday 9:00 AM – 2:00 PM</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          </div>
+          <h3>Email</h3>
+          <p><a href="mailto:hello@cleanova.com">hello@cleanova.com</a></p>
+          <p style="font-size: 11px; color: var(--silver-400); margin-top: 6px;">We respond within 1 business day</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </div>
+          <h3>Location</h3>
+          <p>Lawrenceville, GA</p>
+          <p style="font-size: 11px; color: var(--silver-400); margin-top: 6px;">Serving all of Metro Atlanta</p>
+        </div>
+      </div>
     </div>
+  </section>
+
+  <!-- ===== SERVICE AREAS ===== -->
+  <section class="areas-section" id="areas">
     <div class="areas-grid">
       <div>
+        <span class="eyebrow">Service Areas</span>
+        <h2 style="margin-top: 14px;">Proudly Serving Metro Atlanta</h2>
         <div class="areas-list">
-          <div class="area-pill"><span class="dot"></span><span>Lawrenceville</span><span class="hq">HQ</span></div>
-          <div class="area-pill"><span class="dot"></span>Duluth</div>
-          <div class="area-pill"><span class="dot"></span>Suwanee</div>
-          <div class="area-pill"><span class="dot"></span>Lilburn</div>
-          <div class="area-pill"><span class="dot"></span>Alpharetta</div>
-          <div class="area-pill"><span class="dot"></span>Johns Creek</div>
-          <div class="area-pill"><span class="dot"></span>Snellville</div>
-          <div class="area-pill"><span class="dot"></span>Downtown Atlanta</div>
+          <div class="area-item"><svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Lawrenceville</div>
+          <div class="area-item"><svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Duluth</div>
+          <div class="area-item"><svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Suwanee</div>
+          <div class="area-item"><svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Lilburn</div>
+          <div class="area-item"><svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Alpharetta</div>
+          <div class="area-item"><svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Johns Creek</div>
+          <div class="area-item"><svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Snellville</div>
+          <div class="area-item"><svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Downtown Atlanta</div>
         </div>
-        <p style="margin-top:32px; font-size:0.9rem; color:var(--silver-600);">Outside these cities? Reach out — we evaluate Metro Atlanta accounts on a case-by-case basis.</p>
+        <a href="quote.html" class="btn btn-primary btn-small">Get a Quote</a>
       </div>
       <div class="areas-map">
-        <svg viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:auto;">
+        <svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <radialGradient id="mapGlowA" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#2d6b42" stop-opacity="0.18"/>
-              <stop offset="100%" stop-color="#2d6b42" stop-opacity="0"/>
-            </radialGradient>
-            <linearGradient id="sgA" x1="0" y1="0" x2="1" y2="1">
-              <stop offset="0%" stop-color="#f5f5f3"/>
-              <stop offset="50%" stop-color="#a6a69f"/>
-              <stop offset="100%" stop-color="#55554f"/>
-            </linearGradient>
+            <pattern id="grid2" width="40" height="40" patternUnits="userSpaceOnUse">
+              <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a1a1a" stroke-width="0.5"/>
+            </pattern>
           </defs>
-          <circle cx="250" cy="250" r="220" fill="url(#mapGlowA)"/>
-          <circle cx="250" cy="250" r="195" fill="none" stroke="url(#sgA)" stroke-width="0.5" opacity="0.25" stroke-dasharray="2 6"/>
-          <circle cx="250" cy="250" r="145" fill="none" stroke="url(#sgA)" stroke-width="0.5" opacity="0.35"/>
-          <circle cx="250" cy="250" r="90" fill="none" stroke="url(#sgA)" stroke-width="0.5" opacity="0.45"/>
-          <line x1="250" y1="30" x2="250" y2="470" stroke="url(#sgA)" stroke-width="0.4" opacity="0.2"/>
-          <line x1="30" y1="250" x2="470" y2="250" stroke="url(#sgA)" stroke-width="0.4" opacity="0.2"/>
-          <line x1="250" y1="250" x2="340" y2="160" stroke="#2d6b42" stroke-width="0.7" opacity="0.5" stroke-dasharray="1 4"/>
-          <line x1="250" y1="250" x2="300" y2="118" stroke="#2d6b42" stroke-width="0.7" opacity="0.5" stroke-dasharray="1 4"/>
-          <line x1="250" y1="250" x2="168" y2="178" stroke="#2d6b42" stroke-width="0.7" opacity="0.5" stroke-dasharray="1 4"/>
-          <line x1="250" y1="250" x2="290" y2="200" stroke="#2d6b42" stroke-width="0.7" opacity="0.5" stroke-dasharray="1 4"/>
-          <line x1="250" y1="250" x2="295" y2="272" stroke="#2d6b42" stroke-width="0.7" opacity="0.5" stroke-dasharray="1 4"/>
-          <line x1="250" y1="250" x2="318" y2="368" stroke="#2d6b42" stroke-width="0.7" opacity="0.5" stroke-dasharray="1 4"/>
-          <line x1="250" y1="250" x2="188" y2="338" stroke="#2d6b42" stroke-width="0.7" opacity="0.5" stroke-dasharray="1 4"/>
-          <circle cx="340" cy="160" r="8" fill="#2d6b42"/>
-          <circle cx="340" cy="160" r="14" fill="none" stroke="#4a8c5c" stroke-width="0.8" opacity="0.7"/>
-          <text x="356" y="157" fill="#f5f5f3" font-family="Outfit" font-size="11" font-weight="500">Lawrenceville</text>
-          <text x="356" y="170" fill="#4a8c5c" font-family="Outfit" font-size="8" letter-spacing="1.5">HQ</text>
-          <circle cx="300" cy="118" r="4" fill="#8bbf9a"/>
-          <text x="312" y="121" fill="#a6a69f" font-family="Outfit" font-size="10">Suwanee</text>
-          <circle cx="168" cy="178" r="4" fill="#8bbf9a"/>
-          <text x="82" y="181" fill="#a6a69f" font-family="Outfit" font-size="10">Alpharetta</text>
-          <circle cx="228" cy="138" r="4" fill="#8bbf9a"/>
-          <text x="168" y="133" fill="#a6a69f" font-family="Outfit" font-size="10">Johns Creek</text>
-          <circle cx="290" cy="200" r="4" fill="#8bbf9a"/>
-          <text x="302" y="203" fill="#a6a69f" font-family="Outfit" font-size="10">Duluth</text>
-          <circle cx="295" cy="272" r="4" fill="#8bbf9a"/>
-          <text x="307" y="275" fill="#a6a69f" font-family="Outfit" font-size="10">Lilburn</text>
-          <circle cx="318" cy="368" r="4" fill="#8bbf9a"/>
-          <text x="330" y="371" fill="#a6a69f" font-family="Outfit" font-size="10">Snellville</text>
-          <circle cx="188" cy="338" r="6" fill="#f5f5f3"/>
-          <circle cx="188" cy="338" r="12" fill="none" stroke="#f5f5f3" stroke-width="0.7" opacity="0.6">
-            <animate attributeName="r" values="12;24;12" dur="3s" repeatCount="indefinite"/>
-            <animate attributeName="opacity" values="0.6;0;0.6" dur="3s" repeatCount="indefinite"/>
-          </circle>
-          <text x="118" y="358" fill="#f5f5f3" font-family="Outfit" font-size="11" font-weight="500">Atlanta</text>
-          <text x="242" y="22" fill="#a6a69f" font-family="Outfit" font-size="10" letter-spacing="2">N</text>
+          <rect width="500" height="400" fill="url(#grid2)"/>
+          <path d="M0,180 Q150,160 250,200 T500,210" stroke="#2a2a28" stroke-width="1" fill="none"/>
+          <path d="M0,260 Q200,240 350,270 T500,260" stroke="#2a2a28" stroke-width="1" fill="none"/>
+          <path d="M180,0 Q200,120 250,200 T270,400" stroke="#2a2a28" stroke-width="1" fill="none"/>
+          <path d="M320,0 Q300,150 350,250 T380,400" stroke="#2a2a28" stroke-width="1" fill="none"/>
+          <g fill="#b8b8b3">
+            <circle cx="200" cy="180" r="4"/>
+            <text x="210" y="184" fill="#8a8a85" font-size="10" font-family="Inter, sans-serif">Lawrenceville</text>
+          </g>
+          <g fill="#b8b8b3">
+            <circle cx="140" cy="220" r="3"/>
+            <text x="148" y="224" fill="#5a5a55" font-size="9" font-family="Inter, sans-serif">Duluth</text>
+          </g>
+          <g fill="#b8b8b3">
+            <circle cx="170" cy="140" r="3"/>
+            <text x="178" y="144" fill="#5a5a55" font-size="9" font-family="Inter, sans-serif">Suwanee</text>
+          </g>
+          <g fill="#b8b8b3">
+            <circle cx="240" cy="240" r="3"/>
+            <text x="248" y="244" fill="#5a5a55" font-size="9" font-family="Inter, sans-serif">Lilburn</text>
+          </g>
+          <g fill="#b8b8b3">
+            <circle cx="100" cy="100" r="3"/>
+            <text x="108" y="104" fill="#5a5a55" font-size="9" font-family="Inter, sans-serif">Alpharetta</text>
+          </g>
+          <g fill="#b8b8b3">
+            <circle cx="160" cy="80" r="3"/>
+            <text x="168" y="84" fill="#5a5a55" font-size="9" font-family="Inter, sans-serif">Johns Creek</text>
+          </g>
+          <g fill="#b8b8b3">
+            <circle cx="280" cy="270" r="3"/>
+            <text x="288" y="274" fill="#5a5a55" font-size="9" font-family="Inter, sans-serif">Snellville</text>
+          </g>
+          <g fill="#f5f5f3">
+            <circle cx="200" cy="320" r="5"/>
+            <text x="210" y="324" fill="#b8b8b3" font-size="10" font-family="Inter, sans-serif">Downtown Atlanta</text>
+          </g>
         </svg>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CTA -->
-<section class="cta-strip">
-  <div class="container cta-strip-inner">
-    <div>
-      <span class="eyebrow"><span class="silver-rule"></span>Work With Us</span>
-      <h2 style="margin-top:24px;">Ready to operate at a <em class="display-italic">higher standard?</em></h2>
-      <p>Tell us about your facility or property — we'll come back with a tailored scope and quote, same day.</p>
+  <!-- ===== CTA STRIP ===== -->
+  <section class="cta-strip">
+    <h2>Let's Get Started.</h2>
+    <p>Same-day quotes. Trusted teams. Exceptional results.</p>
+    <div class="cta-actions">
+      <a href="quote.html" class="btn btn-primary">Get a Quote</a>
+      <a href="#schedule" class="btn btn-ghost">Book Consultation</a>
     </div>
-    <div class="cta-strip-actions">
-      <a href="quote.html" class="btn btn-primary">Request a Quote<svg class="arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 5l7 7-7 7"/></svg></a>
-      <a href="tel:+14045550100" class="btn btn-ghost">Call (404) 555-0100</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<footer>
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><img src="logo.png" alt="Cleanova Building Services"><p>Premium commercial and residential facility services across Metro Atlanta. Operating at the standard businesses and homeowners deserve.</p></div>
-      <div class="footer-col"><h4>Services</h4><ul><li><a href="commercial.html">Commercial</a></li><li><a href="residential.html">Residential</a></li><li><a href="residential.html#post-construction">Post-Construction</a></li><li><a href="commercial.html#floor-care">Floor Restoration</a></li></ul></div>
-      <div class="footer-col"><h4>Company</h4><ul><li><a href="about.html">About</a></li><li><a href="quote.html">Get a Quote</a></li><li><a href="about.html#areas">Service Areas</a></li></ul></div>
-      <div class="footer-col"><h4>Contact</h4><ul><li><a href="mailto:hello@cleanova.com">hello@cleanova.com</a></li><li><a href="tel:+14045550100">(404) 555-0100</a></li><li>Metro Atlanta, GA</li><li>Mon–Sun · 24/7</li></ul></div>
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Cleanova Building Services">
+          <p>Premium commercial and residential cleaning services across Metro Atlanta. Exceptional standards, every time.</p>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4" fill="none" stroke="#0a0a0a" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1" fill="#0a0a0a"/></svg></a>
+            <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+          </div>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-list">
+            <li><a href="commercial.html">Commercial Cleaning</a></li>
+            <li><a href="residential.html">Residential Cleaning</a></li>
+            <li><a href="residential.html#postconstruction">Post Construction</a></li>
+            <li><a href="commercial.html#disinfection">Disinfection</a></li>
+            <li><a href="commercial.html#floor">Floor Care</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-list">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="about.html#areas">Service Areas</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+            <li><a href="about.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+            (404) 555-0100
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+            hello@cleanova.com
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+            Lawrenceville, GA<br>Serving Metro Atlanta
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 Cleanova Building Services</div>
+        <div>Licensed &amp; Insured · Metro Atlanta</div>
+      </div>
     </div>
-    <div class="footer-bottom"><small>© 2026 Cleanova Building Services. Licensed & Insured. All rights reserved.</small><small>Metro Atlanta, Georgia</small></div>
-  </div>
-</footer>
+  </footer>
 
-<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-<script src="//code.tidio.co/cleanova.js" async></script>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
