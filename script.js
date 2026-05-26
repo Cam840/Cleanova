@@ -68,3 +68,43 @@ const currentPath = window.location.pathname.split('/').pop() || 'index.html';
 document.querySelectorAll('.nav-links a[data-page]').forEach(link => {
   if (link.dataset.page === currentPath) link.classList.add('active');
 });
+
+// ===== SCROLL REVEAL ANIMATION =====
+const revealItems = document.querySelectorAll(
+  '.section, .split-section, .industries, .about-band, .stats-row, .testimonial-section, .areas-section, .cta-strip, .quote-wrap, .panel-card, .why-card, .contact-card, .area-item, .happens-step, .industry-item, .split-card, .tier-card'
+);
+
+revealItems.forEach((item, index) => {
+  item.classList.add('reveal');
+
+  // Add small stagger delay for cards/items
+  if (
+    item.classList.contains('panel-card') ||
+    item.classList.contains('why-card') ||
+    item.classList.contains('contact-card') ||
+    item.classList.contains('area-item') ||
+    item.classList.contains('happens-step') ||
+    item.classList.contains('industry-item')
+  ) {
+    item.classList.add(`reveal-delay-${(index % 4) + 1}`);
+  }
+});
+
+const revealObserver = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal-active');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 0.12,
+    rootMargin: '0px 0px -80px 0px'
+  }
+);
+
+revealItems.forEach(item => {
+  revealObserver.observe(item);
+});
