@@ -108,3 +108,168 @@ const revealObserver = new IntersectionObserver(
 revealItems.forEach(item => {
   revealObserver.observe(item);
 });
+
+// ===== INDEX SERVICE DETAILS =====
+const serviceDetails = {
+  carpet: {
+    title: 'Carpet Cleaning Extraction',
+    text: 'Deep carpet extraction helps remove dirt, stains, odor, and buildup from high-traffic spaces while improving the overall appearance of the property.',
+    points: [
+      'Hot water extraction cleaning',
+      'High-traffic area treatment',
+      'Spot and stain attention',
+      'Odor improvement',
+      'Ideal for offices, homes, and common areas'
+    ]
+  },
+  wax: {
+    title: 'Strip & Wax Floors',
+    text: 'Professional strip and wax service restores dull floors with a cleaner, glossier, more polished finish.',
+    points: [
+      'Old wax removal',
+      'Deep floor preparation',
+      'Fresh wax application',
+      'Improved shine and protection',
+      'Great for commercial buildings and retail spaces'
+    ]
+  },
+  tile: {
+    title: 'Tile & Grout Cleaning',
+    text: 'Tile and grout cleaning removes built-up dirt from surfaces and grout lines to create a cleaner, brighter finish.',
+    points: [
+      'Detailed tile surface cleaning',
+      'Grout line cleaning',
+      'Restroom and kitchen areas',
+      'Removes dirt and buildup',
+      'Helps restore a cleaner appearance'
+    ]
+  },
+  concrete: {
+    title: 'Concrete Floor Care',
+    text: 'Concrete floor care is ideal for garages, warehouses, industrial spaces, and high-use commercial areas.',
+    points: [
+      'Concrete surface cleaning',
+      'Dust and debris removal',
+      'Industrial floor care',
+      'Warehouse and garage cleaning',
+      'Custom care based on floor condition'
+    ]
+  },
+  pressure: {
+    title: 'Pressure Washing',
+    text: 'Pressure washing helps improve curb appeal by cleaning exterior surfaces around your property.',
+    points: [
+      'Sidewalks and walkways',
+      'Entryways and exterior surfaces',
+      'Driveways and parking areas',
+      'Dirt and buildup removal',
+      'Great for commercial and residential properties'
+    ]
+  },
+  window: {
+    title: 'Window Cleaning',
+    text: 'Window cleaning gives your property a sharper, brighter appearance from both the inside and outside.',
+    points: [
+      'Interior and exterior window cleaning',
+      'Glass surface cleaning',
+      'Entryway glass',
+      'Storefront windows',
+      'Professional streak-reduction process'
+    ]
+  },
+  emergency: {
+    title: 'Emergency Clean-Up',
+    text: 'Emergency clean-up is for urgent cleaning needs when your space needs fast attention.',
+    points: [
+      'Quick response cleaning',
+      'Spill and mess clean-up',
+      'Unexpected property cleaning',
+      'Commercial and residential support',
+      'Custom cleaning based on the situation'
+    ]
+  },
+  supply: {
+    title: 'Supply Management',
+    text: 'Supply management helps businesses stay stocked with essential cleaning and restroom supplies.',
+    points: [
+      'Restroom supply restocking',
+      'Paper goods and soap monitoring',
+      'Trash liner replacement',
+      'Inventory support',
+      'Helpful for offices and commercial facilities'
+    ]
+  },
+  maintenance: {
+    title: 'Light Maintenance',
+    text: 'Light maintenance support helps keep your property looking clean, organized, and professionally maintained.',
+    points: [
+      'Basic facility upkeep',
+      'Small cleaning-related tasks',
+      'Common area support',
+      'Routine property attention',
+      'Best for commercial properties'
+    ]
+  },
+  event: {
+    title: 'Event Cleaning & Janitorial Support',
+    text: 'Event cleaning keeps your space clean before, during, and after gatherings, meetings, and special events.',
+    points: [
+      'Pre-event cleaning',
+      'During-event janitorial support',
+      'Post-event clean-up',
+      'Trash removal',
+      'Restroom and common area support'
+    ]
+  }
+};
+
+const serviceCards = document.querySelectorAll('.service-card[data-service]');
+const servicePanel = document.getElementById('service-detail-panel');
+const serviceTitle = document.getElementById('service-detail-title');
+const serviceText = document.getElementById('service-detail-text');
+const serviceList = document.getElementById('service-detail-list');
+const serviceClose = document.querySelector('.service-detail-close');
+
+function openServiceDetail(serviceKey) {
+  const detail = serviceDetails[serviceKey];
+
+  if (!detail || !servicePanel || !serviceTitle || !serviceText || !serviceList) return;
+
+  serviceTitle.textContent = detail.title;
+  serviceText.textContent = detail.text;
+
+  serviceList.innerHTML = detail.points
+    .map(point => `<li>${point}</li>`)
+    .join('');
+
+  servicePanel.classList.add('open');
+
+  serviceCards.forEach(card => {
+    card.classList.toggle('active', card.dataset.service === serviceKey);
+  });
+
+  servicePanel.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
+}
+
+serviceCards.forEach(card => {
+  card.addEventListener('click', () => {
+    openServiceDetail(card.dataset.service);
+  });
+
+  card.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openServiceDetail(card.dataset.service);
+    }
+  });
+});
+
+if (serviceClose) {
+  serviceClose.addEventListener('click', () => {
+    servicePanel.classList.remove('open');
+    serviceCards.forEach(card => card.classList.remove('active'));
+  });
+}
