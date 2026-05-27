@@ -165,6 +165,17 @@ const serviceDetails = {
       'Overhead surfaces and ledges',
       'Ideal for warehouses, offices, and large spaces'
     ]
+  },
+ sanitization: {
+    title: 'Disinfection & Sanitization',
+    text: 'A detailed sanitization service for homes and spaces that need extra care, especially for families with pets, newborns, illness recovery, or high-touch areas.',
+    points: [
+      'High-touch surface disinfection',
+      'Door handles, switches, counters, and fixtures',
+      'Kitchen and bathroom sanitization',
+      'Pet-friendly home refresh options',
+      'Great before welcoming a newborn or after sickness'
+    ]
   }
 };
 
