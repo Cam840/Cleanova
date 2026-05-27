@@ -2749,3 +2749,135 @@ input[type="date"] {
     font-size: 0.82em;
   }
 }
+
+/* ==================================================
+   CLEANOVA 9-1-1 COMMITMENT PANEL
+   ================================================== */
+
+.commitment-section {
+  position: relative;
+  padding: 90px 40px;
+  background:
+    linear-gradient(rgba(0,0,0,0.82), rgba(0,0,0,0.92)),
+    url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=1800&q=85&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.commitment-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+  background-size: 72px 72px;
+  opacity: 0.35;
+  pointer-events: none;
+}
+
+.commitment-panel {
+  position: relative;
+  z-index: 2;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 50px;
+  border-radius: 34px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.08), transparent 34%),
+    rgba(5, 5, 5, 0.88);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow:
+    0 32px 90px rgba(0,0,0,0.65),
+    inset 0 0 0 1px rgba(255,255,255,0.035);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.commitment-top {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 50px;
+  align-items: start;
+  margin-bottom: 42px;
+}
+
+.commitment-top h2 {
+  margin-top: 12px;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 4rem);
+  letter-spacing: 0.02em;
+  line-height: 0.95;
+  text-transform: none;
+}
+
+.commitment-top p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--silver-200);
+  max-width: 500px;
+}
+
+.commitment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.commitment-card {
+  min-height: 150px;
+  padding: 28px 26px;
+  border-radius: 20px;
+  background: var(--silver-100);
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.commitment-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(255,255,255,0.08);
+}
+
+.commitment-card span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+}
+
+.commitment-card strong {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.4rem);
+  font-weight: 700;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: #050505;
+}
+
+@media (max-width: 800px) {
+  .commitment-section {
+    padding: 70px 22px;
+  }
+
+  .commitment-panel {
+    padding: 34px 24px;
+    border-radius: 26px;
+  }
+
+  .commitment-top {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .commitment-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .commitment-card {
+    min-height: 130px;
+  }
+}
