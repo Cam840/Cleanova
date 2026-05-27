@@ -2572,3 +2572,97 @@ body.modal-open {
     transform: scale(0.98);
   }
 }
+
+/* ==================================================
+   MOVING STATS MARQUEE
+   ================================================== */
+
+.stats-marquee {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--black-1), var(--black));
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 58px 0;
+  position: relative;
+}
+
+.stats-marquee::before,
+.stats-marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 160px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.stats-marquee::before {
+  left: 0;
+  background: linear-gradient(90deg, var(--black), transparent);
+}
+
+.stats-marquee::after {
+  right: 0;
+  background: linear-gradient(270deg, var(--black), transparent);
+}
+
+.stats-track {
+  display: flex;
+  width: max-content;
+  animation: statsMoveRight 28s linear infinite;
+}
+
+.stat {
+  min-width: 360px;
+  text-align: center;
+  padding: 0 52px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+
+.stat-number {
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  font-weight: 500;
+  color: var(--silver-100);
+  letter-spacing: 0.04em;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.stat-label {
+  font-size: 10.5px;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--silver-400);
+}
+
+/* Moves right forever */
+@keyframes statsMoveRight {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Optional: pause when hovering */
+.stats-marquee:hover .stats-track {
+  animation-play-state: paused;
+}
+
+@media (max-width: 600px) {
+  .stats-marquee {
+    padding: 44px 0;
+  }
+
+  .stat {
+    min-width: 260px;
+    padding: 0 34px;
+  }
+
+  .stat-number {
+    font-size: 2.2rem;
+  }
+}
