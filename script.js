@@ -111,53 +111,9 @@ revealItems.forEach(item => {
 
 // ===== INDEX SERVICE DETAILS POPUP =====
 const serviceDetails = {
-  carpet: {
-    title: 'Carpet Cleaning Extraction',
-    text: 'Deep carpet extraction helps remove dirt, stains, odor, and buildup from high-traffic spaces while improving the overall appearance of the property.',
-    points: [
-      'Hot water extraction cleaning',
-      'High-traffic area treatment',
-      'Spot and stain attention',
-      'Odor improvement',
-      'Ideal for offices, homes, and common areas'
-    ]
-  },
-  wax: {
-    title: 'Strip & Wax Floors',
-    text: 'Professional strip and wax service restores dull floors with a cleaner, glossier, more polished finish.',
-    points: [
-      'Old wax removal',
-      'Deep floor preparation',
-      'Fresh wax application',
-      'Improved shine and protection',
-      'Great for commercial buildings and retail spaces'
-    ]
-  },
-  tile: {
-    title: 'Tile & Grout Cleaning',
-    text: 'Tile and grout cleaning removes built-up dirt from surfaces and grout lines to create a cleaner, brighter finish.',
-    points: [
-      'Detailed tile surface cleaning',
-      'Grout line cleaning',
-      'Restroom and kitchen areas',
-      'Removes dirt and buildup',
-      'Helps restore a cleaner appearance'
-    ]
-  },
-  concrete: {
-    title: 'Concrete Floor Care',
-    text: 'Concrete floor care is ideal for garages, warehouses, industrial spaces, and high-use commercial areas.',
-    points: [
-      'Concrete surface cleaning',
-      'Dust and debris removal',
-      'Industrial floor care',
-      'Warehouse and garage cleaning',
-      'Custom care based on floor condition'
-    ]
-  },
-  pressure: {
-    title: 'Pressure Washing',
-    text: 'Pressure washing helps improve curb appeal by cleaning exterior surfaces around your property.',
+  power: {
+    title: 'Power Washing',
+    text: 'Power washing helps improve curb appeal by cleaning exterior surfaces around your property.',
     points: [
       'Sidewalks and walkways',
       'Entryways and exterior surfaces',
@@ -177,48 +133,37 @@ const serviceDetails = {
       'Professional streak-reduction process'
     ]
   },
-  emergency: {
-    title: 'Emergency Clean-Up',
-    text: 'Emergency clean-up is for urgent cleaning needs when your space needs fast attention.',
+  carpet: {
+    title: 'Carpet Cleaning',
+    text: 'Professional carpet cleaning removes dirt, stains, odor, and buildup from high-traffic spaces while improving the overall appearance of the property.',
     points: [
-      'Quick response cleaning',
-      'Spill and mess clean-up',
-      'Unexpected property cleaning',
-      'Commercial and residential support',
-      'Custom cleaning based on the situation'
+      'Hot water extraction cleaning',
+      'High-traffic area treatment',
+      'Spot and stain attention',
+      'Odor improvement',
+      'Ideal for offices, homes, and common areas'
     ]
   },
-  supply: {
-    title: 'Supply Management',
-    text: 'Supply management helps businesses stay stocked with essential cleaning and restroom supplies.',
+  wax: {
+    title: 'Floor Strip & Wax',
+    text: 'Professional strip and wax service restores dull floors with a cleaner, glossier, more polished finish.',
     points: [
-      'Restroom supply restocking',
-      'Paper goods and soap monitoring',
-      'Trash liner replacement',
-      'Inventory support',
-      'Helpful for offices and commercial facilities'
+      'Old wax removal',
+      'Deep floor preparation',
+      'Fresh wax application',
+      'Improved shine and protection',
+      'Great for commercial buildings and retail spaces'
     ]
   },
-  maintenance: {
-    title: 'Light Maintenance',
-    text: 'Light maintenance support helps keep your property looking clean, organized, and professionally maintained.',
+  highdusting: {
+    title: 'High Dusting',
+    text: 'High dusting tackles the hard-to-reach areas that routine cleaning often misses — ceilings, beams, vents, light fixtures, and more.',
     points: [
-      'Basic facility upkeep',
-      'Small cleaning-related tasks',
-      'Common area support',
-      'Routine property attention',
-      'Best for commercial properties'
-    ]
-  },
-  event: {
-    title: 'Event Cleaning & Janitorial Support',
-    text: 'Event cleaning keeps your space clean before, during, and after gatherings, meetings, and special events.',
-    points: [
-      'Pre-event cleaning',
-      'During-event janitorial support',
-      'Post-event clean-up',
-      'Trash removal',
-      'Restroom and common area support'
+      'Ceiling and beam dusting',
+      'Vent and air duct exterior cleaning',
+      'Light fixture and fan cleaning',
+      'Overhead surfaces and ledges',
+      'Ideal for warehouses, offices, and large spaces'
     ]
   }
 };
@@ -286,20 +231,3 @@ document.addEventListener('keydown', event => {
     closeServiceModal();
   }
 });
-
-// ===== OPEN DATE PICKER ON CLICK =====
-const preferredDateInput = document.getElementById('preferred-date');
-
-if (preferredDateInput) {
-  preferredDateInput.addEventListener('click', () => {
-    if (preferredDateInput.showPicker) {
-      preferredDateInput.showPicker();
-    }
-  });
-
-  preferredDateInput.addEventListener('focus', () => {
-    if (preferredDateInput.showPicker) {
-      preferredDateInput.showPicker();
-    }
-  });
-}
