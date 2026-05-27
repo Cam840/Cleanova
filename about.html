@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cleanova Building Services</title>
-  <meta name="description" content="Request a same-day quote for commercial or residential cleaning across Metro Atlanta.">
+  <meta name="description" content="Built on trust. Focused on excellence. Learn about Cleanova Building Services and our mission across Metro Atlanta.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:ital,wght@0,400;1,400;1,500&display=swap" rel="stylesheet">
@@ -42,191 +42,203 @@
   </nav>
 
   <!-- ===== PAGE HEAD ===== -->
-  <section class="page-head quote">
+  <section class="page-head about">
     <div class="page-head-inner">
-      <h1>Get A Free Quote</h1>
-      <p>Tell us about your property and we'll send you a no-obligation estimate.</p>
+      <h1>About Us</h1>
+      <p>Reliable, professional cleaning for homes and businesses across Metro Atlanta.</p>
     </div>
   </section>
 
-  <!-- ===== QUOTE FORM ===== -->
-  <section class="quote-wrap">
-    <div class="quote-grid">
-      <!-- Aside -->
-      <aside class="quote-aside">
-        <h3>How It Works</h3>
-        <p>Fast, transparent, and tailored to your needs. We'll review your details and get back to you with a free, no-obligation quote.</p>
-        <ul>
-          <li>
-            <strong>1. Submit</strong>
-            Fill out the form with your details.
-          </li>
-          <li>
-            <strong>2. Review</strong>
-            We review and may follow up with quick questions.
-          </li>
-          <li>
-            <strong>3. Free Quote</strong>
-            We send a detailed, no-obligation estimate.
-          </li>
-          <li>
-            <strong>4. Book</strong>
-            Pick a date that works and we get started.
-          </li>
-        </ul>
-      </aside>
-
-      <!-- Form -->
-      <form class="quote-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" enctype="multipart/form-data">
-        <div class="form-toggle">
-          <button type="button" class="toggle-btn active" data-type="commercial">Commercial</button>
-          <button type="button" class="toggle-btn" data-type="residential">Residential</button>
-        </div>
-        <input type="hidden" name="property_type" id="service-type" value="commercial">
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone</label>
-            <input type="tel" id="phone" name="phone" required>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-
-        <!-- Commercial-specific fields -->
-        <div id="commercial-fields">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="commercial-service">Service Type</label>
-              <select id="commercial-service" name="service_type">
-                <option value="">Select service</option>
-                <option>Retail Stores</option>
-                <option>Office Buildings</option>
-                <option>Shopping Malls</option>
-                <option>Healthcare Facilities</option>
-                <option>Gyms &amp; Fitness Centers</option>
-                <option>Restaurants</option>
-                <option>Apartment &amp; Commercial Buildings</option>
-                <option>Government Facilities</option>
-                <option>Private Facilities</option>
-                <option>Warehouses</option>
-                <option>Post-Construction Cleaning</option>
-                <option>Commercial Real Estate</option>
-                <option>Specialty Services</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="commercial-size">Property Size</label>
-              <select id="commercial-size" name="property_size">
-                <option value="">Select size</option>
-                <option>Under 2,000 sq ft</option>
-                <option>2,000 – 5,000 sq ft</option>
-                <option>5,000 – 10,000 sq ft</option>
-                <option>10,000 – 25,000 sq ft</option>
-                <option>25,000+ sq ft</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <!-- Residential-specific fields -->
-        <div id="residential-fields" style="display:none;">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="residential-service">Service Type</label>
-              <select id="residential-service" name="service_type">
-                <option value="">Select service</option>
-                <option>Standard Home Cleaning</option>
-                <option>Deep Cleaning</option>
-                <option>Recurring Cleaning (Weekly)</option>
-                <option>Recurring Cleaning (Biweekly)</option>
-                <option>Recurring Cleaning (Monthly)</option>
-                <option>Move-In Cleaning</option>
-                <option>Move-Out Cleaning</option>
-                <option>Open House Cleaning</option>
-                <option>Showing Preparation</option>
-                <option>Pre-Sale Cleaning</option>
-                <option>Post-Sale Cleaning</option>
-                <option>Specialty Services</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="residential-size">Property Size</label>
-              <select id="residential-size" name="property_size">
-                <option value="">Select size</option>
-                <option>Studio / 1 Bedroom</option>
-                <option>2 Bedrooms</option>
-                <option>3 Bedrooms</option>
-                <option>4 Bedrooms</option>
-                <option>5+ Bedrooms</option>
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="preferred-date">Preferred Date</label>
-            <input type="date" id="preferred-date" name="preferred_date">
-          </div>
-          <div class="form-group">
-            <label for="preferred-time">Preferred Time</label>
-            <select id="preferred-time" name="preferred_time">
-              <option value="">Select time</option>
-              <option>Morning (8 AM – 12 PM)</option>
-              <option>Afternoon (12 PM – 4 PM)</option>
-              <option>Evening (4 PM – 8 PM)</option>
-              <option>Flexible</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" placeholder="Anything else we should know about your property, schedule, or specific requirements?"></textarea>
-        </div>
-
-        <button type="submit" class="btn btn-primary form-submit">Get a Free Quote</button>
-      </form>
+  <!-- ===== ABOUT BAND ===== -->
+  <section class="about-band">
+    <div class="about-band-grid">
+      <div class="about-band-text">
+        <span class="eyebrow">About Us</span>
+        <h2>
+          A Premium Cleaning Company
+          <em>For Homes &amp; Businesses.</em>
+        </h2>
+        <p>
+          Cleanova is a modern, premium, and professional cleaning company built to serve homeowners, property managers, commercial businesses, real estate professionals, and government &amp; private facilities.
+        </p>
+        <p>
+          Our goal is simple: deliver reliable residential, commercial, and specialty cleaning solutions tailored to your needs — professional enough for commercial clients and welcoming for homeowners.
+        </p>
+      </div>
+      <div class="about-band-image">
+        <div style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=900&q=80&auto=format&fit=crop');"></div>
+        <div style="background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=900&q=80&auto=format&fit=crop');"></div>
+      </div>
     </div>
   </section>
 
-  <!-- ===== WHAT HAPPENS NEXT ===== -->
+  <!-- ===== STATS ROW ===== -->
+  <div class="stats-row">
+    <div class="stat">
+      <div class="stat-number">100%</div>
+      <div class="stat-label">Satisfaction Focused</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">Same-Day</div>
+      <div class="stat-label">Quotes</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">Experienced</div>
+      <div class="stat-label">Professionals</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">Quality</div>
+      <div class="stat-label">You Can Trust</div>
+    </div>
+  </div>
+
+  <!-- ===== MISSION FEATURE BAR ===== -->
+  <section class="section">
+    <div class="section-inner">
+      <div class="feature-bar">
+        <div class="feature-image" style="background-image: url('https://images.unsplash.com/photo-1581578017093-cd30fce4eeb7?w=900&q=80&auto=format&fit=crop');"></div>
+        <div class="feature-content">
+          <span class="eyebrow" style="margin-bottom: 10px;">Our Goals</span>
+          <h2>Built To Earn Your Trust</h2>
+          <p>We're focused on generating reliable cleaning results, building credibility, and making it easy to book services — positioning Cleanova as a premium full-service cleaning company.</p>
+          <ul class="feature-list">
+            <li>Reliable &amp; Professional</li>
+            <li>Customized Cleaning Plans</li>
+            <li>High Attention to Detail</li>
+            <li>Satisfaction Focused</li>
+          </ul>
+          <a href="quote.html" class="btn btn-primary btn-small" style="align-self: flex-start;">Get a Free Quote</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHY CHOOSE CLEANOVA ===== -->
   <section class="section" style="background: var(--black-1); border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft);">
     <div class="section-inner">
       <div class="section-header">
-        <span class="eyebrow">What Happens Next</span>
-        <h2>From Submission To Sparkling</h2>
+        <span class="eyebrow">Why Choose Cleanova</span>
+        <h2>What Sets Us Apart</h2>
       </div>
-      <div class="happens-grid">
-        <div class="happens-step">
-          <div class="happens-step-num">01</div>
-          <h3>You Submit</h3>
-          <p>Fill out the form with your details. Takes about 2 minutes.</p>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <h3>Reliable &amp; Professional Team</h3>
+          <p>Trained, supervised crews you can count on for every job, large or small.</p>
         </div>
-        <div class="happens-step">
-          <div class="happens-step-num">02</div>
-          <h3>We Review</h3>
-          <p>We review your request and may follow up with quick questions to scope it right.</p>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <h3>Customized Cleaning Plans</h3>
+          <p>Service plans tailored to your space, schedule, and specific requirements.</p>
         </div>
-        <div class="happens-step">
-          <div class="happens-step-num">03</div>
-          <h3>Free Quote</h3>
-          <p>You receive a detailed, no-obligation estimate tailored to your property.</p>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M3 21V7l9-4 9 4v14"/><path d="M9 21V12h6v9"/><path d="M3 21h18"/></svg>
+          </div>
+          <h3>Residential &amp; Commercial Expertise</h3>
+          <p>One trusted team for homes and businesses, with the right approach for each.</p>
         </div>
-        <div class="happens-step">
-          <div class="happens-step-num">04</div>
-          <h3>We Get To Work</h3>
-          <p>Pick a date that works for you. Our trained team handles the rest.</p>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          </div>
+          <h3>High Attention to Detail</h3>
+          <p>We don't skip the corners. Every job is finished to the same exacting standard.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          </div>
+          <h3>Flexible Scheduling</h3>
+          <p>Weekly, biweekly, monthly, or one-time — we work around your calendar.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5"/></svg>
+          </div>
+          <h3>Satisfaction Focused</h3>
+          <p>If something isn't right, we make it right. Your satisfaction comes first.</p>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="eyebrow">Contact Us</span>
+        <h2>We're Here To Help</h2>
+        <p>Reach out by phone, email, or visit us in Lawrenceville. We respond fast.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.37 1.9.72 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.35 1.85.59 2.81.72A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <h3>Phone</h3>
+          <p><a href="tel:4045550100">(404) 555-0100</a></p>
+          <p style="font-size: 11px; color: var(--silver-400); margin-top: 6px;">Mon–Fri 8:00 AM – 6:00 PM<br>Saturday 9:00 AM – 2:00 PM</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+          </div>
+          <h3>Email</h3>
+          <p><a href="mailto:hello@cleanova.com">hello@cleanova.com</a></p>
+          <p style="font-size: 11px; color: var(--silver-400); margin-top: 6px;">We respond within 1 business day</p>
+        </div>
+        <div class="contact-card">
+          <div class="contact-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </div>
+          <h3>Location</h3>
+          <p>Lawrenceville, GA</p>
+          <p style="font-size: 11px; color: var(--silver-400); margin-top: 6px;">Serving all of Metro Atlanta</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SERVICE AREAS ===== -->
+  <section class="areas-section" id="areas">
+    <div class="areas-grid">
+      <div>
+        <span class="eyebrow">Service Areas</span>
+        <h2 style="margin-top: 14px;">Proudly Serving Metro Atlanta</h2>
+        <div class="areas-list">
+          <div class="area-item"><svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Lawrenceville</div>
+          <div class="area-item"><svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Duluth</div>
+          <div class="area-item"><svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Suwanee</div>
+          <div class="area-item"><svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Lilburn</div>
+          <div class="area-item"><svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Alpharetta</div>
+          <div class="area-item"><svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Johns Creek</div>
+          <div class="area-item"><svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Snellville</div>
+          <div class="area-item"><svg viewBox="0 0 24 24"><path d="M12 22s-8-7.58-8-13a8 8 0 0 1 16 0c0 5.42-8 13-8 13z"/><circle cx="12" cy="9" r="2.5"/></svg>Downtown Atlanta</div>
+        </div>
+        <a href="quote.html" class="btn btn-primary btn-small">Get a Free Quote</a>
+      </div>
+      <div class="areas-map">
+        <iframe
+          src="https://www.google.com/maps?q=Metro%20Atlanta%2C%20GA&output=embed"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA STRIP ===== -->
+  <section class="cta-strip">
+    <h2>Let's Get Started.</h2>
+    <p>Free quotes. Reliable teams. Exceptional results.</p>
+    <div class="cta-actions">
+      <a href="quote.html" class="btn btn-primary">Get a Free Quote</a>
+      <a href="quote.html" class="btn btn-ghost">Book a Cleaning</a>
     </div>
   </section>
 
