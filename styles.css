@@ -2925,3 +2925,128 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
   position: relative;
   z-index: 2;
 }
+
+/* ==================================================
+   MOBILE FIXES: QUOTE FORM + SERVICE AREAS
+   ================================================== */
+
+@media (max-width: 700px) {
+
+  /* ---------- QUOTE PAGE FORM FIX ---------- */
+  .quote-wrap {
+    padding: 55px 18px 70px;
+  }
+
+  .quote-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 100%;
+  }
+
+  .quote-aside,
+  .quote-form {
+    width: 100%;
+    max-width: 100%;
+    padding: 28px 20px;
+    overflow: hidden;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .form-group {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  input[type="date"] {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    appearance: none;
+    -webkit-appearance: none;
+    font-size: 13.5px;
+  }
+
+  input[type="date"]::-webkit-date-and-time-value {
+    text-align: left;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.75;
+  }
+
+
+  /* ---------- ABOUT PAGE SERVICE AREAS FIX ---------- */
+  .areas-section {
+    padding: 70px 18px;
+  }
+
+  .areas-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 26px;
+    max-width: 100%;
+  }
+
+  .areas-grid > div:first-child {
+    padding: 30px 22px;
+    border-radius: 24px;
+  }
+
+  .areas-grid h2 {
+    font-size: clamp(1.45rem, 8vw, 2.1rem);
+    line-height: 1.2;
+  }
+
+  .areas-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 26px;
+    margin-bottom: 26px;
+  }
+
+  .area-item {
+    padding: 13px 12px;
+    border-radius: 14px;
+    font-size: 10.5px;
+    letter-spacing: 0.08em;
+    gap: 8px;
+  }
+
+  .area-item svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .areas-map {
+    min-height: 300px;
+    height: 300px;
+    border-radius: 24px;
+    width: 100%;
+  }
+
+  .areas-map iframe {
+    height: 300px;
+  }
+
+  .areas-map::after {
+    left: 14px;
+    bottom: 14px;
+    font-size: 9px;
+    padding: 10px 13px;
+    letter-spacing: 0.12em;
+  }
+}
