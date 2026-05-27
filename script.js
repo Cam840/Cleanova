@@ -286,3 +286,20 @@ document.addEventListener('keydown', event => {
     closeServiceModal();
   }
 });
+
+// ===== OPEN DATE PICKER ON CLICK =====
+const preferredDateInput = document.getElementById('preferred-date');
+
+if (preferredDateInput) {
+  preferredDateInput.addEventListener('click', () => {
+    if (preferredDateInput.showPicker) {
+      preferredDateInput.showPicker();
+    }
+  });
+
+  preferredDateInput.addEventListener('focus', () => {
+    if (preferredDateInput.showPicker) {
+      preferredDateInput.showPicker();
+    }
+  });
+}
