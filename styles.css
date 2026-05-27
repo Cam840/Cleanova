@@ -2881,3 +2881,47 @@ input[type="date"] {
     min-height: 130px;
   }
 }
+
+/* ==================================================
+   GLOBAL ALTERNATING SECTION BACKGROUNDS
+   Applies across all pages
+   ================================================== */
+
+body > section:not(.hero):not(.page-head):not(.cta-strip) {
+  position: relative;
+}
+
+/* Odd sections stay deep black */
+body > section:nth-of-type(odd):not(.hero):not(.page-head):not(.cta-strip) {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(255,255,255,0.035), transparent 32%),
+    linear-gradient(180deg, #000000 0%, #050505 100%) !important;
+}
+
+/* Even sections become dark silver / graphite */
+body > section:nth-of-type(even):not(.hero):not(.page-head):not(.cta-strip) {
+  background:
+    radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08), transparent 34%),
+    linear-gradient(135deg, #191919 0%, #0b0b0b 45%, #232320 100%) !important;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  border-bottom: 1px solid rgba(255,255,255,0.055);
+}
+
+/* Adds a subtle premium silver texture to the silver sections */
+body > section:nth-of-type(even):not(.hero):not(.page-head):not(.cta-strip)::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 70px 70px;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+/* Keeps section content above the texture */
+body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
+  position: relative;
+  z-index: 2;
+}
