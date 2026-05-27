@@ -362,17 +362,17 @@ p { color: var(--silver-300); }
 }
 
 .hero-content {
-  max-width: 640px;
+  max-width: 760px;
 }
 
 .hero h1 {
   font-family: var(--font-display);
-  font-size: clamp(3.2rem, 7vw, 6.4rem);
+  font-size: clamp(2.7rem, 5.2vw, 4.8rem);
   font-weight: 600;
-  letter-spacing: 0.045em;
-  line-height: 0.95;
+  letter-spacing: 0.035em;
+  line-height: 1.02;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 28px;
 }
 
 .hero h1 .light {
@@ -380,8 +380,9 @@ p { color: var(--silver-300); }
   color: var(--silver-300);
   font-style: italic;
   text-transform: none;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.015em;
   font-weight: 500;
+  font-size: 0.86em;
 }
 
 .hero-desc {
@@ -1029,13 +1030,13 @@ body.modal-open {
 .stat:last-child { border-right: none; }
 
 .stat-number {
-  font-family: var(--font-body);
-  font-size: 2.2rem;
-  font-weight: 500;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 4.5vw, 4.2rem);
+  font-weight: 600;
   color: var(--silver-100);
-  letter-spacing: 0.04em;
-  margin-bottom: 8px;
-  line-height: 1;
+  letter-spacing: 0.035em;
+  line-height: 0.95;
+  margin-bottom: 14px;
 }
 
 .stat-label {
@@ -2672,7 +2673,7 @@ body.modal-open {
   }
 
   .stat-number {
-    font-size: 2.2rem;
+    font-size: 2.7rem;
   }
 }
 
@@ -2719,5 +2720,17 @@ input[type="date"] {
 @media (max-width: 600px) {
   .specialty-grid {
     display: flex;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: clamp(2.25rem, 13vw, 3.4rem);
+    line-height: 1.05;
+    letter-spacing: 0.025em;
+  }
+
+  .hero h1 .light {
+    font-size: 0.82em;
   }
 }
