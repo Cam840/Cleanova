@@ -2666,3 +2666,7 @@ body.modal-open {
     font-size: 2.2rem;
   }
 }
+
+input[type="date"] {
+  cursor: pointer;
+}
