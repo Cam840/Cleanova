@@ -2323,3 +2323,175 @@ body.modal-open {
     display: none;
   }
 }
+
+/* ==================================================
+   RESTORE CONTACT CARDS AS PREMIUM BOXES
+   ================================================== */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 55px;
+}
+
+.contact-card {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.08) 0%, transparent 28%),
+    linear-gradient(180deg, #111111 0%, #050505 100%);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  padding: 46px 32px 42px;
+  text-align: center;
+  transition: all 0.35s ease;
+  cursor: pointer;
+  box-shadow: none;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -80%;
+  width: 55%;
+  height: 200%;
+  background: linear-gradient(
+    120deg,
+    transparent 0%,
+    rgba(255,255,255,0.03) 25%,
+    rgba(255,255,255,0.22) 50%,
+    rgba(255,255,255,0.03) 75%,
+    transparent 100%
+  );
+  transform: rotate(18deg);
+  opacity: 0;
+  transition: all 0.65s ease;
+  pointer-events: none;
+  display: block;
+}
+
+.contact-card::after {
+  display: inline-block;
+  margin-top: 22px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--silver-100);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: all 0.35s ease;
+}
+
+.contact-card:nth-child(1)::after {
+  content: 'Call Now →';
+}
+
+.contact-card:nth-child(2)::after {
+  content: 'Send Email →';
+}
+
+.contact-card:nth-child(3)::after {
+  content: 'View Area →';
+}
+
+.contact-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  border-color: rgba(255, 255, 255, 0.38);
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.13) 0%, transparent 32%),
+    linear-gradient(180deg, #151515 0%, #060606 100%);
+  box-shadow:
+    0 26px 70px rgba(0, 0, 0, 0.65),
+    0 0 35px rgba(255, 255, 255, 0.055),
+    inset 0 0 18px rgba(255, 255, 255, 0.035);
+}
+
+.contact-card:hover::before {
+  left: 130%;
+  opacity: 1;
+}
+
+.contact-card:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.contact-icon {
+  width: 58px;
+  height: 58px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 22px;
+  background: rgba(255, 255, 255, 0.035);
+  transition: all 0.35s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.contact-card:hover .contact-icon {
+  transform: scale(1.12) rotate(3deg);
+  background: var(--silver-100);
+  border-color: var(--silver-100);
+}
+
+.contact-icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--silver-200);
+  stroke-width: 1.5;
+  fill: none;
+  transition: all 0.35s ease;
+}
+
+.contact-card:hover .contact-icon svg {
+  stroke: var(--black);
+}
+
+.contact-card h3,
+.contact-card p,
+.contact-icon,
+.contact-card::after {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-card h3 {
+  font-size: 0.82rem;
+  letter-spacing: 0.22em;
+  margin-bottom: 14px;
+  text-align: center;
+}
+
+.contact-card p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--silver-200);
+  text-align: center;
+}
+
+.contact-card a {
+  transition: all 0.25s ease;
+}
+
+.contact-card a:hover {
+  color: var(--silver-100);
+}
+
+@media (max-width: 900px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .contact-card {
+    padding: 40px 28px;
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 24px;
+  }
+}
