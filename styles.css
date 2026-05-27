@@ -1283,10 +1283,34 @@ body.modal-open {
 
 /* ============ CTA STRIP ============ */
 .cta-strip {
-  padding: 90px 40px;
+  position: relative;
+  padding: 110px 40px;
   text-align: center;
-  background: var(--black);
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0.86)),
+    url('https://images.unsplash.com/photo-1758967458314-4bbbb2f3152d?q=80&w=1631&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+
+.cta-strip::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at center, rgba(255,255,255,0.08), transparent 45%);
+  pointer-events: none;
+}
+
+.cta-strip h2,
+.cta-strip p,
+.cta-strip .cta-actions {
+  position: relative;
+  z-index: 2;
 }
 
 .cta-strip h2 {
