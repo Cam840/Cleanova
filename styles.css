@@ -2902,7 +2902,7 @@ body > section:nth-of-type(odd):not(.hero):not(.page-head):not(.cta-strip) {
 body > section:nth-of-type(even):not(.hero):not(.page-head):not(.cta-strip) {
   background:
     radial-gradient(circle at 80% 20%, rgba(255,255,255,0.08), transparent 34%),
-    linear-gradient(135deg, #191919 0%, #0b0b0b 45%, #232320 100%) !important;
+    linear-gradient(135deg, #242424 0%, #101010 45%, #2d2d28 100%) !important;
   border-top: 1px solid rgba(255,255,255,0.07);
   border-bottom: 1px solid rgba(255,255,255,0.055);
 }
