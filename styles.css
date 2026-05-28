@@ -375,6 +375,10 @@ p { color: var(--silver-300); }
   margin-bottom: 28px;
 }
 
+.hero-line {
+  display: block;
+}
+
 .hero h1 .light {
   display: block;
   color: var(--silver-300);
@@ -382,7 +386,9 @@ p { color: var(--silver-300); }
   text-transform: none;
   letter-spacing: 0.015em;
   font-weight: 500;
-  font-size: 0.86em;
+  font-size: 0.74em;
+  line-height: 1.08;
+  margin-top: 10px;
 }
 
 .hero-desc {
@@ -3129,4 +3135,20 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
 .hero-feature svg {
   stroke-linecap: round;
   stroke-linejoin: round;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: clamp(2.15rem, 10vw, 3rem);
+    line-height: 1;
+    letter-spacing: 0.015em;
+    margin-bottom: 26px;
+  }
+
+  .hero h1 .light {
+    font-size: 0.72em;
+    line-height: 1.12;
+    letter-spacing: 0.01em;
+    margin-top: 12px;
+  }
 }
