@@ -3125,3 +3125,8 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
     height: 26px;
   }
 }
+
+.hero-feature svg {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
