@@ -3554,3 +3554,67 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
     font-size: 11px;
   }
 }
+
+/* =========================================
+   HERO IMAGE CLARITY AND NAVIGATION FIX
+   ========================================= */
+
+:root {
+  --hero-nav-space: 120px;
+}
+
+/* Start the hero underneath the fixed navigation */
+.hero {
+  margin-top: var(--hero-nav-space);
+  min-height: calc(100svh - var(--hero-nav-space));
+  padding: 64px 48px 72px;
+}
+
+/* Display the background without unnecessary zooming */
+.hero::before {
+  background-image: url('cleanova-hero.png');
+  background-size: cover;
+  background-position: center 35%;
+  background-repeat: no-repeat;
+  transform: none;
+}
+
+/* Keep the text readable without making the photo muddy */
+.hero::after {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.86) 0%,
+    rgba(0, 0, 0, 0.56) 42%,
+    rgba(0, 0, 0, 0.14) 100%
+  );
+}
+
+/* Tablet and mobile */
+@media (max-width: 900px) {
+  :root {
+    --hero-nav-space: 96px;
+  }
+
+  .hero {
+    padding: 52px 24px 64px;
+  }
+
+  .hero::before {
+    background-position: 58% 35%;
+  }
+}
+
+/* Small phones */
+@media (max-width: 600px) {
+  :root {
+    --hero-nav-space: 84px;
+  }
+
+  .hero {
+    padding: 46px 20px 56px;
+  }
+
+  .hero::before {
+    background-position: 55% center;
+  }
+}
