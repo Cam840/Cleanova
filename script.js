@@ -12,12 +12,16 @@ const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 if (navToggle && navLinks) {
   navToggle.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
   });
   // Close on link click (mobile)
   navLinks.querySelectorAll('a').forEach(link => {
     link.addEventListener('click', () => {
-      if (window.innerWidth <= 600) navLinks.classList.remove('open');
+      if (window.innerWidth <= 900) {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
     });
   });
 }

@@ -13,29 +13,45 @@
 </head>
 <body>
 
- <!-- ===== NAV ===== -->
+  <!-- ===== NAV ===== -->
   <nav class="nav">
     <div class="nav-inner">
       <a href="index.html" class="nav-logo"><img src="logo-side.png" alt="Cleanova Building Services"></a>
       <ul class="nav-links">
         <li><a href="index.html" data-page="index.html">Home</a></li>
-      
-        <li><a href="commercial.html" data-page="commercial.html">Commercial</a></li>
-      
-        <li><a href="residential.html" data-page="residential.html">Residential</a></li>
-      
+
+        <li class="nav-dropdown">
+          <a href="commercial.html" data-page="commercial.html">Commercial</a>
+          <div class="nav-dropdown-menu">
+            <a href="commercial.html" class="dropdown-overview">Commercial Overview</a>
+            <a href="commercial.html#post-construction-detail">Post-Construction</a>
+            <a href="commercial.html#custom-luxury-detail">Custom &amp; Luxury Builds</a>
+            <a href="commercial.html#commercial-real-estate-detail">Commercial Real Estate</a>
+          </div>
+        </li>
+
+        <li class="nav-dropdown">
+          <a href="residential.html" data-page="residential.html">Residential</a>
+          <div class="nav-dropdown-menu">
+            <a href="residential.html" class="dropdown-overview">Residential Overview</a>
+            <a href="residential.html#home-cleaning-detail">Home Cleaning</a>
+            <a href="residential.html#real-estate-detail">Real Estate Cleaning</a>
+            <a href="residential.html#movein">Move-In / Move-Out</a>
+          </div>
+        </li>
+
         <li class="nav-dropdown">
           <a href="about.html" data-page="about.html">About Us</a>
           <div class="nav-dropdown-menu">
-            <a href="about.html">About Us</a>
+            <a href="about.html" class="dropdown-overview">About Cleanova</a>
             <a href="about.html#areas">Service Areas</a>
             <a href="about.html#contact">Contact</a>
           </div>
         </li>
-      
+
         <li><a href="quote.html" class="nav-cta">Get a Quote</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Toggle menu">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -177,6 +193,57 @@
             <a href="quote.html" class="learn-more">Schedule</a>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- ===== SPECIALIZED COMMERCIAL SERVICES ===== -->
+  <section class="section specialized-commercial" id="specialized-commercial-detail">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="eyebrow">Specialized Commercial Services</span>
+        <h2>Built For The Final Impression</h2>
+        <p>Detail-focused cleaning for new construction, luxury projects, and commercial real estate transitions.</p>
+      </div>
+
+      <div class="tier-grid specialized-commercial-grid">
+        <article class="tier-card service-detail-card" id="post-construction-detail">
+          <h4>Construction Turnover</h4>
+          <h3>Post-Construction Cleaning</h3>
+          <p>From fine dust to final presentation, we prepare newly built and renovated spaces for inspection, handoff, and occupancy.</p>
+          <ul>
+            <li>Detailed dust and debris removal</li>
+            <li>Windows, fixtures, floors, and surface finishing</li>
+            <li>Final-clean coordination before turnover</li>
+          </ul>
+          <a href="quote.html" class="learn-more">Request a Quote</a>
+        </article>
+
+        <article class="tier-card service-detail-card" id="custom-luxury-detail">
+          <h4>White-Glove Finish</h4>
+          <h3>Custom &amp; Luxury Builds</h3>
+          <p>Careful final cleaning designed for custom homes and luxury interiors where delicate materials, premium finishes, and presentation matter.</p>
+          <ul>
+            <li>Finish-safe cleaning methods</li>
+            <li>Detailed millwork, glass, stone, and fixture care</li>
+            <li>Presentation-ready final walkthrough preparation</li>
+          </ul>
+          <a href="quote.html" class="learn-more">Request a Quote</a>
+        </article>
+
+        <article class="tier-card service-detail-card" id="commercial-real-estate-detail">
+          <h4>Property Presentation</h4>
+          <h3>Commercial Real Estate</h3>
+          <p>Flexible cleaning support for property managers, brokers, tenant turnovers, listings, showings, and recurring common-area care.</p>
+          <ul>
+            <li>Tenant turnover and move-ready cleaning</li>
+            <li>Listing and showing preparation</li>
+            <li>Recurring property and common-area service</li>
+          </ul>
+          <a href="quote.html" class="learn-more">Request a Quote</a>
+        </article>
       </div>
     </div>
   </section>
