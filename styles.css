@@ -4009,3 +4009,118 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
     contrast(1.12)
     drop-shadow(0 3px 9px rgba(0, 0, 0, 0.80));
 }
+
+/* ==========================================
+   UPDATED CHOOSE YOUR SERVICE SECTION
+   ========================================== */
+
+.split-section {
+  position: relative;
+  padding: 90px 40px 80px;
+
+  background:
+    radial-gradient(
+      circle at 50% 0%,
+      rgba(255, 255, 255, 0.07),
+      transparent 38%
+    ),
+    linear-gradient(
+      180deg,
+      #050505 0%,
+      #0a0a0a 100%
+    );
+
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.split-header {
+  max-width: 800px;
+  margin: 0 auto 48px;
+}
+
+.split-header .eyebrow {
+  margin-bottom: 14px;
+}
+
+.split-header h2 {
+  margin-bottom: 18px;
+  font-size: clamp(1.8rem, 3.8vw, 3rem);
+}
+
+.split-statement {
+  max-width: 680px;
+  margin: 0 auto;
+
+  font-family: var(--font-display);
+  color: var(--silver-200);
+
+  font-size: clamp(1.35rem, 2.3vw, 2rem);
+  font-style: italic;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+}
+
+.split-grid {
+  gap: 24px;
+}
+
+.split-card {
+  min-height: 300px;
+  padding: 44px 36px;
+
+  border-radius: 20px;
+  border-color: rgba(255, 255, 255, 0.13);
+
+  box-shadow: 0 22px 55px rgba(0, 0, 0, 0.45);
+}
+
+.split-card::before {
+  opacity: 0.64;
+  transform: scale(1.01);
+
+  transition:
+    opacity 0.4s ease,
+    transform 0.55s ease;
+}
+
+.split-card::after {
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.25) 0%,
+    rgba(0, 0, 0, 0.82) 100%
+  );
+}
+
+.split-card:hover::before {
+  opacity: 0.82;
+  transform: scale(1.06);
+}
+
+.split-card h3 {
+  margin-bottom: 24px;
+  font-size: clamp(1rem, 1.7vw, 1.35rem);
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.8);
+}
+
+.split-card .btn {
+  min-width: 150px;
+  background: rgba(0, 0, 0, 0.38);
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+@media (max-width: 760px) {
+  .split-section {
+    padding: 72px 20px 60px;
+  }
+
+  .split-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .split-card {
+    min-height: 260px;
+  }
+}
