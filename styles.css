@@ -3895,7 +3895,7 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
 
 /* Much clearer header at the top of the page */
 .nav:not(.scrolled) .nav-inner {
-  background: rgba(0, 0, 0, 0.18);
+  background: rgba(0, 0, 0, 0.08);
   border-color: rgba(255, 255, 255, 0.12);
   box-shadow: none;
 
