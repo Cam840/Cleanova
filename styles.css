@@ -3964,3 +3964,46 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
     font-size: clamp(2.3rem, 11vw, 3.4rem);
   }
 }
+
+/* Smoother transparent-to-black navigation transition */
+.nav-inner {
+  transition:
+    background-color 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+    backdrop-filter 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+    -webkit-backdrop-filter 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Very clear while at the top */
+.nav:not(.scrolled) .nav-inner {
+  background-color: rgba(0, 0, 0, 0.04);
+  border-color: rgba(255, 255, 255, 0.10);
+  box-shadow: none;
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+/* Dark navigation after scrolling */
+.nav.scrolled .nav-inner {
+  background-color: rgba(0, 0, 0, 0.94);
+  border-color: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.60);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+/* Keep links and logo readable while transparent */
+.nav:not(.scrolled) .nav-links a {
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.90);
+}
+
+.nav:not(.scrolled) .nav-logo img {
+  filter:
+    brightness(1.25)
+    contrast(1.12)
+    drop-shadow(0 3px 9px rgba(0, 0, 0, 0.80));
+}
