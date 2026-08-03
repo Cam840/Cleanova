@@ -4528,3 +4528,148 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
     font-size: 9.5px;
   }
 }
+
+/* ==========================================
+   FINAL MOBILE NAVIGATION FIX
+   ========================================== */
+
+@media (max-width: 900px) {
+  .nav-inner {
+    position: relative;
+  }
+
+  .nav-toggle {
+    position: relative;
+    z-index: 1002;
+
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  /* Closed by default */
+  .nav-links {
+    position: absolute;
+    z-index: 1001;
+
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+
+    padding: 20px;
+
+    background: rgba(5, 5, 5, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+
+    transform: translateY(-12px);
+
+    transition:
+      opacity 0.28s ease,
+      visibility 0.28s ease,
+      transform 0.28s ease;
+  }
+
+  /* Open only after clicking hamburger */
+  .nav-links.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
+    transform: translateY(0);
+  }
+
+  .nav-links > li {
+    width: 100%;
+  }
+
+  .nav-links > li > a {
+    display: flex;
+    width: 100%;
+    padding: 10px 0;
+  }
+
+  .nav-links .nav-cta {
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Mobile dropdown links */
+  .nav-dropdown-menu {
+    position: static;
+
+    min-width: 0;
+    margin: 5px 0 0;
+    padding: 5px 0 5px 16px;
+
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+
+    background: transparent;
+    border: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .nav-dropdown-menu a {
+    padding: 8px 0;
+  }
+
+  /* Turn hamburger into an X */
+  .nav-toggle span {
+    transform-origin: center;
+    transition:
+      transform 0.25s ease,
+      opacity 0.2s ease;
+  }
+
+  .nav-toggle.open span:nth-child(1) {
+    transform: translateY(5px) rotate(45deg);
+  }
+
+  .nav-toggle.open span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav-toggle.open span:nth-child(3) {
+    transform: translateY(-5px) rotate(-45deg);
+  }
+
+  body.nav-menu-open {
+    overflow: hidden;
+  }
+}
+
+/* Restore normal desktop navigation */
+@media (min-width: 901px) {
+  .nav-links {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: none;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  body.nav-menu-open {
+    overflow: auto;
+  }
+}
