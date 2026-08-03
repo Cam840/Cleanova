@@ -4225,3 +4225,136 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
     padding: 40px 26px;
   }
 }
+
+/* ==========================================
+   FINAL HOMEPAGE HERO LAYOUT
+   ========================================== */
+
+.hero {
+  padding: 130px 42px 72px;
+}
+
+/* Keep the text in a narrower left-side area */
+.hero-content {
+  max-width: 560px;
+}
+
+/* Bold sans-serif heading like the reference */
+.hero h1 {
+  max-width: 560px;
+  margin-bottom: 18px;
+
+  font-family: 'Manrope', Arial, sans-serif;
+  font-size: clamp(3rem, 4.2vw, 4.5rem);
+  font-weight: 800;
+  line-height: 0.94;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.75);
+}
+
+/* Keep the three main words on separate lines */
+.hero-line {
+  display: block;
+}
+
+/* Italic subheading */
+.hero h1 .light {
+  display: block;
+  max-width: 520px;
+  margin-top: 12px;
+
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 0.55em;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: 0;
+  text-transform: none;
+
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* Smaller description like the reference */
+.hero-desc {
+  max-width: 440px;
+  margin-bottom: 28px;
+
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+/* Reduce the empty gap below the buttons */
+.hero-actions {
+  margin-bottom: 44px;
+}
+
+/* Keep the feature row contained on the left */
+.hero-features {
+  max-width: 650px;
+  gap: 28px;
+}
+
+/* Darken only the text side */
+.hero::after {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.90) 0%,
+    rgba(0, 0, 0, 0.76) 24%,
+    rgba(0, 0, 0, 0.40) 44%,
+    rgba(0, 0, 0, 0.12) 68%,
+    rgba(0, 0, 0, 0.04) 100%
+  );
+}
+
+/* Shift the people toward the right on desktop */
+@media (min-width: 901px) {
+  .hero::before {
+    background-image: url('cleanova-hero1.png');
+
+    /*
+      Slight enlargement creates enough horizontal crop
+      to move the people toward the right.
+    */
+    background-size: auto 108%;
+    background-position: left center;
+    background-repeat: no-repeat;
+  }
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .hero {
+    padding: 130px 24px 66px;
+  }
+
+  .hero::before {
+    background-size: cover;
+    background-position: 50% center;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.8rem, 8vw, 4.2rem);
+  }
+}
+
+/* Phone */
+@media (max-width: 600px) {
+  .hero {
+    padding: 118px 20px 58px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.6rem, 12vw, 3.6rem);
+    line-height: 0.96;
+  }
+
+  .hero h1 .light {
+    font-size: 0.62em;
+  }
+
+  .hero::before {
+    background-position: 56% center;
+  }
+}
