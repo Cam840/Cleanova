@@ -4730,3 +4730,12 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
     max-width: 100%;
   }
 }
+
+#car-dealerships .panel-image {
+  background-position: center 55% !important;
+  filter: grayscale(100%) brightness(0.78) contrast(1.08);
+}
+
+#car-dealerships:hover .panel-image {
+  filter: grayscale(0%) brightness(0.9) contrast(1.04);
+}
