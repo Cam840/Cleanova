@@ -10,20 +10,61 @@ if (nav) {
 // ===== MOBILE NAV TOGGLE =====
 const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
-if (navToggle && navLinks) {
-  navToggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', String(isOpen));
+const navContainer = document.querySelector('.nav');
+
+function setMobileMenu(open) {
+  if (!navToggle || !navLinks) return;
+
+  navLinks.classList.toggle('open', open);
+  navToggle.classList.toggle('open', open);
+  navToggle.setAttribute('aria-expanded', String(open));
+  document.body.classList.toggle('nav-menu-open', open);
+}
+
+if (navToggle && navLinks && navContainer) {
+  // Open and close with hamburger button
+  navToggle.addEventListener('click', event => {
+    event.stopPropagation();
+
+    const isOpen = navLinks.classList.contains('open');
+    setMobileMenu(!isOpen);
   });
-  // Close on link click (mobile)
-  navLinks.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 900) {
-        navLinks.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
+
+  // Close after selecting any navigation link
+  navLinks.addEventListener('click', event => {
+    const clickedLink = event.target.closest('a');
+
+    if (clickedLink && window.innerWidth <= 900) {
+      setMobileMenu(false);
+    }
   });
+
+  // Close when tapping outside the navigation
+  document.addEventListener('click', event => {
+    if (
+      window.innerWidth <= 900 &&
+      !navContainer.contains(event.target)
+    ) {
+      setMobileMenu(false);
+    }
+  });
+
+  // Close with Escape
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') {
+      setMobileMenu(false);
+    }
+  });
+
+  // Remove the mobile-open state when returning to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+      setMobileMenu(false);
+    }
+  });
+
+  // Start closed whenever the page loads
+  setMobileMenu(false);
 }
 
 // ===== QUOTE FORM TOGGLE =====
