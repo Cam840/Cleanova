@@ -510,11 +510,13 @@ p { color: var(--silver-300); }
 }
 
 .split-card.commercial::before {
-  background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=80&auto=format&fit=crop');
+  background-image: url('https://images.unsplash.com/photo-1483153597167-15375b89a20e?auto=format&fit=crop&w=1800&q=85');
+  background-position: center 48%;
 }
 
 .split-card.residential::before {
-  background-image: url('https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1200&q=80&auto=format&fit=crop');
+  background-image: url('https://images.pexels.com/photos/6197108/pexels-photo-6197108.jpeg?auto=compress&dpr=1&h=900&w=1600');
+  background-position: center center;
 }
 
 .split-card:hover { border-color: var(--silver-500); }
