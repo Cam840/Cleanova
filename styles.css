@@ -3309,7 +3309,7 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  transform: scale(1.01);
+  transform: none;
 }
 
 .hero::after {
