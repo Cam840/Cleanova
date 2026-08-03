@@ -3307,7 +3307,7 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
 }
 
 .hero::before {
-  background-image: url('cleanova-hero1.png');
+  background-image: url('cleanova-hero2.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3751,7 +3751,7 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('cleanova-hero1.png');
+  background-image: url('cleanova-hero2.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
