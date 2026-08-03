@@ -4124,3 +4124,104 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
     min-height: 260px;
   }
 }
+
+/* ==========================================
+   RESIDENTIAL AND COMMERCIAL BUNDLES
+   ========================================== */
+
+.service-bundle-section {
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+
+.service-bundle {
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.05),
+      transparent 34%
+    ),
+    var(--black-2);
+
+  box-shadow: 0 26px 70px rgba(0, 0, 0, 0.5);
+}
+
+.bundle-image-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.bundle-photo {
+  min-width: 0;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  filter: grayscale(25%) contrast(1.05);
+
+  transition:
+    filter 0.35s ease,
+    transform 0.5s ease;
+}
+
+.bundle-photo:hover {
+  filter: grayscale(0%) contrast(1.05);
+  transform: scale(1.03);
+}
+
+.service-bundle .feature-content {
+  padding: 58px 52px;
+}
+
+.service-bundle .eyebrow {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.service-bundle h2 {
+  margin-bottom: 20px;
+  line-height: 1.35;
+}
+
+.service-bundle p {
+  margin-bottom: 24px;
+  line-height: 1.75;
+}
+
+#convenience-bundle,
+#fleet-detailing {
+  scroll-margin-top: 140px;
+}
+
+@media (max-width: 900px) {
+  .service-bundle {
+    grid-template-columns: 1fr;
+  }
+
+  .bundle-image-grid {
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 600px) {
+  .bundle-image-grid {
+    grid-template-columns: 1fr;
+    min-height: 600px;
+  }
+
+  .bundle-photo {
+    min-height: 300px;
+  }
+
+  .service-bundle .feature-content {
+    padding: 40px 26px;
+  }
+}
