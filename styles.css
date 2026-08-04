@@ -5129,3 +5129,38 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
   background-position: center 42%;
   background-repeat: no-repeat;
 }
+/* Specialty services: balanced 3 by 2 layout */
+.specialty-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.specialty-grid .panel-card {
+  min-width: 0;
+}
+
+.specialty-grid .panel-image {
+  height: 190px;
+}
+
+.specialty-grid .panel-body {
+  min-height: 135px;
+}
+
+.specialty-grid .panel-card h3 {
+  min-height: 2.7em;
+  display: flex;
+  align-items: flex-start;
+}
+
+@media (max-width: 1000px) {
+  .specialty-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .specialty-grid {
+    display: flex;
+  }
+}
