@@ -5121,3 +5121,11 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
     bottom: 16px;
   }
 }
+
+/* About page handshake image */
+.trust-handshake-image {
+  min-height: 470px;
+  background-size: cover;
+  background-position: center 42%;
+  background-repeat: no-repeat;
+}
