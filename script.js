@@ -179,16 +179,16 @@ const serviceDetails = {
     ]
   },
   carpet: {
-    title: 'Carpet Cleaning',
-    text: 'Professional carpet cleaning removes dirt, stains, odor, and buildup from high-traffic spaces while improving the overall appearance of the property.',
-    points: [
-      'Hot water extraction cleaning',
-      'High-traffic area treatment',
-      'Spot and stain attention',
-      'Odor improvement',
-      'Ideal for offices, homes, and common areas'
-    ]
-  },
+  title: 'Carpet Extraction',
+  text: 'Professional carpet extraction removes embedded soil, spots, odors, and buildup from carpeted spaces.',
+  points: [
+    'Hot-water extraction cleaning',
+    'Commercial and residential carpets',
+    'High-traffic area treatment',
+    'Spot and stain attention',
+    'Odor and buildup removal'
+  ]
+},
   wax: {
     title: 'Floor Strip & Wax',
     text: 'Professional strip and wax service restores dull floors with a cleaner, glossier, more polished finish.',
@@ -212,7 +212,7 @@ const serviceDetails = {
     ]
   },
  sanitization: {
-    title: 'Disinfection & Sanitization',
+    title: 'Disinfection',
     text: 'A detailed sanitization service for homes and spaces that need extra care, especially for families with pets, newborns, illness recovery, or high-touch areas.',
     points: [
       'High-touch surface disinfection',
@@ -221,7 +221,18 @@ const serviceDetails = {
       'Pet-friendly home refresh options',
       'Great before welcoming a newborn or after sickness'
     ]
-  }
+  },
+  litter: {
+  title: 'Litter Pickup & Lot Maintenance',
+  text: 'Routine exterior maintenance keeps parking lots, sidewalks, entrances, and surrounding areas clean and presentable.',
+  points: [
+    'Parking-lot litter pickup',
+    'Sidewalk and entryway cleanup',
+    'Trash and loose-debris removal',
+    'Routine property inspections',
+    'Recurring lot-maintenance schedules'
+  ]
+}
 };
 
 const serviceCards = document.querySelectorAll('.service-card[data-service]');
