@@ -5367,3 +5367,198 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================
+   ABOUT SECTION — FIT INSIDE VIEWPORT
+   ========================================== */
+
+.about-company {
+  padding: 70px 32px;
+}
+
+.about-company .section-inner {
+  max-width: 1480px;
+}
+
+/* Keep the full design inside one clean frame */
+.about-company-shell {
+  grid-template-columns: 48% 52%;
+  align-items: stretch;
+
+  max-height: none;
+  min-height: 620px;
+
+  overflow: visible;
+  border-radius: 28px;
+}
+
+/* Make the text column more compact */
+.about-company-text {
+  padding: 54px 52px;
+  justify-content: center;
+}
+
+.about-company-text h2 {
+  margin-bottom: 20px;
+
+  font-size: clamp(2rem, 3.1vw, 3.25rem);
+  line-height: 1.04;
+}
+
+.about-company-text h2 em {
+  margin-top: 10px;
+  font-size: 0.58em;
+}
+
+.about-company-lead {
+  margin-bottom: 22px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.about-company-copy {
+  gap: 13px;
+  margin-bottom: 25px;
+}
+
+.about-company-copy p {
+  font-size: 14px;
+  line-height: 1.68;
+}
+
+.about-company-highlights {
+  gap: 9px;
+  margin-bottom: 24px;
+}
+
+.about-highlight {
+  padding: 9px 13px;
+  font-size: 9.5px;
+}
+
+/* Stop the picture from becoming excessively tall */
+.about-company-visual {
+  min-height: 620px;
+  height: auto;
+
+  background-size: cover;
+  background-position: center 35%;
+
+  border-radius: 0 28px 28px 0;
+}
+
+/* Smaller logo panel */
+.team-logo-card {
+  top: 22px;
+  padding: 13px 20px;
+  border-radius: 16px;
+}
+
+.team-logo-card img {
+  width: 190px;
+}
+
+/* Keep floating cards inside the picture */
+.about-floating-card {
+  max-width: 225px;
+  padding: 15px 16px;
+
+  border-radius: 15px;
+}
+
+.about-floating-card-top {
+  left: 22px;
+  bottom: 100px;
+}
+
+.about-floating-card-bottom {
+  right: 22px;
+  bottom: 22px;
+}
+
+.about-floating-card strong {
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.small-label {
+  font-size: 8.5px;
+}
+
+/* Medium screens */
+@media (max-width: 1100px) {
+  .about-company-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .about-company-text {
+    padding: 52px 42px;
+  }
+
+  .about-company-visual {
+    min-height: 560px;
+    border-radius: 0 0 28px 28px;
+    background-position: center 30%;
+  }
+}
+
+/* Phones */
+@media (max-width: 700px) {
+  .about-company {
+    padding: 50px 16px;
+  }
+
+  .about-company-shell {
+    border-radius: 20px;
+  }
+
+  .about-company-text {
+    padding: 38px 22px;
+  }
+
+  .about-company-text h2 {
+    font-size: clamp(1.9rem, 9vw, 2.7rem);
+  }
+
+  .about-company-lead {
+    font-size: 14px;
+  }
+
+  .about-company-copy p {
+    font-size: 13px;
+  }
+
+  .about-company-visual {
+    min-height: 440px;
+    border-radius: 0 0 20px 20px;
+    background-position: center top;
+  }
+
+  .team-logo-card {
+    top: 16px;
+    padding: 10px 15px;
+  }
+
+  .team-logo-card img {
+    width: 145px;
+  }
+
+  .about-floating-card {
+    max-width: 180px;
+    padding: 12px;
+  }
+
+  .about-floating-card-top {
+    left: 12px;
+    bottom: 82px;
+  }
+
+  .about-floating-card-bottom {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .about-floating-card strong {
+    font-size: 12px;
+  }
+}
