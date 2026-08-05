@@ -5683,3 +5683,69 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
     transform: none;
   }
 }
+
+/* ==========================================
+   CLICKABLE RESIDENTIAL SERVICE CARDS
+   ========================================== */
+
+#residential-services .panel-card {
+  position: relative;
+  cursor: pointer;
+}
+
+#residential-services .panel-card::before {
+  content: 'View details';
+
+  position: absolute;
+  z-index: 5;
+  top: 12px;
+  right: 12px;
+
+  padding: 7px 11px;
+
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 999px;
+
+  background: rgba(0, 0, 0, 0.72);
+  color: var(--silver-100);
+
+  font-size: 8px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+
+  opacity: 0;
+  transform: translateY(-5px);
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+#residential-services .panel-card:hover::before,
+#residential-services .panel-card:focus-visible::before {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#residential-services .panel-card:focus-visible {
+  outline: 2px solid var(--silver-200);
+  outline-offset: 4px;
+}
+
+/* Keep Schedule link above the clickable card */
+#residential-services .learn-more {
+  position: relative;
+  z-index: 6;
+}
+
+@media (max-width: 700px) {
+  #residential-services .panel-card::before {
+    opacity: 1;
+    transform: none;
+  }
+}
