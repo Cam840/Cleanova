@@ -847,3 +847,213 @@ if (clientMarquee && clientTrack) {
 
   positionClientSliderAtMiddle();
 }
+
+// ===== SPECIALTY SERVICES — MOBILE TWO-WAY INFINITE LOOP =====
+const specialtySlider = document.querySelector(
+  '#specialty-services-slider'
+);
+
+const specialtyMobileQuery = window.matchMedia(
+  '(max-width: 600px)'
+);
+
+if (specialtySlider) {
+  const originalSpecialtyCards = Array.from(
+    specialtySlider.querySelectorAll(
+      ':scope > .panel-card:not(.specialty-loop-clone)'
+    )
+  );
+
+  let previousSpecialtyCards = [];
+  let nextSpecialtyCards = [];
+  let specialtyLoopReady = false;
+  let specialtyIsRepositioning = false;
+
+  function activateSpecialtyClone(clone) {
+    const serviceName = clone.dataset.service;
+
+    const originalCard = originalSpecialtyCards.find(
+      card => card.dataset.service === serviceName
+    );
+
+    if (!originalCard) return;
+
+    /*
+     * Clicking a cloned card triggers the corresponding
+     * original card, preserving the existing service popup.
+     */
+    clone.addEventListener('click', event => {
+      if (event.target.closest('a')) return;
+
+      originalCard.click();
+    });
+
+    clone.addEventListener('keydown', event => {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        originalCard.click();
+      }
+    });
+  }
+
+  function buildSpecialtyLoop() {
+    if (
+      specialtyLoopReady ||
+      !originalSpecialtyCards.length
+    ) {
+      return;
+    }
+
+    const previousFragment = document.createDocumentFragment();
+    const nextFragment = document.createDocumentFragment();
+
+    previousSpecialtyCards = originalSpecialtyCards.map(card => {
+      const clone = card.cloneNode(true);
+
+      clone.classList.add('specialty-loop-clone');
+      clone.setAttribute('aria-hidden', 'true');
+
+      activateSpecialtyClone(clone);
+      previousFragment.appendChild(clone);
+
+      return clone;
+    });
+
+    nextSpecialtyCards = originalSpecialtyCards.map(card => {
+      const clone = card.cloneNode(true);
+
+      clone.classList.add('specialty-loop-clone');
+      clone.setAttribute('aria-hidden', 'true');
+
+      activateSpecialtyClone(clone);
+      nextFragment.appendChild(clone);
+
+      return clone;
+    });
+
+    specialtySlider.insertBefore(
+      previousFragment,
+      specialtySlider.firstChild
+    );
+
+    specialtySlider.appendChild(nextFragment);
+
+    specialtyLoopReady = true;
+  }
+
+  function getSpecialtyLoopMeasurements() {
+    const firstOriginal = originalSpecialtyCards[0];
+    const firstNextClone = nextSpecialtyCards[0];
+
+    if (!firstOriginal || !firstNextClone) {
+      return null;
+    }
+
+    const middleStart = firstOriginal.offsetLeft;
+    const nextStart = firstNextClone.offsetLeft;
+    const setWidth = nextStart - middleStart;
+
+    if (setWidth <= 0) {
+      return null;
+    }
+
+    return {
+      middleStart,
+      nextStart,
+      setWidth
+    };
+  }
+
+  function positionSpecialtySliderAtStart() {
+    if (!specialtyMobileQuery.matches) return;
+
+    buildSpecialtyLoop();
+
+    requestAnimationFrame(() => {
+      const measurements = getSpecialtyLoopMeasurements();
+
+      if (!measurements) return;
+
+      /*
+       * Begin on the first original card, with a complete
+       * duplicate set available before it.
+       */
+      specialtySlider.scrollLeft =
+        measurements.middleStart;
+    });
+  }
+
+  function maintainSpecialtyLoop() {
+    if (
+      !specialtyMobileQuery.matches ||
+      specialtyIsRepositioning
+    ) {
+      return;
+    }
+
+    const measurements = getSpecialtyLoopMeasurements();
+
+    if (!measurements) return;
+
+    const {
+      middleStart,
+      nextStart,
+      setWidth
+    } = measurements;
+
+    const currentPosition = specialtySlider.scrollLeft;
+
+    /*
+     * Swiping backward from the first service:
+     * move to the equivalent position at the end.
+     */
+    if (currentPosition < middleStart - 4) {
+      specialtyIsRepositioning = true;
+
+      specialtySlider.scrollLeft =
+        currentPosition + setWidth;
+
+      requestAnimationFrame(() => {
+        specialtyIsRepositioning = false;
+      });
+    }
+
+    /*
+     * Swiping beyond the final service:
+     * return to the equivalent position near the beginning.
+     */
+    else if (currentPosition >= nextStart - 4) {
+      specialtyIsRepositioning = true;
+
+      specialtySlider.scrollLeft =
+        currentPosition - setWidth;
+
+      requestAnimationFrame(() => {
+        specialtyIsRepositioning = false;
+      });
+    }
+  }
+
+  specialtySlider.addEventListener(
+    'scroll',
+    maintainSpecialtyLoop,
+    { passive: true }
+  );
+
+  specialtyMobileQuery.addEventListener(
+    'change',
+    positionSpecialtySliderAtStart
+  );
+
+  window.addEventListener(
+    'resize',
+    positionSpecialtySliderAtStart
+  );
+
+  window.addEventListener(
+    'load',
+    positionSpecialtySliderAtStart
+  );
+
+  positionSpecialtySliderAtStart();
+}
