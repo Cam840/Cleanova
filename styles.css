@@ -6142,3 +6142,129 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
     animation-duration: 24s;
   }
 }
+
+/* ==========================================
+   CLIENT SLIDER — SLIMMER VERSION
+   ========================================== */
+
+.client-section {
+  padding: 52px 40px 42px;
+}
+
+.client-section-header {
+  max-width: 900px;
+  margin: 0 auto 22px;
+  text-align: center;
+}
+
+.client-section-header .eyebrow {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.client-section-header h2 {
+  margin-bottom: 10px;
+  font-size: clamp(2rem, 4vw, 3.3rem);
+  line-height: 1.05;
+  letter-spacing: 0.08em;
+}
+
+.client-section-header p {
+  max-width: 620px;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.client-marquee {
+  padding: 8px 0;
+}
+
+.client-track {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: max-content;
+  animation: clientSlide 30s linear infinite;
+}
+
+.client-pill {
+  flex: 0 0 auto;
+  min-width: 240px;
+  height: 58px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 18px;
+
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+
+  box-shadow:
+    0 10px 24px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.client-name {
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* No numbers anymore */
+.client-index {
+  display: none;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .client-section {
+    padding: 46px 24px 36px;
+  }
+
+  .client-pill {
+    min-width: 220px;
+    height: 54px;
+    padding: 0 16px;
+  }
+
+  .client-name {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .client-section {
+    padding: 40px 18px 32px;
+  }
+
+  .client-section-header h2 {
+    font-size: clamp(1.7rem, 8vw, 2.3rem);
+  }
+
+  .client-section-header p {
+    font-size: 14px;
+  }
+
+  .client-pill {
+    min-width: 200px;
+    height: 50px;
+    padding: 0 14px;
+  }
+
+  .client-name {
+    font-size: 9.5px;
+    letter-spacing: 0.08em;
+  }
+
+  .client-track {
+    gap: 10px;
+    animation-duration: 24s;
+  }
+}
