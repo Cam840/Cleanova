@@ -502,3 +502,183 @@ commercialIndustryCards.forEach(card => {
     }
   });
 });
+
+// ===== RESIDENTIAL SERVICE DETAILS =====
+const residentialServiceDetails = {
+  standard: {
+    title: 'Standard Home Cleaning',
+    text: 'Routine professional cleaning designed to keep your home fresh, comfortable, and consistently maintained.',
+    points: [
+      'Kitchen and bathroom cleaning',
+      'Dusting accessible surfaces',
+      'Vacuuming and floor mopping',
+      'Bedroom and living-area cleaning',
+      'Weekly, biweekly, or monthly scheduling'
+    ]
+  },
+
+  deep: {
+    title: 'Deep Cleaning',
+    text: 'A detailed reset for homes that need extra attention beyond regular maintenance cleaning.',
+    points: [
+      'Baseboards, corners, and detailed surfaces',
+      'Built-up dust and grime removal',
+      'Detailed kitchen and bathroom cleaning',
+      'High-touch surface attention',
+      'Ideal for seasonal or first-time cleaning'
+    ]
+  },
+
+  recurring: {
+    title: 'Recurring Cleaning',
+    text: 'Dependable scheduled cleaning that keeps your home consistently clean without requiring repeated booking.',
+    points: [
+      'Weekly cleaning options',
+      'Biweekly cleaning options',
+      'Monthly cleaning options',
+      'Consistent customized checklist',
+      'Flexible scheduling based on your needs'
+    ]
+  },
+
+  movein: {
+    title: 'Move-In Cleaning',
+    text: 'A detailed cleaning service that prepares your new home before furniture, boxes, and personal belongings arrive.',
+    points: [
+      'Kitchen and cabinet cleaning',
+      'Bathroom sanitization',
+      'Floors, baseboards, and surfaces',
+      'Closets and storage areas',
+      'Move-in-ready finishing'
+    ]
+  },
+
+  moveout: {
+    title: 'Move-Out Cleaning',
+    text: 'Thorough cleaning that helps leave your previous home ready for its next resident, landlord inspection, or sale.',
+    points: [
+      'Detailed room-by-room cleaning',
+      'Kitchen and appliance exterior cleaning',
+      'Bathroom cleaning and sanitization',
+      'Floors, baseboards, and empty spaces',
+      'Rental and real-estate turnover preparation'
+    ]
+  },
+
+  openhouse: {
+    title: 'Open House Cleaning',
+    text: 'Presentation-focused cleaning designed to help your property make a strong first impression on potential buyers.',
+    points: [
+      'Entryway and living-space presentation',
+      'Kitchen and bathroom detailing',
+      'Floors, glass, and visible surfaces',
+      'High-touch and high-visibility areas',
+      'Final preparation before showings'
+    ]
+  },
+
+  sanitization: {
+    title: 'Disinfection & Sanitization',
+    text: 'Extra cleaning attention for high-touch areas and homes that need a more detailed sanitization service.',
+    points: [
+      'Door handles and light switches',
+      'Kitchen and bathroom surfaces',
+      'Counters, fixtures, and touchpoints',
+      'Options for homes with pets or newborns',
+      'Useful after illness, guests, or major events'
+    ]
+  },
+
+  presalepostsale: {
+    title: 'Pre-Sale & Post-Sale Cleaning',
+    text: 'Cleaning support for homeowners, agents, and buyers before listing, after closing, or during a property transition.',
+    points: [
+      'Pre-listing property preparation',
+      'Showing and photography preparation',
+      'Post-sale cleaning',
+      'Move-ready finishing',
+      'Customized real-estate cleaning plans'
+    ]
+  },
+
+  'luxury-builds': {
+    title: 'Luxury Build Cleaning',
+    text: 'Careful cleaning for premium homes, upscale interiors, and properties with delicate or high-end finishes.',
+    points: [
+      'Finish-safe cleaning methods',
+      'Stone, glass, and fixture care',
+      'Detailed millwork cleaning',
+      'Presentation-focused finishing',
+      'Customized service scope'
+    ]
+  },
+
+  'custom-build-final-cleaning': {
+    title: 'Custom-Build Final Cleaning',
+    text: 'Detailed final cleaning that prepares newly completed custom homes for inspection, presentation, and occupancy.',
+    points: [
+      'Fine construction dust removal',
+      'Windows, fixtures, and surfaces',
+      'Floor and baseboard detailing',
+      'Cabinet and built-in cleaning',
+      'Final walkthrough preparation'
+    ]
+  }
+};
+
+const residentialServiceCards = document.querySelectorAll(
+  '#residential-services .panel-card'
+);
+
+function openResidentialServiceModal(card) {
+  const detail = residentialServiceDetails[card.id];
+
+  if (
+    !detail ||
+    !serviceModal ||
+    !serviceModalTitle ||
+    !serviceModalText ||
+    !serviceModalList
+  ) {
+    return;
+  }
+
+  const imageElement = card.querySelector('.panel-image');
+  const imageBackground = imageElement
+    ? imageElement.style.backgroundImage
+    : '';
+
+  serviceModalTitle.textContent = detail.title;
+  serviceModalText.textContent = detail.text;
+
+  serviceModalList.innerHTML = detail.points
+    .map(point => `<li>${point}</li>`)
+    .join('');
+
+  if (serviceModalImage) {
+    serviceModalImage.style.backgroundImage = imageBackground;
+  }
+
+  serviceModal.classList.add('open');
+  serviceModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+}
+
+residentialServiceCards.forEach(card => {
+  card.setAttribute('role', 'button');
+  card.setAttribute('tabindex', '0');
+
+  card.addEventListener('click', event => {
+    // Let the Schedule link continue directly to the quote page
+    if (event.target.closest('a')) return;
+
+    openResidentialServiceModal(card);
+  });
+
+  card.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openResidentialServiceModal(card);
+    }
+  });
+});
