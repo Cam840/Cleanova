@@ -298,3 +298,206 @@ document.addEventListener('keydown', event => {
     closeServiceModal();
   }
 });
+
+// ===== COMMERCIAL INDUSTRY DETAILS =====
+const commercialIndustryDetails = {
+  retail: {
+    title: 'Retail Stores',
+    text: 'Professional cleaning designed around customer-facing retail environments.',
+    points: [
+      'Sales floors and fitting rooms',
+      'Entrances and display areas',
+      'Restrooms and high-touch surfaces',
+      'Flexible before- or after-hours service'
+    ]
+  },
+
+  office: {
+    title: 'Office Buildings',
+    text: 'Reliable cleaning that supports a clean, productive, and professional workplace.',
+    points: [
+      'Workstations and common areas',
+      'Conference rooms and kitchens',
+      'Restrooms and high-touch surfaces',
+      'Daily or recurring service plans'
+    ]
+  },
+
+  malls: {
+    title: 'Shopping Malls',
+    text: 'High-capacity cleaning for busy shopping and public areas.',
+    points: [
+      'Common areas and corridors',
+      'Food-court cleaning',
+      'Restrooms and entrances',
+      'Day porter and recurring service'
+    ]
+  },
+
+  healthcare: {
+    title: 'Healthcare Facilities',
+    text: 'Detail-focused cleaning for professional healthcare environments.',
+    points: [
+      'Waiting and reception areas',
+      'Exam and administrative spaces',
+      'High-touch surface cleaning',
+      'Customized facility procedures'
+    ]
+  },
+
+  gyms: {
+    title: 'Gyms & Fitness Centers',
+    text: 'Cleaning plans built for high-traffic fitness and wellness environments.',
+    points: [
+      'Workout and equipment areas',
+      'Locker rooms and restrooms',
+      'Mirrors, floors, and entry areas',
+      'High-touch surface attention'
+    ]
+  },
+
+  restaurants: {
+    title: 'Restaurants',
+    text: 'Professional cleaning support for customer areas and facility presentation.',
+    points: [
+      'Dining and entrance areas',
+      'Floors and high-traffic surfaces',
+      'Restrooms and common spaces',
+      'Flexible off-hours scheduling'
+    ]
+  },
+
+  apartments: {
+    title: 'Apartment & Commercial Buildings',
+    text: 'Recurring and turnover cleaning for managed properties and shared spaces.',
+    points: [
+      'Lobbies and common areas',
+      'Hallways and elevators',
+      'Move-in and move-out cleaning',
+      'Property-specific service plans'
+    ]
+  },
+
+  government: {
+    title: 'Government Facilities',
+    text: 'Dependable cleaning for public-facing and administrative facilities.',
+    points: [
+      'Offices and meeting areas',
+      'Public entrances and lobbies',
+      'Restrooms and shared spaces',
+      'Customized scheduling and scope'
+    ]
+  },
+
+  private: {
+    title: 'Private Facilities',
+    text: 'Discreet, customized cleaning for private and controlled-access properties.',
+    points: [
+      'Customized cleaning procedures',
+      'Professional supervised teams',
+      'Flexible service scheduling',
+      'Detail-focused facility care'
+    ]
+  },
+
+  warehouses: {
+    title: 'Warehouses',
+    text: 'Commercial cleaning for large industrial and storage environments.',
+    points: [
+      'Warehouse floors and aisles',
+      'Breakrooms and offices',
+      'High dusting and debris removal',
+      'Recurring maintenance plans'
+    ]
+  },
+
+  postconstruction: {
+    title: 'Post-Construction Cleaning',
+    text: 'Final cleaning that prepares newly built or renovated spaces for turnover.',
+    points: [
+      'Dust and construction residue removal',
+      'Floors, windows, and fixtures',
+      'Detailed final-clean preparation',
+      'Inspection and occupancy readiness'
+    ]
+  },
+
+  realestate: {
+    title: 'Commercial Real Estate',
+    text: 'Cleaning support for listings, tenant transitions, and managed properties.',
+    points: [
+      'Tenant turnover cleaning',
+      'Listing and showing preparation',
+      'Common-area maintenance',
+      'Move-ready presentation'
+    ]
+  },
+
+  'car-dealerships': {
+    title: 'Car Dealerships',
+    text: 'Professional facility cleaning that supports a polished showroom experience.',
+    points: [
+      'Showrooms and customer lounges',
+      'Glass, floors, and entrances',
+      'Service waiting areas',
+      'Restrooms and employee spaces'
+    ]
+  }
+};
+
+const commercialIndustryCards = document.querySelectorAll(
+  '#commercial-industries .panel-card'
+);
+
+function openCommercialIndustryModal(card) {
+  const detail = commercialIndustryDetails[card.id];
+
+  if (
+    !detail ||
+    !serviceModal ||
+    !serviceModalTitle ||
+    !serviceModalText ||
+    !serviceModalList
+  ) {
+    return;
+  }
+
+  const imageElement = card.querySelector('.panel-image');
+  const imageBackground = imageElement
+    ? imageElement.style.backgroundImage
+    : '';
+
+  serviceModalTitle.textContent = detail.title;
+  serviceModalText.textContent = detail.text;
+
+  serviceModalList.innerHTML = detail.points
+    .map(point => `<li>${point}</li>`)
+    .join('');
+
+  if (serviceModalImage) {
+    serviceModalImage.style.backgroundImage = imageBackground;
+  }
+
+  serviceModal.classList.add('open');
+  serviceModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+}
+
+commercialIndustryCards.forEach(card => {
+  card.setAttribute('role', 'button');
+  card.setAttribute('tabindex', '0');
+
+  card.addEventListener('click', event => {
+    // Allow the existing Schedule link to continue working
+    if (event.target.closest('a')) return;
+
+    openCommercialIndustryModal(card);
+  });
+
+  card.addEventListener('keydown', event => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openCommercialIndustryModal(card);
+    }
+  });
+});
