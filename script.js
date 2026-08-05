@@ -682,3 +682,168 @@ residentialServiceCards.forEach(card => {
     }
   });
 });
+
+// ===== MOBILE CLIENT SLIDER — TWO-WAY INFINITE SWIPE =====
+const clientMarquee = document.querySelector('.client-marquee');
+const clientTrack = document.querySelector('.client-track');
+const mobileClientQuery = window.matchMedia('(max-width: 600px)');
+
+if (clientMarquee && clientTrack) {
+  // Original visible set
+  const originalClients = Array.from(
+    clientTrack.querySelectorAll(
+      '.client-pill:not([aria-hidden="true"])'
+    )
+  );
+
+  // Existing duplicated set after the originals
+  const nextClients = Array.from(
+    clientTrack.querySelectorAll(
+      '.client-pill[aria-hidden="true"]:not(.mobile-loop-clone)'
+    )
+  ).slice(0, originalClients.length);
+
+  /*
+   * Add another copy before the originals.
+   * The order becomes:
+   *
+   * Previous copy | Original set | Next copy
+   */
+  if (
+    originalClients.length &&
+    nextClients.length &&
+    !clientTrack.querySelector('.mobile-loop-clone')
+  ) {
+    const previousFragment = document.createDocumentFragment();
+
+    originalClients.forEach(client => {
+      const clone = client.cloneNode(true);
+
+      clone.classList.add('mobile-loop-clone');
+      clone.setAttribute('aria-hidden', 'true');
+
+      previousFragment.appendChild(clone);
+    });
+
+    clientTrack.insertBefore(
+      previousFragment,
+      clientTrack.firstChild
+    );
+  }
+
+  let isRepositioning = false;
+
+  function getClientLoopPositions() {
+    const firstOriginal = originalClients[0];
+    const firstNext = nextClients[0];
+
+    if (!firstOriginal || !firstNext) {
+      return null;
+    }
+
+    const middleStart = firstOriginal.offsetLeft;
+    const nextStart = firstNext.offsetLeft;
+    const setWidth = nextStart - middleStart;
+
+    if (setWidth <= 0) {
+      return null;
+    }
+
+    return {
+      middleStart,
+      nextStart,
+      setWidth
+    };
+  }
+
+  function positionClientSliderAtMiddle() {
+    if (!mobileClientQuery.matches) return;
+
+    requestAnimationFrame(() => {
+      const positions = getClientLoopPositions();
+
+      if (!positions) return;
+
+      /*
+       * Begin on the original set.
+       * A complete duplicate exists before it, allowing the
+       * user to swipe backward from the first client.
+       */
+      clientMarquee.scrollLeft = positions.middleStart;
+    });
+  }
+
+  function maintainInfiniteClientLoop() {
+    if (
+      !mobileClientQuery.matches ||
+      isRepositioning
+    ) {
+      return;
+    }
+
+    const positions = getClientLoopPositions();
+
+    if (!positions) return;
+
+    const {
+      middleStart,
+      nextStart,
+      setWidth
+    } = positions;
+
+    const currentPosition = clientMarquee.scrollLeft;
+
+    /*
+     * Entered the previous duplicate set:
+     * jump forward by one identical set.
+     */
+    if (currentPosition < middleStart - 4) {
+      isRepositioning = true;
+
+      clientMarquee.scrollLeft =
+        currentPosition + setWidth;
+
+      requestAnimationFrame(() => {
+        isRepositioning = false;
+      });
+    }
+
+    /*
+     * Entered the next duplicate set:
+     * jump backward by one identical set.
+     */
+    else if (currentPosition >= nextStart - 4) {
+      isRepositioning = true;
+
+      clientMarquee.scrollLeft =
+        currentPosition - setWidth;
+
+      requestAnimationFrame(() => {
+        isRepositioning = false;
+      });
+    }
+  }
+
+  clientMarquee.addEventListener(
+    'scroll',
+    maintainInfiniteClientLoop,
+    { passive: true }
+  );
+
+  mobileClientQuery.addEventListener(
+    'change',
+    positionClientSliderAtMiddle
+  );
+
+  window.addEventListener(
+    'resize',
+    positionClientSliderAtMiddle
+  );
+
+  window.addEventListener(
+    'load',
+    positionClientSliderAtMiddle
+  );
+
+  positionClientSliderAtMiddle();
+}
