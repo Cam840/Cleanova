@@ -6381,3 +6381,60 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
     white-space: nowrap;
   }
 }
+
+/* ==========================================
+   SPECIALTY SERVICES — MOBILE TWO-WAY LOOP
+   ========================================== */
+
+/* Loop copies should not appear on desktop */
+.specialty-loop-clone {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  #specialty-services-slider {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+
+    width: auto;
+    margin: 0 -20px;
+    padding: 0 20px 18px;
+
+    gap: 14px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px;
+    scroll-behavior: auto;
+
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+  }
+
+  #specialty-services-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  #specialty-services-slider .panel-card,
+  #specialty-services-slider .specialty-loop-clone {
+    display: flex;
+
+    flex: 0 0 82vw !important;
+    width: 82vw !important;
+    min-width: 270px;
+    max-width: 340px !important;
+
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  #specialty-services-slider .panel-image {
+    width: 100%;
+    height: 185px;
+  }
+}
