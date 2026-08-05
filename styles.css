@@ -6268,3 +6268,116 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
     animation-duration: 24s;
   }
 }
+
+/* ==========================================
+   COMMERCIAL CARDS — MOBILE SWIPE
+   ========================================== */
+
+@media (max-width: 600px) {
+  #commercial-industries {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+
+    width: auto;
+    margin: 0 -20px;
+    padding: 0 20px 18px;
+
+    gap: 14px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px;
+    overscroll-behavior-x: contain;
+
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  #commercial-industries::-webkit-scrollbar {
+    display: none;
+  }
+
+  #commercial-industries .panel-card {
+    flex: 0 0 82vw !important;
+    width: 82vw !important;
+    max-width: 340px !important;
+    min-width: 270px;
+
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  #commercial-industries .panel-image {
+    height: 180px;
+  }
+}
+
+/* ==========================================
+   CLIENT SLIDER — MANUAL MOBILE SWIPE
+   ========================================== */
+
+/* Mobile loop clones are hidden on desktop */
+.mobile-loop-clone {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .client-marquee {
+    width: auto;
+    margin: 0 -18px;
+    padding: 8px 18px 14px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 18px;
+    scroll-behavior: auto;
+    overscroll-behavior-x: contain;
+
+    mask-image: none;
+    -webkit-mask-image: none;
+
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .client-marquee::-webkit-scrollbar {
+    display: none;
+  }
+
+  .client-track {
+    animation: none !important;
+    transform: none !important;
+
+    display: flex;
+    width: max-content;
+    gap: 10px;
+  }
+
+  .mobile-loop-clone {
+    display: flex;
+  }
+
+  .client-pill {
+    flex: 0 0 210px;
+    min-width: 210px;
+    width: 210px;
+    height: 50px;
+
+    padding: 0 14px;
+
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  .client-name {
+    font-size: 9.5px;
+    line-height: 1.2;
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+}
