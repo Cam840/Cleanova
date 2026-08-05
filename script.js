@@ -269,6 +269,7 @@ function closeServiceModal() {
   if (!serviceModal) return;
 
   serviceModal.classList.remove('open');
+  serviceModal.setAttribute('aria-hidden', 'true');
   document.body.classList.remove('modal-open');
 }
 
