@@ -71,7 +71,7 @@
         <span class="eyebrow">Industries &amp; Property Types</span>
         <h2>Who We Serve</h2>
       </div>
-      <div class="panel-grid commercial-panel-grid">
+      <div class="panel-grid commercial-panel-grid" id="commercial-industries">
         <div class="panel-card" id="retail">
           <div class="panel-image" style="background-image: url('https://images.unsplash.com/photo-1604719312566-8912e9227c6a?w=600&q=80&auto=format&fit=crop');"></div>
           <div class="panel-body">
@@ -462,7 +462,57 @@
     </div>
   </div>
 </footer>
+  
+<!-- ===== COMMERCIAL INDUSTRY DETAILS POPUP ===== -->
+<div
+  class="service-modal"
+  id="service-modal"
+  aria-hidden="true"
+>
+  <div class="service-modal-backdrop"></div>
 
+  <div
+    class="service-modal-box"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="service-modal-title"
+  >
+    <button
+      class="service-modal-close"
+      type="button"
+      aria-label="Close details popup"
+    >
+      ×
+    </button>
+
+    <div
+      class="service-modal-image"
+      id="service-modal-image"
+    ></div>
+
+    <div class="service-modal-content">
+      <span class="eyebrow">Industry Details</span>
+
+      <h3 id="service-modal-title">
+        Industry
+      </h3>
+
+      <p id="service-modal-text">
+        Industry description.
+      </p>
+
+      <ul id="service-modal-list"></ul>
+
+      <a
+        href="quote.html"
+        class="btn btn-primary btn-small"
+      >
+        Request a Quote
+      </a>
+    </div>
+  </div>
+</div>
+  
 <script src="script.js"></script>
 </body>
 </html>
