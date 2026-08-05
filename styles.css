@@ -6438,3 +6438,887 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
     height: 185px;
   }
 }
+
+/* =========================================================
+   CLEANOVA — FINAL COMPACT MOBILE LAYOUT
+   Keep this at the absolute bottom of styles.css
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* -----------------------------------------
+     GLOBAL MOBILE SPACING AND TYPOGRAPHY
+     ----------------------------------------- */
+
+  .section,
+  .split-section,
+  .industries,
+  .commitment-section,
+  .client-section,
+  .service-bundle-section,
+  .about-company,
+  .testimonial-section,
+  .cta-strip {
+    padding: 46px 16px;
+  }
+
+  .section-header,
+  .industries-title,
+  .client-section-header {
+    margin-bottom: 24px;
+  }
+
+  .section-header .eyebrow,
+  .industries-title .eyebrow,
+  .client-section-header .eyebrow {
+    margin-bottom: 8px;
+  }
+
+  .eyebrow {
+    font-size: 8.5px;
+    line-height: 1.4;
+    letter-spacing: 0.22em;
+  }
+
+  .section-header h2,
+  .industries-title h2,
+  .client-section-header h2 {
+    font-size: clamp(1.4rem, 6vw, 1.85rem);
+    line-height: 1.14;
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+
+  .section-header p,
+  .client-section-header p {
+    max-width: 34rem;
+    font-size: 12.5px;
+    line-height: 1.55;
+  }
+
+  /* Keep buttons readable and comfortably tappable */
+  .btn,
+  .btn-small,
+  .learn-more {
+    min-height: 44px;
+  }
+
+  .btn,
+  .btn-small {
+    padding: 10px 15px;
+    font-size: 8.5px;
+    letter-spacing: 0.11em;
+  }
+
+  /* Compact page banners on every inner page */
+  .page-head {
+    min-height: 245px;
+    padding: 118px 18px 46px;
+  }
+
+  .page-head h1 {
+    font-size: clamp(1.6rem, 7vw, 2.15rem);
+    line-height: 1.14;
+    letter-spacing: 0.09em;
+  }
+
+  .page-head p {
+    max-width: 340px;
+    font-size: 12.5px;
+    line-height: 1.55;
+  }
+
+
+  /* =====================================================
+     INDEX.HTML — CHOOSE YOUR SERVICE
+     Keep Commercial and Residential side by side
+     ===================================================== */
+
+  .split-section {
+    padding: 44px 12px;
+  }
+
+  .split-header {
+    margin-bottom: 22px;
+  }
+
+  .split-header h2 {
+    margin-bottom: 10px;
+  }
+
+  .split-subheading,
+  .split-statement {
+    max-width: 340px;
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  /* The department pills add too much mobile height */
+  .department-points {
+    display: none;
+  }
+
+  .split-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 9px !important;
+    width: 100%;
+  }
+
+  .split-card {
+    min-width: 0;
+    min-height: 152px;
+    padding: 15px 9px;
+    border-radius: 14px;
+  }
+
+  .split-card h3 {
+    max-width: 130px;
+    margin-bottom: 12px;
+    font-size: clamp(0.68rem, 3.2vw, 0.84rem);
+    line-height: 1.35;
+    letter-spacing: 0.08em;
+  }
+
+  /* The image and service title already explain the choice */
+  .split-card p {
+    display: none;
+  }
+
+  .split-card .btn {
+    min-height: 40px;
+    padding: 8px 10px;
+    font-size: 7.8px;
+    letter-spacing: 0.08em;
+    white-space: normal;
+  }
+
+
+  /* =====================================================
+     INDEX.HTML — INDUSTRIES WE SERVE
+     Four compact icons per row
+     ===================================================== */
+
+  .industries {
+    padding: 42px 10px;
+  }
+
+  .industries-title {
+    margin-bottom: 26px;
+  }
+
+  .industries-row {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: 20px 7px !important;
+    width: 100%;
+  }
+
+  .industry-item {
+    gap: 8px;
+    min-width: 0;
+  }
+
+  /* New icon-container version */
+  .industry-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 12px;
+  }
+
+  .industry-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  /* Fallback for older HTML without .industry-icon */
+  .industry-item > svg {
+    width: 23px;
+    height: 23px;
+  }
+
+  .industry-item span {
+    max-width: 78px;
+    font-size: 8px;
+    line-height: 1.3;
+    letter-spacing: 0.055em;
+    text-transform: uppercase;
+    overflow-wrap: anywhere;
+  }
+
+
+  /* =====================================================
+     INDEX.HTML — CLEANOVA 9-1-1
+     Three compact cards in one row
+     ===================================================== */
+
+  .commitment-section {
+    padding: 42px 11px;
+  }
+
+  .commitment-panel {
+    padding: 18px 12px;
+    border-radius: 20px;
+  }
+
+  .commitment-top {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 17px;
+  }
+
+  .commitment-top h2 {
+    margin-top: 5px;
+    font-size: clamp(1.55rem, 7vw, 2rem);
+    line-height: 1;
+  }
+
+  .commitment-top p {
+    max-width: none;
+    font-size: 11.5px;
+    line-height: 1.48;
+  }
+
+  .commitment-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+  }
+
+  .commitment-card {
+    min-width: 0;
+    min-height: 88px;
+    padding: 11px 7px;
+    border-radius: 13px;
+    text-align: center;
+  }
+
+  .commitment-card span {
+    margin-bottom: 5px;
+    font-size: 8.5px;
+    line-height: 1.25;
+  }
+
+  .commitment-card strong {
+    font-size: clamp(1.4rem, 6vw, 1.85rem);
+    line-height: 1;
+    letter-spacing: -0.025em;
+  }
+
+
+  /* =====================================================
+     PANEL CAROUSELS
+     Commercial, Residential and Specialty Services
+     ===================================================== */
+
+  #commercial-industries,
+  #residential-services,
+  #specialty-services-slider {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+
+    width: auto;
+    margin-inline: -16px;
+    padding: 0 16px 14px;
+    gap: 11px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    scroll-snap-type: x mandatory;
+    scroll-padding-inline: 16px;
+    overscroll-behavior-x: contain;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: none;
+  }
+
+  #commercial-industries::-webkit-scrollbar,
+  #residential-services::-webkit-scrollbar,
+  #specialty-services-slider::-webkit-scrollbar {
+    display: none;
+  }
+
+  #commercial-industries .panel-card,
+  #residential-services .panel-card,
+  #specialty-services-slider .panel-card {
+    flex: 0 0 72vw !important;
+    width: 72vw !important;
+    min-width: 230px;
+    max-width: 278px !important;
+
+    border-radius: 16px;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+  }
+
+  #commercial-industries .panel-image,
+  #residential-services .panel-image,
+  #specialty-services-slider .panel-image {
+    height: 140px;
+  }
+
+  #commercial-industries .panel-body,
+  #residential-services .panel-body,
+  #specialty-services-slider .panel-body {
+    min-height: 105px;
+    padding: 15px 14px 16px;
+  }
+
+  #commercial-industries .panel-icon,
+  #residential-services .panel-icon,
+  #specialty-services-slider .panel-icon {
+    width: 32px;
+    height: 32px;
+    margin-top: -31px;
+    margin-bottom: 10px;
+  }
+
+  #commercial-industries .panel-icon svg,
+  #residential-services .panel-icon svg,
+  #specialty-services-slider .panel-icon svg {
+    width: 15px;
+    height: 15px;
+  }
+
+  #commercial-industries .panel-card h3,
+  #residential-services .panel-card h3,
+  #specialty-services-slider .panel-card h3 {
+    min-height: 0;
+    margin-bottom: 7px;
+    font-size: 0.72rem;
+    line-height: 1.35;
+    letter-spacing: 0.1em;
+  }
+
+  #commercial-industries .learn-more,
+  #residential-services .learn-more,
+  #specialty-services-slider .service-click {
+    min-height: 30px;
+    margin-top: auto;
+    font-size: 8.5px;
+    letter-spacing: 0.12em;
+  }
+
+
+  /* =====================================================
+     COMMERCIAL CLIENTS
+     Variable widths so long client names do not overflow
+     ===================================================== */
+
+  .client-section {
+    padding: 42px 0 34px;
+  }
+
+  .client-section-header {
+    padding-inline: 16px;
+    margin-bottom: 18px;
+  }
+
+  .client-section-header h2 {
+    font-size: clamp(1.45rem, 7vw, 1.9rem);
+    white-space: nowrap;
+  }
+
+  .client-section-header p {
+    max-width: 330px;
+    font-size: 11.5px;
+  }
+
+  .client-marquee {
+    width: 100%;
+    margin: 0;
+    padding: 6px 16px 12px;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+
+  .client-track {
+    animation: none !important;
+    transform: none !important;
+    display: flex;
+    width: max-content;
+    gap: 9px;
+  }
+
+  .client-pill {
+    flex: 0 0 auto !important;
+
+    width: max-content !important;
+    min-width: 175px !important;
+    max-width: 82vw !important;
+    height: auto !important;
+    min-height: 50px;
+
+    padding: 9px 16px;
+    border-radius: 999px;
+
+    justify-content: center;
+    scroll-snap-align: start;
+  }
+
+  .client-name {
+    max-width: 100%;
+    font-size: 9.5px;
+    line-height: 1.3;
+    letter-spacing: 0.075em;
+
+    white-space: normal !important;
+    text-align: center;
+    overflow-wrap: anywhere;
+  }
+
+
+  /* =====================================================
+     COMMERCIAL — BUILT FOR THE FINAL IMPRESSION
+     Compact horizontal cards
+     ===================================================== */
+
+  .specialized-commercial {
+    padding: 44px 14px;
+  }
+
+  .specialized-commercial .section-header {
+    margin-bottom: 21px;
+  }
+
+  .specialized-commercial .section-header h2 {
+    font-size: clamp(1.35rem, 6vw, 1.7rem);
+  }
+
+  .specialized-commercial-grid {
+    display: flex !important;
+    grid-template-columns: none !important;
+
+    width: auto;
+    margin-inline: -14px;
+    padding: 0 14px 12px;
+    gap: 10px;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+
+  .specialized-commercial-grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .service-detail-card {
+    flex: 0 0 78vw;
+    width: 78vw;
+    min-width: 240px;
+    max-width: 292px;
+
+    min-height: 0;
+    padding: 18px 16px;
+    border-radius: 15px;
+
+    scroll-snap-align: start;
+  }
+
+  .service-detail-card h4 {
+    margin-bottom: 5px;
+    font-size: 8px;
+    letter-spacing: 0.15em;
+  }
+
+  .service-detail-card h3 {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    font-size: 0.75rem;
+    line-height: 1.35;
+    letter-spacing: 0.1em;
+  }
+
+  .service-detail-card p {
+    margin: 0 0 10px;
+    font-size: 11.5px;
+    line-height: 1.48;
+  }
+
+  .service-detail-card li {
+    padding: 4px 0;
+    font-size: 10.5px;
+    line-height: 1.4;
+  }
+
+  .service-detail-card .learn-more {
+    margin-top: 12px;
+    font-size: 8px;
+  }
+
+
+  /* =====================================================
+     COMMERCIAL + RESIDENTIAL FEATURE SECTIONS
+     Fleet bundle, Home + Car bundle, Tailored Facility
+     ===================================================== */
+
+  .service-bundle-section {
+    padding: 38px 14px;
+  }
+
+  .feature-bar,
+  .service-bundle {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    border-radius: 18px;
+    overflow: hidden;
+  }
+
+  .feature-image {
+    min-height: 180px !important;
+    order: -1;
+  }
+
+  .bundle-image-grid {
+    order: -1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 165px !important;
+  }
+
+  .bundle-photo {
+    min-height: 165px !important;
+  }
+
+  .feature-content,
+  .service-bundle .feature-content {
+    padding: 19px 16px !important;
+  }
+
+  .feature-content .eyebrow,
+  .service-bundle .eyebrow {
+    margin-bottom: 7px;
+  }
+
+  .feature-content h2,
+  .service-bundle h2 {
+    margin-bottom: 10px;
+    font-size: clamp(1.2rem, 5.7vw, 1.5rem);
+    line-height: 1.2;
+    letter-spacing: 0.075em;
+  }
+
+  .feature-content p,
+  .service-bundle p {
+    margin-bottom: 13px;
+    font-size: 11.8px;
+    line-height: 1.5;
+  }
+
+  .feature-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0 10px;
+    margin-bottom: 15px;
+  }
+
+  .feature-list li {
+    min-width: 0;
+    padding: 6px 0;
+    font-size: 10.5px;
+    line-height: 1.35;
+  }
+
+
+  /* =====================================================
+     ABOUT.HTML — PREMIUM ABOUT SECTION
+     ===================================================== */
+
+  .about-company {
+    padding: 42px 13px;
+  }
+
+  .about-company-shell {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    min-height: 0;
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .about-company-text {
+    padding: 23px 18px;
+  }
+
+  .about-company-text .eyebrow {
+    margin-bottom: 8px;
+  }
+
+  .about-company-text h2 {
+    margin-bottom: 13px;
+    font-size: clamp(1.65rem, 7.6vw, 2.15rem);
+    line-height: 1.06;
+  }
+
+  .about-company-text h2 em {
+    margin-top: 7px;
+    font-size: 0.62em;
+    line-height: 1.15;
+  }
+
+  .about-company-lead {
+    margin-bottom: 14px;
+    font-size: 13px;
+    line-height: 1.52;
+  }
+
+  .about-company-copy {
+    gap: 9px;
+    margin-bottom: 16px;
+  }
+
+  .about-company-copy p {
+    font-size: 11.8px;
+    line-height: 1.5;
+  }
+
+  .about-company-highlights {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    margin-bottom: 16px;
+  }
+
+  .about-highlight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 36px;
+    padding: 6px 8px;
+
+    font-size: 7.5px;
+    line-height: 1.25;
+    text-align: center;
+    letter-spacing: 0.07em;
+  }
+
+  .about-company-visual {
+    order: -1;
+    min-height: 225px !important;
+    height: 225px;
+    border-radius: 0;
+    background-position: center 22%;
+  }
+
+  .team-logo-card {
+    top: 12px;
+    padding: 8px 12px;
+    border-radius: 12px;
+  }
+
+  .team-logo-card img {
+    width: 130px;
+  }
+
+  /* Floating panels crowd the photograph on phones */
+  .about-floating-card {
+    display: none;
+  }
+
+
+  /* =====================================================
+     ABOUT.HTML — WHY CLEANOVA
+     Two cards per row
+     ===================================================== */
+
+  .why-cleanova-section,
+  .why-cleanova-section.section {
+    padding: 44px 13px;
+  }
+
+  .why-cleanova-header {
+    margin-bottom: 22px;
+  }
+
+  .why-cleanova-header h2 {
+    font-size: clamp(1.55rem, 7vw, 1.95rem);
+  }
+
+  .why-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 11px 10px !important;
+  }
+
+  .why-card {
+    min-width: 0;
+    padding: 14px 11px;
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.025);
+  }
+
+  .why-card::before {
+    width: 38px;
+    margin-bottom: 10px;
+  }
+
+  .why-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 0 9px;
+  }
+
+  .why-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .why-card h3 {
+    margin-bottom: 7px;
+    font-size: 0.64rem;
+    line-height: 1.38;
+    letter-spacing: 0.085em;
+  }
+
+  .why-card p {
+    font-size: 10.5px;
+    line-height: 1.42;
+  }
+
+
+  /* =====================================================
+     ABOUT.HTML — CONTACT
+     Three compact columns
+     ===================================================== */
+
+  #contact {
+    padding: 44px 10px;
+  }
+
+  #contact .section-header {
+    margin-bottom: 22px;
+    padding-inline: 6px;
+  }
+
+  .contact-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: 7px !important;
+    margin-top: 20px;
+  }
+
+  .contact-card {
+    min-width: 0;
+    padding: 12px 5px 0;
+    text-align: center;
+  }
+
+  .contact-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 auto 8px;
+    justify-content: center;
+  }
+
+  .contact-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .contact-card h3 {
+    margin-bottom: 6px;
+    font-size: 8.5px;
+    line-height: 1.25;
+    letter-spacing: 0.11em;
+  }
+
+  .contact-card p {
+    min-width: 0;
+    font-size: 9.5px;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+  }
+
+  /* Hide hours/secondary descriptions to keep the row compact */
+  .contact-card p:nth-of-type(n + 2) {
+    display: none;
+  }
+
+  .contact-card a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 44px;
+    overflow-wrap: anywhere;
+  }
+
+
+  /* =====================================================
+     QUOTE.HTML — WHAT HAPPENS NEXT
+     Compact 2 × 2 process
+     ===================================================== */
+
+  .happens-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 17px 10px !important;
+    margin-top: 22px;
+  }
+
+  .happens-step {
+    min-width: 0;
+    padding: 0 0 0 13px;
+  }
+
+  .happens-step::before {
+    top: 3px;
+  }
+
+  .happens-step-num {
+    margin-bottom: 7px;
+    font-size: 1.65rem;
+  }
+
+  .happens-step h3 {
+    margin-bottom: 6px;
+    font-size: 0.66rem;
+    line-height: 1.35;
+    letter-spacing: 0.09em;
+  }
+
+  .happens-step p {
+    font-size: 10.8px;
+    line-height: 1.45;
+  }
+}
+
+
+/* Smaller phones: keep layouts usable below roughly 370px */
+@media (max-width: 370px) {
+
+  .industries-row {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  }
+
+  .split-card {
+    min-height: 145px;
+    padding-inline: 7px;
+  }
+
+  .split-card h3 {
+    font-size: 0.65rem;
+  }
+
+  .commitment-card span {
+    font-size: 7.8px;
+  }
+
+  .commitment-card strong {
+    font-size: 1.35rem;
+  }
+
+  .contact-card p {
+    font-size: 8.7px;
+  }
+}
