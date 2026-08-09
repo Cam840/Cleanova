@@ -7679,3 +7679,580 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
     font-size: 7.5px;
   }
 }
+
+/* =========================================================
+   CLEANOVA MOBILE HOMEPAGE HERO — FINAL PREMIUM VERSION
+   KEEP THIS AT THE ABSOLUTE BOTTOM OF styles.css
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  /* -------------------------------------------------
+     HERO CONTAINER
+     ------------------------------------------------- */
+
+  .hero {
+    position: relative;
+
+    min-height: 100svh !important;
+    height: auto !important;
+
+    display: flex;
+    align-items: flex-start !important;
+
+    /*
+      Photo gets the upper part of the screen.
+      Content begins around the lower portion of the photo.
+    */
+    padding:
+      44svh
+      14px
+      24px !important;
+
+    background: #050505;
+    overflow: hidden;
+  }
+
+
+  /* -------------------------------------------------
+     MOBILE BACKGROUND IMAGE
+     ------------------------------------------------- */
+
+  .hero::before {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    /*
+      Force the Cleanova image on mobile.
+    */
+    background-image:
+      url('cleanova-hero2.png') !important;
+
+    /*
+      IMPORTANT:
+      Do NOT use cover on mobile.
+
+      145% gives us a wide cinematic crop while still
+      showing much more of the actual photo.
+    */
+    background-size:
+      145% auto !important;
+
+    /*
+      Shift toward the workers/machine and move the image
+      below the navigation.
+    */
+    background-position:
+      62% 72px !important;
+
+    background-repeat:
+      no-repeat !important;
+
+    /*
+      Make the actual photo noticeably brighter.
+    */
+    filter:
+      brightness(1.22)
+      contrast(1.03)
+      saturate(0.92);
+
+    transform: none !important;
+    opacity: 1 !important;
+
+    z-index: 0;
+  }
+
+
+  /* -------------------------------------------------
+     LIGHTER MOBILE GRADIENT
+     ------------------------------------------------- */
+
+  .hero::after {
+    content: '';
+
+    position: absolute;
+    inset: 0;
+
+    /*
+      Keep the top/photo bright.
+      Darken only as we reach the text.
+    */
+    background:
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.03) 0%,
+        rgba(0, 0, 0, 0.05) 28%,
+        rgba(0, 0, 0, 0.18) 42%,
+        rgba(0, 0, 0, 0.58) 57%,
+        rgba(0, 0, 0, 0.91) 74%,
+        #050505 100%
+      ) !important;
+
+    z-index: 1;
+    pointer-events: none;
+  }
+
+
+  /* -------------------------------------------------
+     CONTENT CONTAINER
+     ------------------------------------------------- */
+
+  .hero-inner {
+    position: relative;
+
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0 !important;
+
+    z-index: 2;
+  }
+
+  .hero-content {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    padding: 21px 17px 17px;
+
+    border:
+      1px solid
+      rgba(255, 255, 255, 0.13);
+
+    border-radius: 24px;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(20, 20, 20, 0.72),
+        rgba(4, 4, 4, 0.90)
+      );
+
+    box-shadow:
+      0 22px 55px
+      rgba(0, 0, 0, 0.44),
+      inset 0 1px 0
+      rgba(255, 255, 255, 0.06);
+
+    backdrop-filter:
+      blur(12px);
+
+    -webkit-backdrop-filter:
+      blur(12px);
+  }
+
+
+  /* -------------------------------------------------
+     HEADLINE
+     ------------------------------------------------- */
+
+  .hero h1 {
+    margin: 0 0 13px !important;
+
+    max-width: 100% !important;
+
+    font-size:
+      clamp(
+        2.05rem,
+        10.2vw,
+        2.85rem
+      ) !important;
+
+    line-height: 0.94 !important;
+
+    letter-spacing:
+      0.005em !important;
+
+    color: #fff;
+  }
+
+  .hero-line {
+    display: block;
+  }
+
+
+  /* Commercial & Residential Experts */
+
+  .hero h1 .light {
+    display: block;
+
+    margin-top: 9px !important;
+
+    max-width: 100%;
+
+    font-family:
+      'Cormorant Garamond',
+      serif;
+
+    font-size:
+      0.63em !important;
+
+    line-height:
+      1.05 !important;
+
+    font-weight: 400;
+
+    letter-spacing:
+      0 !important;
+
+    color:
+      rgba(255, 255, 255, 0.88);
+
+    font-style: italic;
+  }
+
+
+  /* -------------------------------------------------
+     DESCRIPTION
+     ------------------------------------------------- */
+
+  .hero-desc {
+    max-width: 330px !important;
+
+    margin:
+      0
+      0
+      16px !important;
+
+    font-size:
+      12.5px !important;
+
+    line-height:
+      1.52 !important;
+
+    color:
+      rgba(255, 255, 255, 0.77) !important;
+  }
+
+
+  /* -------------------------------------------------
+     BUTTONS — SIDE BY SIDE
+     ------------------------------------------------- */
+
+  .hero-actions {
+    display:
+      grid !important;
+
+    grid-template-columns:
+      1fr 1fr;
+
+    gap:
+      8px !important;
+
+    width: 100%;
+
+    margin-bottom:
+      18px !important;
+  }
+
+  .hero-actions .btn {
+    width:
+      100% !important;
+
+    min-width:
+      0 !important;
+
+    min-height:
+      48px !important;
+
+    padding:
+      10px
+      7px !important;
+
+    font-size:
+      8px !important;
+
+    line-height:
+      1.2;
+
+    letter-spacing:
+      0.08em !important;
+
+    white-space:
+      normal !important;
+
+    text-align:
+      center;
+
+    border-radius:
+      999px;
+  }
+
+
+  /* Primary CTA */
+
+  .hero-actions .btn-primary {
+    background:
+      #ffffff;
+
+    color:
+      #070707;
+
+    box-shadow:
+      0 8px 28px
+      rgba(255, 255, 255, 0.10);
+  }
+
+
+  /* Secondary CTA */
+
+  .hero-actions .btn-ghost {
+    background:
+      rgba(255, 255, 255, 0.04);
+
+    border:
+      1px solid
+      rgba(255, 255, 255, 0.42);
+
+    color:
+      #fff;
+  }
+
+
+  /* -------------------------------------------------
+     TRUST POINTS — 2 × 2
+     ------------------------------------------------- */
+
+  .hero-features {
+    display:
+      grid !important;
+
+    grid-template-columns:
+      repeat(
+        2,
+        minmax(0, 1fr)
+      ) !important;
+
+    gap:
+      11px 9px !important;
+
+    margin:
+      0 !important;
+  }
+
+  .hero-feature {
+    min-width: 0;
+
+    display: flex;
+
+    align-items:
+      center;
+
+    gap:
+      7px !important;
+
+    color:
+      rgba(255, 255, 255, 0.72) !important;
+
+    font-size:
+      8.3px !important;
+
+    line-height:
+      1.25;
+
+    letter-spacing:
+      0.055em !important;
+  }
+
+  .hero-feature svg {
+    width:
+      17px !important;
+
+    height:
+      17px !important;
+
+    min-width:
+      17px;
+
+    stroke:
+      rgba(
+        255,
+        255,
+        255,
+        0.82
+      ) !important;
+  }
+
+
+  /* -------------------------------------------------
+     MOBILE NAV — PREMIUM GLASS
+     ------------------------------------------------- */
+
+  .nav {
+    padding:
+      8px
+      10px
+      0 !important;
+  }
+
+  .nav-inner {
+    min-height:
+      72px !important;
+
+    padding:
+      8px
+      13px !important;
+
+    border-radius:
+      18px !important;
+  }
+
+  .nav-logo img {
+    height:
+      52px !important;
+
+    max-width:
+      180px !important;
+  }
+
+  /*
+    At top:
+    transparent enough to see photo,
+    but strong enough to read.
+  */
+
+  .nav:not(.scrolled) .nav-inner {
+    background:
+      rgba(
+        5,
+        5,
+        5,
+        0.46
+      ) !important;
+
+    border-color:
+      rgba(
+        255,
+        255,
+        255,
+        0.15
+      ) !important;
+
+    box-shadow:
+      0
+      10px
+      30px
+      rgba(
+        0,
+        0,
+        0,
+        0.16
+      ) !important;
+
+    backdrop-filter:
+      blur(13px) !important;
+
+    -webkit-backdrop-filter:
+      blur(13px) !important;
+  }
+
+
+  /* After scrolling */
+
+  .nav.scrolled .nav-inner {
+    background:
+      rgba(
+        4,
+        4,
+        4,
+        0.95
+      ) !important;
+
+    backdrop-filter:
+      blur(20px) !important;
+
+    -webkit-backdrop-filter:
+      blur(20px) !important;
+
+    box-shadow:
+      0
+      14px
+      35px
+      rgba(
+        0,
+        0,
+        0,
+        0.48
+      ) !important;
+  }
+
+
+  /* Hamburger */
+
+  .nav-toggle {
+    width:
+      42px !important;
+
+    height:
+      42px !important;
+
+    border-radius:
+      50%;
+
+    border:
+      1px solid
+      rgba(
+        255,
+        255,
+        255,
+        0.18
+      );
+
+    background:
+      rgba(
+        255,
+        255,
+        255,
+        0.055
+      );
+  }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 370px) {
+
+  .hero {
+    padding-top:
+      42svh !important;
+  }
+
+  .hero::before {
+    background-size:
+      155% auto !important;
+
+    background-position:
+      63% 68px !important;
+  }
+
+  .hero-content {
+    padding:
+      18px
+      14px
+      15px;
+  }
+
+  .hero h1 {
+    font-size:
+      1.95rem !important;
+  }
+
+  .hero-desc {
+    font-size:
+      11.5px !important;
+  }
+
+  .hero-actions .btn {
+    font-size:
+      7.5px !important;
+  }
+
+  .hero-feature {
+    font-size:
+      7.7px !important;
+  }
+}
