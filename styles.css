@@ -3307,7 +3307,7 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
 }
 
 .hero::before {
-  background-image: url('cleanova-hero2.png');
+  background-image: url('cleanova-hero3.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -3751,7 +3751,7 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
   content: '';
   position: absolute;
   inset: 0;
-  background-image: url('cleanova-hero2.png');
+  background-image: url('cleanova-hero3.png');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -4311,7 +4311,7 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
 /* Shift the people toward the right on desktop */
 @media (min-width: 901px) {
   .hero::before {
-    background-image: url('cleanova-hero2.png');
+    background-image: url('cleanova-hero3.png');
 
     /*
       Slight enlargement creates enough horizontal crop
@@ -5183,7 +5183,7 @@ body > section:not(.hero):not(.page-head):not(.cta-strip) > * {
   position: absolute;
   inset: 0;
 
-  background-image: url('cleanova-hero2.png');
+  background-image: url('cleanova-hero3.png');
   background-size: cover;
   background-position: 58% center;
   background-repeat: no-repeat;
