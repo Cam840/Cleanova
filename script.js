@@ -1057,3 +1057,31 @@ if (specialtySlider) {
 
   positionSpecialtySliderAtStart();
 }
+
+// ===== SERVICE AREA MARKET TABS =====
+const marketTabs = document.querySelectorAll('.market-tab');
+const marketPanels = document.querySelectorAll('.market-panel');
+
+marketTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    const market = tab.dataset.market;
+
+    marketTabs.forEach(item => {
+      item.classList.remove('active');
+    });
+
+    marketPanels.forEach(panel => {
+      panel.classList.remove('active');
+    });
+
+    tab.classList.add('active');
+
+    const targetPanel = document.querySelector(
+      `#market-${market}`
+    );
+
+    if (targetPanel) {
+      targetPanel.classList.add('active');
+    }
+  });
+});
